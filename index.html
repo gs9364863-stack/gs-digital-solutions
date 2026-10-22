@@ -3,91 +3,87 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GS Digital Solutions | आपकी डिजिटल साथी</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GS Digital Solutions</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,"Noto Sans Devanagari",sans-serif;color:#10213b;background:#f1f8ff}
-header{background:#061326;color:white;padding:18px 7%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
-.logo{font-size:25px;font-weight:bold;color:#18baff}
-.logo span{color:white;font-size:17px;display:block}
-nav a{color:white;text-decoration:none;margin:0 10px;font-size:14px}
-.btn{display:inline-block;padding:13px 22px;border-radius:30px;background:#08a9f4;color:white;text-decoration:none;font-weight:bold;margin:8px 5px 0 0}
-.whatsapp{background:#00b981}
-.hero{background:radial-gradient(ellipse at 75% 45%,#35126b,#07172e 48%,#020b18);color:white;padding:75px 7%;min-height:370px}
-.hero h1{font-size:clamp(34px,5vw,58px);margin:18px 0}
-.hero h1 b{color:#0bb9ff}
-.hero h2{font-size:clamp(22px,3vw,34px);margin-bottom:18px}
-.hero p{max-width:570px;line-height:1.9;color:#d5e7ff}
-.tag{background:#087bc9;border-radius:20px;padding:8px 14px;font-size:14px}
-section{padding:42px 7%}
-.section-title{color:#079ff0;margin-bottom:10px}
-.intro{margin-bottom:25px;line-height:1.8}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
-.card{background:white;padding:23px;border-radius:15px;border:1px solid #e0ebf7;box-shadow:0 5px 15px #12313b10}
-.card .icon{font-size:30px;margin-bottom:15px}
-.card h3{margin-bottom:12px;font-size:19px}
-.card p{color:#536985;line-height:1.8;font-size:14px}
+body{font-family:Arial,sans-serif;background:#f2f8ff;color:#10213b}
+header{background:#031326;color:white;padding:20px 7%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.logo{font-size:25px;font-weight:bold;color:#11baff}
+.logo span{color:white;font-size:15px;display:block}
+nav a{color:white;text-decoration:none;margin:0 9px}
+.btn{display:inline-block;padding:13px 22px;border-radius:28px;background:#08a9f4;color:white;text-decoration:none;margin:8px 5px 0 0;font-weight:bold}
+.green{background:#00b982}
+.hero{background:radial-gradient(ellipse at 78% 50%,#48116c,#07172e 48%,#020b18);color:white;padding:65px 7%;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;min-height:370px}
+.hero h1{font-size:clamp(36px,4vw,58px);margin:20px 0}
+.hero h1 b{color:#09b9ff}
+.hero h2{font-size:clamp(23px,3vw,33px);margin-bottom:18px}
+.hero p{line-height:1.9;color:#d7e7ff}
+.tag{display:inline-block;background:#087bc9;border-radius:20px;padding:9px 14px}
+.visual{min-height:245px;border-radius:25px;background:linear-gradient(135deg,#101b54,#0879ce,#8e2eb5);border:5px solid #728bc7;box-shadow:0 15px 45px #0008;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px;transform:rotate(-2deg)}
+.visual h2{font-size:35px;color:white}
+.visual p{font-size:18px}
+section{padding:40px 7%}
+.title{color:#069ff1;margin-bottom:10px}
+.services{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;margin-top:22px}
+.card{background:white;border:1px solid #e0ebf7;border-radius:15px;padding:22px;box-shadow:0 5px 15px #12313b10}
+.icon{font-size:30px;margin-bottom:14px}
+.card h3{font-size:18px;margin-bottom:12px}
+.card p{font-size:14px;color:#536985;line-height:1.8}
 .card a{display:inline-block;margin-top:15px;color:#009ef0;text-decoration:none;font-weight:bold}
-.trust{background:#071426;color:white;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:25px;align-items:center}
+.trust{background:#071426;color:white;display:grid;grid-template-columns:2fr repeat(3,1fr);gap:25px;align-items:center}
 .trust p{color:#c9d7e9;line-height:1.8;margin-top:10px}
 .contact{background:#eaf5ff;text-align:center}
 footer{background:#020b18;color:#cbd9e8;padding:25px 7%;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-footer a{color:#31bdff;text-decoration:none}
-@media(max-width:600px){header{padding:18px 5%}nav{width:100%;line-height:2.5}.hero{padding:55px 6%}section{padding:35px 6%}}
+@media(max-width:900px){.services{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.trust{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){nav{width:100%;line-height:2.5}.services{grid-template-columns:1fr}.trust{grid-template-columns:1fr}.hero{padding:45px 6%}}
 </style>
 </head>
 <body>
 <header>
-  <div class="logo">GS <span>GS Digital Solutions</span></div>
-  <nav>
-    <a href="#home">होम</a>
-    <a href="#services">हमारी सेवाएँ</a>
-    <a href="#about">हमारे बारे में</a>
-    <a href="#contact">संपर्क करें</a>
-  </nav>
-  <a class="btn whatsapp" href="#contact">WhatsApp पर बात करें</a>
+<div class="logo">GS <span>GS Digital Solutions</span></div>
+<nav><a href="#home">होम</a><a href="#services">हमारी सेवाएँ</a><a href="#about">हमारे बारे में</a><a href="#contact">संपर्क करें</a></nav>
+<a class="btn green" href="#contact">☘ WhatsApp पर बात करें</a>
 </header>
 
 <div class="hero" id="home">
-  <span class="tag">🚀 अपने विचारों को डिजिटल बनाएँ</span>
-  <h1><b>GS</b> Digital Solutions</h1>
-  <h2>आपके हर डिजिटल काम का भरोसेमंद साथी</h2>
-  <p>हम वेबसाइट डिजाइन, ग्राफिक डिजाइन, डिजिटल मार्केटिंग और ऑनलाइन सेवाओं के लिए डिजिटल समाधान प्रदान करने का लक्ष्य रखते हैं। आपका काम, हमारी जिम्मेदारी!</p>
-  <a class="btn" href="#services">➜ हमारी सेवाएँ देखें</a>
-  <a class="btn" href="#contact" style="background:transparent;border:1px solid white">हमसे संपर्क करें</a>
+<div>
+<span class="tag">✦ अपने विचारों को डिजिटल बनाएँ</span>
+<h1><b>GS</b> Digital Solutions</h1>
+<h2>आपके हर डिजिटल काम का भरोसेमंद साथी</h2>
+<p>हम वेबसाइट डिजाइन, ग्राफिक डिजाइन, डिजिटल मार्केटिंग, ऑनलाइन सेवाओं और कई तरह के डिजिटल समाधानों में आपकी मदद करते हैं। आपका काम, हमारी जिम्मेदारी!</p>
+<a class="btn" href="#services">➜ हमारी सेवाएँ देखें</a>
+<a class="btn" href="#contact" style="background:transparent;border:1px solid white">हमसे संपर्क करें</a>
+</div>
+<div class="visual"><div><h2>Build Your<br>Dream Website</h2><p>Ideas · Design · Digital Growth</p><p style="font-size:50px">💻 📱</p></div></div>
 </div>
 
 <section id="services">
-  <h3 class="section-title">हमारी सेवाएँ</h3>
-  <h1 class="intro">हम क्या-क्या करते हैं?<br><small style="font-size:16px;font-weight:normal">हम आपकी डिजिटल जरूरतों के लिए एक ही जगह पर समाधान देने का प्रयास करते हैं।</small></h1>
-  <div class="services">
-    <div class="card"><div class="icon">💻</div><h3>वेबसाइट डिजाइन</h3><p>आपके बिजनेस के लिए प्रोफेशनल और मोबाइल फ्रेंडली वेबसाइट।</p><a href="#contact">और जानें →</a></div>
-    <div class="card"><div class="icon">🎨</div><h3>ग्राफिक डिजाइन</h3><p>पोस्टर, लोगो, बैनर और सोशल मीडिया डिजाइन।</p><a href="#contact">और जानें →</a></div>
-    <div class="card"><div class="icon">📢</div><h3>डिजिटल मार्केटिंग</h3><p>सोशल मीडिया प्रचार और ऑनलाइन बिजनेस की मदद।</p><a href="#contact">और जानें →</a></div>
-    <div class="card"><div class="icon">📝</div><h3>ऑनलाइन सेवाएँ</h3><p>ऑनलाइन फॉर्म, डॉक्यूमेंट और अन्य डिजिटल काम।</p><a href="#contact">और जानें →</a></div>
-    <div class="card"><div class="icon">📱</div><h3>सॉफ्टवेयर और टूल्स</h3><p>आपके काम के लिए उपयोगी डिजिटल टूल्स की जानकारी।</p><a href="#contact">और जानें →</a></div>
-  </div>
+<h3 class="title">हमारी सेवाएँ</h3>
+<h1>हम क्या-क्या करते हैं?</h1>
+<p style="margin-top:10px">हम आपकी डिजिटल जरूरतों के लिए एक ही जगह पर समाधान देते हैं।</p>
+<div class="services">
+<div class="card"><div class="icon">💻</div><h3>वेबसाइट डिजाइन</h3><p>आपके बिजनेस के लिए प्रोफेशनल और मोबाइल फ्रेंडली वेबसाइट।</p><a href="#contact">और जानें →</a></div>
+<div class="card"><div class="icon">🎨</div><h3>ग्राफिक डिजाइन</h3><p>पोस्टर, लोगो, बैनर और सोशल मीडिया डिजाइन।</p><a href="#contact">और जानें →</a></div>
+<div class="card"><div class="icon">📢</div><h3>डिजिटल मार्केटिंग</h3><p>सोशल मीडिया प्रचार और ऑनलाइन बिजनेस की मदद।</p><a href="#contact">और जानें →</a></div>
+<div class="card"><div class="icon">📝</div><h3>ऑनलाइन सेवाएँ</h3><p>ऑनलाइन फॉर्म, डॉक्यूमेंट और अन्य डिजिटल काम।</p><a href="#contact">और जानें →</a></div>
+<div class="card"><div class="icon">📱</div><h3>सॉफ्टवेयर और टूल्स</h3><p>आपके काम के लिए उपयोगी डिजिटल टूल्स की जानकारी।</p><a href="#contact">और जानें →</a></div>
+</div>
 </section>
 
 <section class="trust" id="about">
-  <div><h2>हम पर भरोसा क्यों करें?</h2><p>हमारा लक्ष्य है कि आपके डिजिटल काम को सरल और सुविधाजनक बनाया जाए।</p></div>
-  <div><h3>🛡️ भरोसेमंद सेवा</h3><p>काम में स्पष्टता और जिम्मेदारी।</p></div>
-  <div><h3>⏰ समय का ध्यान</h3><p>काम समय पर पूरा करने का प्रयास।</p></div>
-  <div><h3>🤝 उचित कीमत</h3><p>काम के अनुसार स्पष्ट कीमत।</p></div>
+<div><h2>हम पर भरोसा क्यों करें?</h2><p>हम आपके डिजिटल काम को सरल और सुविधाजनक बनाने का प्रयास करते हैं।</p></div>
+<div><h3>🛡️ भरोसेमंद सेवा</h3><p>काम में स्पष्टता और जिम्मेदारी।</p></div>
+<div><h3>⏰ समय पर डिलीवरी</h3><p>समय का ध्यान रखते हैं।</p></div>
+<div><h3>🤝 उचित कीमतें</h3><p>काम के अनुसार स्पष्ट कीमत।</p></div>
 </section>
 
 <section class="contact" id="contact">
-  <h2>अपना डिजिटल काम शुरू करें!</h2>
-  <p style="margin:15px">सेवा और कीमत जानने के लिए हमसे संपर्क करें।</p>
-  <a class="btn whatsapp" href="https://wa.me/91XXXXXXXXXX">WhatsApp पर संपर्क करें</a>
-  <p style="margin-top:15px;font-size:13px">नोट: WhatsApp लिंक में XXXXXXXXXX की जगह अपना नंबर डालें।</p>
+<h2>अब ही संपर्क करें</h2><p style="margin:15px">अपने काम की जानकारी के लिए हमसे संपर्क करें।</p>
+<a class="btn green" href="https://wa.me/91XXXXXXXXXX">WhatsApp पर बात करें →</a>
+<p style="margin-top:12px;font-size:13px">WhatsApp बटन चलाने के लिए कोड में अपना नंबर डालें।</p>
 </section>
 
-<footer>
-  <div><strong style="color:#20baff">GS Digital Solutions</strong><br>Your Vision · Our Digital Work</div>
-  <div><a href="#home">होम</a>　<a href="#services">सेवाएँ</a>　<a href="#contact">संपर्क</a></div>
-  <div>© 2026 GS Digital Solutions</div>
-</footer>
+<footer><div><strong style="color:#18baff">GS Digital Solutions</strong><br>Your Vision · Our Digital Work</div><div>होम　 सेवाएँ　 हमारे बारे में　 संपर्क</div><div>© 2026 GS Digital Solutions</div></footer>
 </body>
 </html>
