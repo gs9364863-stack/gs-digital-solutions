@@ -4,184 +4,226 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GS Digital Solutions</title>
-<meta name="description" content="GS Digital Solutions - Website Design, Online Forms, Typing and Digital Services.">
-
+<title>GS Digital Solutions | Your Digital Partner</title>
+<meta name="description" content="GS Digital Solutions - Website design, online form assistance, typing and digital services.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#050b1d;color:#f5f7ff;line-height:1.6}
-a{text-decoration:none;color:inherit}
-.container{width:90%;max-width:1150px;margin:auto}
-header{background:#070e22;border-bottom:1px solid #1b2b50;position:sticky;top:0;z-index:10}
-.nav{min-height:76px;display:flex;justify-content:space-between;align-items:center;gap:18px}
-.logo{font-size:27px;font-weight:900;color:#29d7ff}
-.logo span{color:#9c69ff}
-nav{display:flex;gap:22px}
-nav a{font-size:14px;color:#d9e3ff}
-nav a:hover{color:#29d7ff}
-.btn{display:inline-block;padding:12px 21px;border-radius:30px;background:linear-gradient(100deg,#078dff,#8c45f7);font-weight:bold;color:white}
-.btn-green{background:linear-gradient(100deg,#00c77b,#00e0a1);color:#001c16}
-.hero{background:radial-gradient(ellipse at 80% 45%,#252c89 0,transparent 36%),linear-gradient(120deg,#050b1d,#0b1740);overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:35px;padding:75px 0}
-.tag{display:inline-block;color:#8deaff;border:1px solid #274f88;background:#10234a;padding:7px 13px;border-radius:25px;font-size:13px;margin-bottom:18px}
-h1{font-size:clamp(40px,5vw,66px);line-height:1.08;letter-spacing:-2px}
-.gradient{background:linear-gradient(90deg,#32ddff,#9b65ff);-webkit-background-clip:text;color:transparent}
-.hero h2{font-size:21px;margin:17px 0 9px}
-p{color:#b9c8e8}
-.hero p{max-width:520px;margin-bottom:24px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap}
-.btn-outline{border:1px solid #536c9e;background:transparent}
-.stats{display:flex;gap:20px;flex-wrap:wrap;margin-top:25px;font-size:13px;color:#dbe8ff}
-.art{position:relative;min-height:330px;display:grid;place-items:center}
-.halo{position:absolute;width:280px;height:250px;background:#126dff;filter:blur(95px);opacity:.45}
-.laptop{position:relative;z-index:1;width:90%;max-width:420px}
-.screen{border:5px solid #8798bc;border-radius:14px 14px 5px 5px;background:linear-gradient(145deg,#102c60,#070f24);padding:18px;min-height:235px;box-shadow:0 0 35px #087fff55}
-.screenbar{display:flex;justify-content:space-between;color:#a8dcff;font-size:11px;border-bottom:1px solid #304b7c;padding-bottom:10px}
-.screen h3{font-size:27px;margin-top:35px}
-.screen h4{font-size:22px;color:#31dfff}
-.screen p{font-size:12px;margin:9px 0}
-.screen button{border:0;padding:8px 13px;border-radius:6px;background:#078dff;color:white}
-.laptop-base{height:13px;width:110%;margin-left:-5%;background:linear-gradient(#d4def1,#65789e);border-radius:2px 2px 15px 15px}
-.phone{position:absolute;z-index:2;right:0;bottom:5px;width:76px;height:145px;border:4px solid #a3b1d0;border-radius:16px;background:#09152f;text-align:center;padding:20px 5px;box-shadow:0 0 25px #934fff55}
-.phone b{display:block;color:#2ddcff;margin-top:15px;font-size:12px}
-.plant{position:absolute;left:0;bottom:10px;font-size:60px}
-section{padding:65px 0}
-.section-title{text-align:center;margin-bottom:30px}
-.eyebrow{font-size:12px;letter-spacing:2px;color:#32dfff;font-weight:bold}
-h2{font-size:clamp(28px,3vw,38px);line-height:1.25}
-.section-title p{margin-top:8px}
-.services{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}
-.card{background:linear-gradient(145deg,#0d1b3b,#081229);border:1px solid #213d6c;border-radius:16px;padding:21px 16px;transition:.2s}
-.card:hover{transform:translateY(-5px);border-color:#30dfff}
-.icon{width:48px;height:48px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,#087fff,#8c45f7);font-size:24px;margin-bottom:14px}
-.card h3{font-size:16px;margin-bottom:8px}
-.card p{font-size:13px;min-height:65px}
-.card a{display:inline-block;margin-top:12px;color:#32dfff;font-size:13px;font-weight:bold}
-.about{background:linear-gradient(120deg,#071127,#0a1735)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
-.about p{margin:15px 0 22px}
-.features{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-.feature{padding:18px;border:1px solid #25436e;background:#0a1935;border-radius:13px}
-.feature b{display:block;color:#32dfff;font-size:18px}
-.feature span{font-size:13px;color:#b9c8e8}
-.contact-box{padding:35px;border:1px solid #285b9c;border-radius:20px;background:radial-gradient(ellipse at right,#183c7c,#08152f 70%);display:flex;justify-content:space-between;align-items:center;gap:20px}
-.contact-box p{margin-top:8px}
-footer{border-top:1px solid #1c3056;padding:25px 0}
-.footer-row{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;font-size:13px;color:#b9c8e8}
-@media(max-width:900px){.services{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:650px){
-.nav{padding:13px 0;flex-wrap:wrap}
-nav{order:3;width:100%;justify-content:space-between;gap:8px}
-nav a{font-size:12px}
-.nav>.btn{padding:9px 12px;font-size:12px}
-.hero-grid{grid-template-columns:1fr;padding:48px 0 20px}
-.art{min-height:285px}
-.screen{min-height:210px;padding:12px}
-.screen h3{font-size:23px;margin-top:25px}
-.screen h4{font-size:19px}
-.plant{font-size:45px}
-.phone{transform:scale(.85);transform-origin:bottom right}
-section{padding:45px 0}
-.services{grid-template-columns:repeat(2,1fr);gap:10px}
-.card{padding:15px 12px}
-.card p{min-height:0}
-.about-grid{grid-template-columns:1fr}
-.contact-box{padding:24px;align-items:flex-start;flex-direction:column}
+body{
+  font-family:Arial,sans-serif;
+  background:#080d1c;
+  color:#f4f7ff;
+  line-height:1.7
 }
-@media(max-width:380px){.services{grid-template-columns:1fr}}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1120px;margin:auto}
+header{
+  position:sticky;top:0;z-index:10;
+  background:rgba(8,13,28,.94);
+  border-bottom:1px solid #202b48;
+  backdrop-filter:blur(12px)
+}
+nav{min-height:76px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px}
+.logo{font-size:23px;font-weight:800}
+.logo span{color:#6d8cff}
+.navlinks{display:flex;gap:24px;flex-wrap:wrap}
+.navlinks a{color:#c8d1e8;font-size:14px}
+.navlinks a:hover{color:#8fa6ff}
+.hero{padding:90px 0 80px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;
+  align-items:center;gap:45px}
+.tag{
+ display:inline-block;padding:7px 14px;border-radius:30px;
+ color:#b9c7ff;background:#172345;border:1px solid #35477d;
+ font-size:13px;margin-bottom:22px
+}
+h1{font-size:clamp(38px,6vw,65px);line-height:1.12;
+  letter-spacing:-1.5px;margin-bottom:22px}
+.gradient{background:linear-gradient(90deg,#70a5ff,#bd8cff);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p,.section-intro{color:#aebbd5;font-size:17px;max-width:600px}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:13px 21px;border-radius:12px;
+  font-weight:700;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:linear-gradient(110deg,#4778ff,#965dff);color:white;
+  box-shadow:0 10px 35px #4c68ff35}
+.secondary{border:1px solid #354361;background:#111a30}
+.art{
+ min-height:330px;border:1px solid #29395f;border-radius:28px;
+ background:radial-gradient(ellipse at 50% 20%,#3d4fa0 0%,#171e43 42%,#10172b 75%);
+ display:flex;align-items:center;justify-content:center;padding:28px;
+ box-shadow:0 25px 70px #0005
+}
+.device{width:100%;max-width:330px;border:2px solid #7388ff;
+  border-radius:18px;padding:15px;background:#0a1022;
+  transform:rotate(-3deg);box-shadow:0 0 45px #596eff30}
+.device-top{display:flex;gap:5px;margin-bottom:18px}
+.dot{width:8px;height:8px;border-radius:50%;background:#8298ff}
+.screen-card{padding:16px;border-radius:12px;background:linear-gradient(135deg,#222f62,#20203d);margin:10px 0}
+.screen-card strong{font-size:20px}
+.screen-bars{height:8px;border-radius:10px;background:#46557f;margin-top:10px;width:80%}
+.screen-bars.short{width:55%}
+.section{padding:78px 0}
+.section-head{text-align:center;margin-bottom:38px}
+h2{font-size:clamp(28px,4vw,40px);line-height:1.2;margin-bottom:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{padding:26px;border-radius:18px;background:#10182b;
+  border:1px solid #263452;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#657eff}
+.icon{font-size:29px;margin-bottom:14px}
+.card h3{font-size:19px;margin-bottom:10px}
+.card p{color:#aab7d0;font-size:14px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about-panel{padding:28px;border:1px solid #2a385a;
+  border-radius:20px;background:linear-gradient(145deg,#151f3b,#0d1426)}
+.points{list-style:none;margin-top:20px}
+.points li{margin:12px 0;color:#d6dff2}
+.points li:before{content:"✓";color:#8ca6ff;font-weight:bold;margin-right:10px}
+.contact-box{
+ text-align:center;padding:45px 25px;border-radius:25px;
+ border:1px solid #384c83;
+ background:radial-gradient(ellipse at top,#27396b,#10172b 65%)
+}
+.contact-box p{color:#b6c3dc;margin:14px auto 24px;max-width:600px}
+footer{border-top:1px solid #202b48;padding:25px 0;color:#98a6c0;font-size:13px}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:760px){
+ nav{padding:15px 0;align-items:flex-start;flex-direction:column}
+ .navlinks{gap:14px}
+ .hero{padding:58px 0}
+ .hero-grid,.about-grid{grid-template-columns:1fr}
+ .art{min-height:270px}
+ .cards{grid-template-columns:1fr}
+ .section{padding:58px 0}
+}
 </style>
 </head>
 <body>
-
 <header>
-<div class="container nav">
-<a class="logo" href="#home">GS <span>Digital</span></a>
-<nav>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
-<a class="btn btn-green" href="#contact">WhatsApp ↗</a>
-</div>
+ <nav class="container">
+  <a class="logo" href="#home">GS <span>Digital Solutions</span></a>
+  <div class="navlinks">
+   <a href="#home">Home</a>
+   <a href="#services">Services</a>
+   <a href="#about">About</a>
+   <a href="#contact">Contact</a>
+  </div>
+ </nav>
 </header>
 
 <main>
 <section class="hero" id="home">
-<div class="container hero-grid">
-<div>
-<span class="tag">✦ Your Digital Growth Partner</span>
-<h1>Smart Ideas.<br><span class="gradient">Digital Solutions.</span></h1>
-<h2>Your Trusted Online Service Center</h2>
-<p>Website design, graphic design, online form assistance, Hindi-English typing and digital services — all in one place.</p>
-<div class="buttons">
-<a class="btn" href="#services">Explore Services →</a>
-<a class="btn btn-outline" href="#contact">Contact Us</a>
-</div>
-<div class="stats"><span>✓ Friendly Support</span><span>✓ Affordable Services</span></div>
-</div>
-<div class="art">
-<div class="halo"></div><div class="plant">🪴</div>
-<div class="laptop">
-<div class="screen">
-<div class="screenbar"><b>GS DIGITAL</b><span>Home　 Services</span></div>
-<h3>Build Your</h3><h4>Digital Future</h4>
-<p>Creative websites for modern ideas.</p>
-<button onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Get Started →</button>
-</div><div class="laptop-base"></div>
-</div>
-<div class="phone">GS<b>WEB<br>DESIGN<br>DIGITAL</b></div>
-</div>
-</div>
+ <div class="container hero-grid">
+  <div>
+   <span class="tag">YOUR DIGITAL PARTNER</span>
+   <h1>Smart Ideas.<br><span class="gradient">Digital Solutions.</span></h1>
+   <p>Welcome to GS Digital Solutions. We help you take your ideas online with website design, online form assistance, typing and useful digital services.</p>
+   <div class="actions">
+    <a class="btn primary" href="#services">Explore Services ↗</a>
+    <a class="btn secondary" href="#contact">Contact Us</a>
+   </div>
+  </div>
+  <div class="art" aria-label="Illustration of a digital dashboard">
+   <div class="device">
+    <div class="device-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+    <div class="screen-card">
+     <span style="color:#aebeff;font-size:12px">WELCOME TO</span><br>
+     <strong>GS Digital</strong>
+     <div class="screen-bars"></div>
+     <div class="screen-bars short"></div>
+    </div>
+    <div class="screen-card">
+     <span style="color:#c4d0ff">✦ Websites</span><br>
+     <span style="color:#c4d0ff">✦ Digital Services</span><br>
+     <span style="color:#c4d0ff">✦ Online Assistance</span>
+    </div>
+   </div>
+  </div>
+ </div>
 </section>
 
-<section id="services">
-<div class="container">
-<div class="section-title"><div class="eyebrow">WHAT WE OFFER</div><h2>Our <span class="gradient">Services</span></h2><p>Digital help to make your work easier.</p></div>
-<div class="services">
-<article class="card"><div class="icon">💻</div><h3>Website Design</h3><p>Modern, stylish and mobile-friendly websites.</p><a href="#contact">Enquire →</a></article>
-<article class="card"><div class="icon">🎨</div><h3>Graphic Design</h3><p>Posters, logos, banners and social media designs.</p><a href="#contact">Enquire →</a></article>
-<article class="card"><div class="icon">📝</div><h3>Online Form Help</h3><p>Application forms and online process assistance.</p><a href="#contact">Enquire →</a></article>
-<article class="card"><div class="icon">⌨️</div><h3>Typing & Data Entry</h3><p>Hindi-English typing and document work.</p><a href="#contact">Enquire →</a></article>
-<article class="card"><div class="icon">⚙️</div><h3>Digital Services</h3><p>Helpful online services for your everyday needs.</p><a href="#contact">Enquire →</a></article>
-</div>
-</div>
+<section class="section" id="services">
+ <div class="container">
+  <div class="section-head">
+   <span class="tag">WHAT WE DO</span>
+   <h2>Our <span class="gradient">Services</span></h2>
+   <p class="section-intro" style="margin:auto">Simple digital support for your everyday needs.</p>
+  </div>
+  <div class="cards">
+   <article class="card">
+    <div class="icon">🌐</div>
+    <h3>Website Design</h3>
+    <p>Modern, mobile-friendly websites for individuals, small businesses and new ideas.</p>
+   </article>
+   <article class="card">
+    <div class="icon">📝</div>
+    <h3>Online Form Assistance</h3>
+    <p>Help with filling online forms and understanding the information required.</p>
+   </article>
+   <article class="card">
+    <div class="icon">⌨️</div>
+    <h3>Typing & Documents</h3>
+    <p>Typing support and basic document preparation for your everyday work.</p>
+   </article>
+   <article class="card">
+    <div class="icon">💻</div>
+    <h3>Digital Support</h3>
+    <p>Guidance with common online services and digital tasks.</p>
+   </article>
+   <article class="card">
+    <div class="icon">📱</div>
+    <h3>Business Online Presence</h3>
+    <p>Get started with a clear online profile for your service or business.</p>
+   </article>
+   <article class="card">
+    <div class="icon">🤝</div>
+    <h3>Customer Assistance</h3>
+    <p>Tell us what you need and we will discuss the available support with you.</p>
+   </article>
+  </div>
+ </div>
 </section>
 
-<section class="about" id="about">
-<div class="container about-grid">
-<div>
-<div class="eyebrow">ABOUT GS DIGITAL</div>
-<h2>Simple. Smart.<br><span class="gradient">Reliable.</span></h2>
-<p>हमारा उद्देश्य डिजिटल काम को आसान बनाना है। GS Digital Solutions पर आपको आपकी ज़रूरत के अनुसार ऑनलाइन सेवाओं में सहायता मिल सकती है।</p>
-<a class="btn" href="#contact">Let's Connect →</a>
-</div>
-<div class="features">
-<div class="feature"><b>✓ Careful Work</b><span>काम पर ध्यान और गुणवत्ता</span></div>
-<div class="feature"><b>⚡ Quick Response</b><span>आपके संदेश का जवाब</span></div>
-<div class="feature"><b>₹ Fair Pricing</b><span>सेवा के अनुसार उचित कीमत</span></div>
-<div class="feature"><b>♡ Helpful Support</b><span>आपकी ज़रूरत पर सहायता</span></div>
-</div>
-</div>
+<section class="section" id="about">
+ <div class="container about-grid">
+  <div>
+   <span class="tag">ABOUT US</span>
+   <h2>Technology made <span class="gradient">simpler.</span></h2>
+   <p class="section-intro">GS Digital Solutions is focused on making everyday digital tasks easier to understand and access.</p>
+  </div>
+  <div class="about-panel">
+   <h3>A simple, customer-first approach</h3>
+   <ul class="points">
+    <li>Clear communication</li>
+    <li>Friendly digital assistance</li>
+    <li>Responsive website design</li>
+    <li>Discuss the service before starting</li>
+   </ul>
+  </div>
+ </div>
 </section>
 
-<section id="contact">
-<div class="container">
-<div class="contact-box">
-<div><div class="eyebrow">LET'S TALK</div><h2>Need Digital Help?</h2><p>अपनी ज़रूरत बताने के लिए WhatsApp पर संपर्क करें।</p></div>
-<a class="btn btn-green" href="https://wa.me/" target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
-</div>
-</div>
+<section class="section" id="contact">
+ <div class="container">
+  <div class="contact-box">
+   <span class="tag">LET'S CONNECT</span>
+   <h2>Have a project in mind?</h2>
+   <p>Contact GS Digital Solutions to discuss website design, typing or online service assistance.</p>
+   <!-- Replace YOURNUMBER with your WhatsApp number including country code, digits only -->
+   <a class="btn primary" href="https://wa.me/YOURNUMBER" target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+   <p style="font-size:12px;margin-bottom:0">WhatsApp button needs your number added in the code.</p>
+  </div>
+ </div>
 </section>
 </main>
 
 <footer>
-<div class="container footer-row">
-<strong>GS Digital Solutions</strong>
-<span>© 2026 GS Digital Solutions. All rights reserved.</span>
-<a href="#home">Back to Top ↑</a>
-</div>
+ <div class="container footer-inner">
+  <span>© 2026 GS Digital Solutions</span>
+  <span>Built with care for your digital journey.</span>
+ </div>
 </footer>
 </body>
 </html>
