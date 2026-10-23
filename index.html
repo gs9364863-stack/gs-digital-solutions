@@ -227,3 +227,696 @@ footer{border-top:1px solid #202b48;padding:25px 0;color:#98a6c0;font-size:13px}
 </footer>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GS Digital Solutions | Your Digital Partner</title>
+<meta name="description" content="GS Digital Solutions - Website design, online form assistance, typing and digital services.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,sans-serif;
+  background:#080d1c;
+  color:#f4f7ff;
+  line-height:1.7
+}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1120px;margin:auto}
+header{
+  position:sticky;top:0;z-index:10;
+  background:rgba(8,13,28,.94);
+  border-bottom:1px solid #202b48;
+  backdrop-filter:blur(12px)
+}
+nav{min-height:76px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px}
+.logo{font-size:23px;font-weight:800}
+.logo span{color:#6d8cff}
+.navlinks{display:flex;gap:24px;flex-wrap:wrap}
+.navlinks a{color:#c8d1e8;font-size:14px}
+.navlinks a:hover{color:#8fa6ff}
+.hero{padding:90px 0 80px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;
+  align-items:center;gap:45px}
+.tag{
+ display:inline-block;padding:7px 14px;border-radius:30px;
+ color:#b9c7ff;background:#172345;border:1px solid #35477d;
+ font-size:13px;margin-bottom:22px
+}
+h1{font-size:clamp(38px,6vw,65px);line-height:1.12;
+  letter-spacing:-1.5px;margin-bottom:22px}
+.gradient{background:linear-gradient(90deg,#70a5ff,#bd8cff);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p,.section-intro{color:#aebbd5;font-size:17px;max-width:600px}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:13px 21px;border-radius:12px;
+  font-weight:700;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:linear-gradient(110deg,#4778ff,#965dff);color:white;
+  box-shadow:0 10px 35px #4c68ff35}
+.secondary{border:1px solid #354361;background:#111a30}
+.art{
+ min-height:330px;border:1px solid #29395f;border-radius:28px;
+ background:radial-gradient(ellipse at 50% 20%,#3d4fa0 0%,#171e43 42%,#10172b 75%);
+ display:flex;align-items:center;justify-content:center;padding:28px;
+ box-shadow:0 25px 70px #0005
+}
+.device{width:100%;max-width:330px;border:2px solid #7388ff;
+  border-radius:18px;padding:15px;background:#0a1022;
+  transform:rotate(-3deg);box-shadow:0 0 45px #596eff30}
+.device-top{display:flex;gap:5px;margin-bottom:18px}
+.dot{width:8px;height:8px;border-radius:50%;background:#8298ff}
+.screen-card{padding:16px;border-radius:12px;background:linear-gradient(135deg,#222f62,#20203d);margin:10px 0}
+.screen-card strong{font-size:20px}
+.screen-bars{height:8px;border-radius:10px;background:#46557f;margin-top:10px;width:80%}
+.screen-bars.short{width:55%}
+.section{padding:78px 0}
+.section-head{text-align:center;margin-bottom:38px}
+h2{font-size:clamp(28px,4vw,40px);line-height:1.2;margin-bottom:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{padding:26px;border-radius:18px;background:#10182b;
+  border:1px solid #263452;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#657eff}
+.icon{font-size:29px;margin-bottom:14px}
+.card h3{font-size:19px;margin-bottom:10px}
+.card p{color:#aab7d0;font-size:14px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about-panel{padding:28px;border:1px solid #2a385a;
+  border-radius:20px;background:linear-gradient(145deg,#151f3b,#0d1426)}
+.points{list-style:none;margin-top:20px}
+.points li{margin:12px 0;color:#d6dff2}
+.points li:before{content:"✓";color:#8ca6ff;font-weight:bold;margin-right:10px}
+.contact-box{
+ text-align:center;padding:45px 25px;border-radius:25px;
+ border:1px solid #384c83;
+ background:radial-gradient(ellipse at top,#27396b,#10172b 65%)
+}
+.contact-box p{color:#b6c3dc;margin:14px auto 24px;max-width:600px}
+footer{border-top:1px solid #202b48;padding:25px 0;color:#98a6c0;font-size:13px}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:760px){
+ nav{padding:15px 0;align-items:flex-start;flex-direction:column}
+ .navlinks{gap:14px}
+ .hero{padding:58px 0}
+ .hero-grid,.about-grid{grid-template-columns:1fr}
+ .art{min-height:270px}
+ .cards{grid-template-columns:1fr}
+ .section{padding:58px 0}
+}
+</style>
+</head>
+<body>
+<header>
+ <nav class="container">
+  <a class="logo" href="#home">GS <span>Digital Solutions</span></a>
+  <div class="navlinks">
+   <a href="#home">Home</a>
+   <a href="#services">Services</a>
+   <a href="#about">About</a>
+   <a href="#contact">Contact</a>
+  </div>
+ </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="container hero-grid">
+  <div>
+   <span class="tag">YOUR DIGITAL PARTNER</span>
+   <h1>Smart Ideas.<br><span class="gradient">Digital Solutions.</span></h1>
+   <p>Welcome to GS Digital Solutions. We help you take your ideas online with website design, online form assistance, typing and useful digital services.</p>
+   <div class="actions">
+    <a class="btn primary" href="#services">Explore Services ↗</a>
+    <a class="btn secondary" href="#contact">Contact Us</a>
+   </div>
+  </div>
+  <div class="art" aria-label="Illustration of a digital dashboard">
+   <div class="device">
+    <div class="device-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+    <div class="screen-card">
+     <span style="color:#aebeff;font-size:12px">WELCOME TO</span><br>
+     <strong>GS Digital</strong>
+     <div class="screen-bars"></div>
+     <div class="screen-bars short"></div>
+    </div>
+    <div class="screen-card">
+     <span style="color:#c4d0ff">✦ Websites</span><br>
+     <span style="color:#c4d0ff">✦ Digital Services</span><br>
+     <span style="color:#c4d0ff">✦ Online Assistance</span>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="services">
+ <div class="container">
+  <div class="section-head">
+   <span class="tag">WHAT WE DO</span>
+   <h2>Our <span class="gradient">Services</span></h2>
+   <p class="section-intro" style="margin:auto">Simple digital support for your everyday needs.</p>
+  </div>
+  <div class="cards">
+   <article class="card">
+    <div class="icon">🌐</div>
+    <h3>Website Design</h3>
+    <p>Modern, mobile-friendly websites for individuals, small businesses and new ideas.</p>
+   </article>
+   <article class="card">
+    <div class="icon">📝</div>
+    <h3>Online Form Assistance</h3>
+    <p>Help with filling online forms and understanding the information required.</p>
+   </article>
+   <article class="card">
+    <div class="icon">⌨️</div>
+    <h3>Typing & Documents</h3>
+    <p>Typing support and basic document preparation for your everyday work.</p>
+   </article>
+   <article class="card">
+    <div class="icon">💻</div>
+    <h3>Digital Support</h3>
+    <p>Guidance with common online services and digital tasks.</p>
+   </article>
+   <article class="card">
+    <div class="icon">📱</div>
+    <h3>Business Online Presence</h3>
+    <p>Get started with a clear online profile for your service or business.</p>
+   </article>
+   <article class="card">
+    <div class="icon">🤝</div>
+    <h3>Customer Assistance</h3>
+    <p>Tell us what you need and we will discuss the available support with you.</p>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="about">
+ <div class="container about-grid">
+  <div>
+   <span class="tag">ABOUT US</span>
+   <h2>Technology made <span class="gradient">simpler.</span></h2>
+   <p class="section-intro">GS Digital Solutions is focused on making everyday digital tasks easier to understand and access.</p>
+  </div>
+  <div class="about-panel">
+   <h3>A simple, customer-first approach</h3>
+   <ul class="points">
+    <li>Clear communication</li>
+    <li>Friendly digital assistance</li>
+    <li>Responsive website design</li>
+    <li>Discuss the service before starting</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="contact">
+ <div class="container">
+  <div class="contact-box">
+   <span class="tag">LET'S CONNECT</span>
+   <h2>Have a project in mind?</h2>
+   <p>Contact GS Digital Solutions to discuss website design, typing or online service assistance.</p>
+   <!-- Replace YOURNUMBER with your WhatsApp number including country code, digits only -->
+   <a class="btn primary" href="https://wa.me/YOURNUMBER" target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+   <p style="font-size:12px;margin-bottom:0">WhatsApp button needs your number added in the code.</p>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container footer-inner">
+  <span>© 2026 GS Digital Solutions</span>
+  <span>Built with care for your digital journey.</span>
+ </div>
+</footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GS Digital Solutions | Your Digital Partner</title>
+<meta name="description" content="GS Digital Solutions - Website design, online form assistance, typing and digital services.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,sans-serif;
+  background:#080d1c;
+  color:#f4f7ff;
+  line-height:1.7
+}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1120px;margin:auto}
+header{
+  position:sticky;top:0;z-index:10;
+  background:rgba(8,13,28,.94);
+  border-bottom:1px solid #202b48;
+  backdrop-filter:blur(12px)
+}
+nav{min-height:76px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px}
+.logo{font-size:23px;font-weight:800}
+.logo span{color:#6d8cff}
+.navlinks{display:flex;gap:24px;flex-wrap:wrap}
+.navlinks a{color:#c8d1e8;font-size:14px}
+.navlinks a:hover{color:#8fa6ff}
+.hero{padding:90px 0 80px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;
+  align-items:center;gap:45px}
+.tag{
+ display:inline-block;padding:7px 14px;border-radius:30px;
+ color:#b9c7ff;background:#172345;border:1px solid #35477d;
+ font-size:13px;margin-bottom:22px
+}
+h1{font-size:clamp(38px,6vw,65px);line-height:1.12;
+  letter-spacing:-1.5px;margin-bottom:22px}
+.gradient{background:linear-gradient(90deg,#70a5ff,#bd8cff);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p,.section-intro{color:#aebbd5;font-size:17px;max-width:600px}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:13px 21px;border-radius:12px;
+  font-weight:700;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:linear-gradient(110deg,#4778ff,#965dff);color:white;
+  box-shadow:0 10px 35px #4c68ff35}
+.secondary{border:1px solid #354361;background:#111a30}
+.art{
+ min-height:330px;border:1px solid #29395f;border-radius:28px;
+ background:radial-gradient(ellipse at 50% 20%,#3d4fa0 0%,#171e43 42%,#10172b 75%);
+ display:flex;align-items:center;justify-content:center;padding:28px;
+ box-shadow:0 25px 70px #0005
+}
+.device{width:100%;max-width:330px;border:2px solid #7388ff;
+  border-radius:18px;padding:15px;background:#0a1022;
+  transform:rotate(-3deg);box-shadow:0 0 45px #596eff30}
+.device-top{display:flex;gap:5px;margin-bottom:18px}
+.dot{width:8px;height:8px;border-radius:50%;background:#8298ff}
+.screen-card{padding:16px;border-radius:12px;background:linear-gradient(135deg,#222f62,#20203d);margin:10px 0}
+.screen-card strong{font-size:20px}
+.screen-bars{height:8px;border-radius:10px;background:#46557f;margin-top:10px;width:80%}
+.screen-bars.short{width:55%}
+.section{padding:78px 0}
+.section-head{text-align:center;margin-bottom:38px}
+h2{font-size:clamp(28px,4vw,40px);line-height:1.2;margin-bottom:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{padding:26px;border-radius:18px;background:#10182b;
+  border:1px solid #263452;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#657eff}
+.icon{font-size:29px;margin-bottom:14px}
+.card h3{font-size:19px;margin-bottom:10px}
+.card p{color:#aab7d0;font-size:14px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about-panel{padding:28px;border:1px solid #2a385a;
+  border-radius:20px;background:linear-gradient(145deg,#151f3b,#0d1426)}
+.points{list-style:none;margin-top:20px}
+.points li{margin:12px 0;color:#d6dff2}
+.points li:before{content:"✓";color:#8ca6ff;font-weight:bold;margin-right:10px}
+.contact-box{
+ text-align:center;padding:45px 25px;border-radius:25px;
+ border:1px solid #384c83;
+ background:radial-gradient(ellipse at top,#27396b,#10172b 65%)
+}
+.contact-box p{color:#b6c3dc;margin:14px auto 24px;max-width:600px}
+footer{border-top:1px solid #202b48;padding:25px 0;color:#98a6c0;font-size:13px}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:760px){
+ nav{padding:15px 0;align-items:flex-start;flex-direction:column}
+ .navlinks{gap:14px}
+ .hero{padding:58px 0}
+ .hero-grid,.about-grid{grid-template-columns:1fr}
+ .art{min-height:270px}
+ .cards{grid-template-columns:1fr}
+ .section{padding:58px 0}
+}
+</style>
+</head>
+<body>
+<header>
+ <nav class="container">
+  <a class="logo" href="#home">GS <span>Digital Solutions</span></a>
+  <div class="navlinks">
+   <a href="#home">Home</a>
+   <a href="#services">Services</a>
+   <a href="#about">About</a>
+   <a href="#contact">Contact</a>
+  </div>
+ </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="container hero-grid">
+  <div>
+   <span class="tag">YOUR DIGITAL PARTNER</span>
+   <h1>Smart Ideas.<br><span class="gradient">Digital Solutions.</span></h1>
+   <p>Welcome to GS Digital Solutions. We help you take your ideas online with website design, online form assistance, typing and useful digital services.</p>
+   <div class="actions">
+    <a class="btn primary" href="#services">Explore Services ↗</a>
+    <a class="btn secondary" href="#contact">Contact Us</a>
+   </div>
+  </div>
+  <div class="art" aria-label="Illustration of a digital dashboard">
+   <div class="device">
+    <div class="device-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+    <div class="screen-card">
+     <span style="color:#aebeff;font-size:12px">WELCOME TO</span><br>
+     <strong>GS Digital</strong>
+     <div class="screen-bars"></div>
+     <div class="screen-bars short"></div>
+    </div>
+    <div class="screen-card">
+     <span style="color:#c4d0ff">✦ Websites</span><br>
+     <span style="color:#c4d0ff">✦ Digital Services</span><br>
+     <span style="color:#c4d0ff">✦ Online Assistance</span>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="services">
+ <div class="container">
+  <div class="section-head">
+   <span class="tag">WHAT WE DO</span>
+   <h2>Our <span class="gradient">Services</span></h2>
+   <p class="section-intro" style="margin:auto">Simple digital support for your everyday needs.</p>
+  </div>
+  <div class="cards">
+   <article class="card">
+    <div class="icon">🌐</div>
+    <h3>Website Design</h3>
+    <p>Modern, mobile-friendly websites for individuals, small businesses and new ideas.</p>
+   </article>
+   <article class="card">
+    <div class="icon">📝</div>
+    <h3>Online Form Assistance</h3>
+    <p>Help with filling online forms and understanding the information required.</p>
+   </article>
+   <article class="card">
+    <div class="icon">⌨️</div>
+    <h3>Typing & Documents</h3>
+    <p>Typing support and basic document preparation for your everyday work.</p>
+   </article>
+   <article class="card">
+    <div class="icon">💻</div>
+    <h3>Digital Support</h3>
+    <p>Guidance with common online services and digital tasks.</p>
+   </article>
+   <article class="card">
+    <div class="icon">📱</div>
+    <h3>Business Online Presence</h3>
+    <p>Get started with a clear online profile for your service or business.</p>
+   </article>
+   <article class="card">
+    <div class="icon">🤝</div>
+    <h3>Customer Assistance</h3>
+    <p>Tell us what you need and we will discuss the available support with you.</p>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="about">
+ <div class="container about-grid">
+  <div>
+   <span class="tag">ABOUT US</span>
+   <h2>Technology made <span class="gradient">simpler.</span></h2>
+   <p class="section-intro">GS Digital Solutions is focused on making everyday digital tasks easier to understand and access.</p>
+  </div>
+  <div class="about-panel">
+   <h3>A simple, customer-first approach</h3>
+   <ul class="points">
+    <li>Clear communication</li>
+    <li>Friendly digital assistance</li>
+    <li>Responsive website design</li>
+    <li>Discuss the service before starting</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="contact">
+ <div class="container">
+  <div class="contact-box">
+   <span class="tag">LET'S CONNECT</span>
+   <h2>Have a project in mind?</h2>
+   <p>Contact GS Digital Solutions to discuss website design, typing or online service assistance.</p>
+   <!-- Replace YOURNUMBER with your WhatsApp number including country code, digits only -->
+   <a class="btn primary" href="https://wa.me/YOURNUMBER" target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+   <p style="font-size:12px;margin-bottom:0">WhatsApp button needs your number added in the code.</p>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container footer-inner">
+  <span>© 2026 GS Digital Solutions</span>
+  <span>Built with care for your digital journey.</span>
+ </div>
+</footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GS Digital Solutions | Your Digital Partner</title>
+<meta name="description" content="GS Digital Solutions - Website design, online form assistance, typing and digital services.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,sans-serif;
+  background:#080d1c;
+  color:#f4f7ff;
+  line-height:1.7
+}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1120px;margin:auto}
+header{
+  position:sticky;top:0;z-index:10;
+  background:rgba(8,13,28,.94);
+  border-bottom:1px solid #202b48;
+  backdrop-filter:blur(12px)
+}
+nav{min-height:76px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px}
+.logo{font-size:23px;font-weight:800}
+.logo span{color:#6d8cff}
+.navlinks{display:flex;gap:24px;flex-wrap:wrap}
+.navlinks a{color:#c8d1e8;font-size:14px}
+.navlinks a:hover{color:#8fa6ff}
+.hero{padding:90px 0 80px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;
+  align-items:center;gap:45px}
+.tag{
+ display:inline-block;padding:7px 14px;border-radius:30px;
+ color:#b9c7ff;background:#172345;border:1px solid #35477d;
+ font-size:13px;margin-bottom:22px
+}
+h1{font-size:clamp(38px,6vw,65px);line-height:1.12;
+  letter-spacing:-1.5px;margin-bottom:22px}
+.gradient{background:linear-gradient(90deg,#70a5ff,#bd8cff);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p,.section-intro{color:#aebbd5;font-size:17px;max-width:600px}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:13px 21px;border-radius:12px;
+  font-weight:700;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:linear-gradient(110deg,#4778ff,#965dff);color:white;
+  box-shadow:0 10px 35px #4c68ff35}
+.secondary{border:1px solid #354361;background:#111a30}
+.art{
+ min-height:330px;border:1px solid #29395f;border-radius:28px;
+ background:radial-gradient(ellipse at 50% 20%,#3d4fa0 0%,#171e43 42%,#10172b 75%);
+ display:flex;align-items:center;justify-content:center;padding:28px;
+ box-shadow:0 25px 70px #0005
+}
+.device{width:100%;max-width:330px;border:2px solid #7388ff;
+  border-radius:18px;padding:15px;background:#0a1022;
+  transform:rotate(-3deg);box-shadow:0 0 45px #596eff30}
+.device-top{display:flex;gap:5px;margin-bottom:18px}
+.dot{width:8px;height:8px;border-radius:50%;background:#8298ff}
+.screen-card{padding:16px;border-radius:12px;background:linear-gradient(135deg,#222f62,#20203d);margin:10px 0}
+.screen-card strong{font-size:20px}
+.screen-bars{height:8px;border-radius:10px;background:#46557f;margin-top:10px;width:80%}
+.screen-bars.short{width:55%}
+.section{padding:78px 0}
+.section-head{text-align:center;margin-bottom:38px}
+h2{font-size:clamp(28px,4vw,40px);line-height:1.2;margin-bottom:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{padding:26px;border-radius:18px;background:#10182b;
+  border:1px solid #263452;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#657eff}
+.icon{font-size:29px;margin-bottom:14px}
+.card h3{font-size:19px;margin-bottom:10px}
+.card p{color:#aab7d0;font-size:14px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about-panel{padding:28px;border:1px solid #2a385a;
+  border-radius:20px;background:linear-gradient(145deg,#151f3b,#0d1426)}
+.points{list-style:none;margin-top:20px}
+.points li{margin:12px 0;color:#d6dff2}
+.points li:before{content:"✓";color:#8ca6ff;font-weight:bold;margin-right:10px}
+.contact-box{
+ text-align:center;padding:45px 25px;border-radius:25px;
+ border:1px solid #384c83;
+ background:radial-gradient(ellipse at top,#27396b,#10172b 65%)
+}
+.contact-box p{color:#b6c3dc;margin:14px auto 24px;max-width:600px}
+footer{border-top:1px solid #202b48;padding:25px 0;color:#98a6c0;font-size:13px}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:760px){
+ nav{padding:15px 0;align-items:flex-start;flex-direction:column}
+ .navlinks{gap:14px}
+ .hero{padding:58px 0}
+ .hero-grid,.about-grid{grid-template-columns:1fr}
+ .art{min-height:270px}
+ .cards{grid-template-columns:1fr}
+ .section{padding:58px 0}
+}
+</style>
+</head>
+<body>
+<header>
+ <nav class="container">
+  <a class="logo" href="#home">GS <span>Digital Solutions</span></a>
+  <div class="navlinks">
+   <a href="#home">Home</a>
+   <a href="#services">Services</a>
+   <a href="#about">About</a>
+   <a href="#contact">Contact</a>
+  </div>
+ </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <div class="container hero-grid">
+  <div>
+   <span class="tag">YOUR DIGITAL PARTNER</span>
+   <h1>Smart Ideas.<br><span class="gradient">Digital Solutions.</span></h1>
+   <p>Welcome to GS Digital Solutions. We help you take your ideas online with website design, online form assistance, typing and useful digital services.</p>
+   <div class="actions">
+    <a class="btn primary" href="#services">Explore Services ↗</a>
+    <a class="btn secondary" href="#contact">Contact Us</a>
+   </div>
+  </div>
+  <div class="art" aria-label="Illustration of a digital dashboard">
+   <div class="device">
+    <div class="device-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+    <div class="screen-card">
+     <span style="color:#aebeff;font-size:12px">WELCOME TO</span><br>
+     <strong>GS Digital</strong>
+     <div class="screen-bars"></div>
+     <div class="screen-bars short"></div>
+    </div>
+    <div class="screen-card">
+     <span style="color:#c4d0ff">✦ Websites</span><br>
+     <span style="color:#c4d0ff">✦ Digital Services</span><br>
+     <span style="color:#c4d0ff">✦ Online Assistance</span>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="services">
+ <div class="container">
+  <div class="section-head">
+   <span class="tag">WHAT WE DO</span>
+   <h2>Our <span class="gradient">Services</span></h2>
+   <p class="section-intro" style="margin:auto">Simple digital support for your everyday needs.</p>
+  </div>
+  <div class="cards">
+   <article class="card">
+    <div class="icon">🌐</div>
+    <h3>Website Design</h3>
+    <p>Modern, mobile-friendly websites for individuals, small businesses and new ideas.</p>
+   </article>
+   <article class="card">
+    <div class="icon">📝</div>
+    <h3>Online Form Assistance</h3>
+    <p>Help with filling online forms and understanding the information required.</p>
+   </article>
+   <article class="card">
+    <div class="icon">⌨️</div>
+    <h3>Typing & Documents</h3>
+    <p>Typing support and basic document preparation for your everyday work.</p>
+   </article>
+   <article class="card">
+    <div class="icon">💻</div>
+    <h3>Digital Support</h3>
+    <p>Guidance with common online services and digital tasks.</p>
+   </article>
+   <article class="card">
+    <div class="icon">📱</div>
+    <h3>Business Online Presence</h3>
+    <p>Get started with a clear online profile for your service or business.</p>
+   </article>
+   <article class="card">
+    <div class="icon">🤝</div>
+    <h3>Customer Assistance</h3>
+    <p>Tell us what you need and we will discuss the available support with you.</p>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="about">
+ <div class="container about-grid">
+  <div>
+   <span class="tag">ABOUT US</span>
+   <h2>Technology made <span class="gradient">simpler.</span></h2>
+   <p class="section-intro">GS Digital Solutions is focused on making everyday digital tasks easier to understand and access.</p>
+  </div>
+  <div class="about-panel">
+   <h3>A simple, customer-first approach</h3>
+   <ul class="points">
+    <li>Clear communication</li>
+    <li>Friendly digital assistance</li>
+    <li>Responsive website design</li>
+    <li>Discuss the service before starting</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="contact">
+ <div class="container">
+  <div class="contact-box">
+   <span class="tag">LET'S CONNECT</span>
+   <h2>Have a project in mind?</h2>
+   <p>Contact GS Digital Solutions to discuss website design, typing or online service assistance.</p>
+   <!-- Replace YOURNUMBER with your WhatsApp number including country code, digits only -->
+   <a class="btn primary" href="https://wa.me/YOURNUMBER" target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+   <p style="font-size:12px;margin-bottom:0">WhatsApp button needs your number added in the code.</p>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container footer-inner">
+  <span>© 2026 GS Digital Solutions</span>
+  <span>Built with care for your digital journey.</span>
+ </div>
+</footer>
+</body>
+</html>
+vn>
+ </div>
+</footer>
+</body>
+</html>
+</CodeBlock>
