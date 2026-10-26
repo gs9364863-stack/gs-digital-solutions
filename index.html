@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GS Digital Solutions</title>
+    <title>GS Digital Solutions - Premium Agency Layout</title>
     
-    <!-- सुंदर और सटीक फॉन्ट के लिए Google Fonts -->
+    <!-- प्रीमियम लुक के लिए Google Fonts से Poppins फॉन्ट -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* वैश्विक रीसेट */
+        /* 1. बेस सेटिंग्स (CSS Reset & Base) */
         * {
             margin: 0;
             padding: 0;
@@ -25,28 +25,28 @@
             overflow-x: hidden;
         }
 
-        /* 1. शीर्ष नेविगेशन बार (Navbar) */
+        /* 2. प्रीमियम हेडर डिज़ाइन */
         .main-header {
-            background-color: #051932; /* फोटो का सटीक गहरा नेवी ब्लू */
+            background-color: #001A39; /* सटीक गहरा नेवी ब्लू */
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 6%;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 20px 8%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
         .logo-box {
-            background: #00a2ff;
+            background: linear-gradient(135deg, #0056b3, #00d2ff);
             color: #ffffff;
             font-weight: 700;
-            font-size: 22px;
-            padding: 4px 12px;
+            font-size: 24px;
+            padding: 6px 14px;
             border-radius: 4px;
         }
 
@@ -56,22 +56,23 @@
         }
 
         .logo-title {
-            font-size: 18px;
+            font-size: 19px;
             font-weight: 700;
             color: #ffffff;
             line-height: 1.1;
         }
 
         .logo-subtitle {
-            font-size: 9px;
-            color: #a0b0c0;
+            font-size: 10px;
+            color: #00d2ff;
             letter-spacing: 0.5px;
+            margin-top: 2px;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 25px;
+            gap: 32px;
         }
 
         .nav-links a {
@@ -79,160 +80,221 @@
             text-decoration: none;
             font-size: 14px;
             font-weight: 400;
+            transition: color 0.3s;
         }
 
         .nav-links a.active, .nav-links a:hover {
-            color: #00a2ff;
+            color: #00d2ff;
         }
 
         .whatsapp-button {
-            background-color: #00b64f; /* व्हाट्सएप ग्रीन बटन */
+            background-color: #128C7E; /* सटीक व्हाट्सएप ग्रीन */
             color: #ffffff;
             text-decoration: none;
-            padding: 8px 20px;
+            padding: 10px 24px;
             border-radius: 30px;
             font-size: 13px;
             font-weight: 500;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
-        /* 2. मुख्य हीरो बैनर (सटीक फोटो बैकग्राउंड के साथ) */
+        /* 3. हीरो बैनर लेआउट (आधुनिक फ्लेक्सबॉक्स) */
         .hero-banner {
-            /* यहाँ आपकी स्क्रीनशॉट वाली बैकग्राउंड इमेज का इस्तेमाल किया गया है */
-            background: linear-gradient(rgba(5, 25, 50, 0.85), rgba(5, 25, 50, 0.85)), 
-                        url('https://unsplash.com') no-repeat center center/cover;
-            padding: 80px 6% 100px 6%;
+            background-color: #001A39;
+            padding: 80px 8% 100px 8%;
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-between;
             align-items: center;
-            min-height: 500px;
+            gap: 50px;
         }
 
         .hero-content {
-            max-width: 55%;
+            flex: 1;
+            max-width: 50%;
         }
 
         .info-tag {
-            background: rgba(0, 162, 25ff, 0.15);
-            color: #00a2ff;
-            font-size: 11px;
-            padding: 5px 14px;
+            background: rgba(0, 210, 255, 0.12);
+            color: #00d2ff;
+            font-size: 12px;
+            padding: 6px 16px;
             border-radius: 20px;
             display: inline-flex;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             font-weight: 500;
-            border: 1px solid rgba(0, 162, 255, 0.2);
+            border: 1px solid rgba(0, 210, 255, 0.2);
         }
 
         .hero-content h1 {
-            font-size: 36px;
+            font-size: 42px;
             font-weight: 700;
             line-height: 1.3;
-            margin-bottom: 18px;
+            margin-bottom: 22px;
+            letter-spacing: 0.5px;
         }
 
         .hero-content p {
-            color: #d0dec2;
-            font-size: 14px;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            max-width: 90%;
+            color: #b0c4de;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 35px;
         }
 
         .action-btns {
             display: flex;
-            gap: 12px;
+            gap: 15px;
         }
 
         .btn-cyan {
-            background-color: #00a2ff;
-            color: #051932;
+            background-color: #00d2ff;
+            color: #001A39;
             text-decoration: none;
-            padding: 12px 24px;
+            padding: 14px 28px;
             border-radius: 6px;
             font-weight: 600;
-            font-size: 13px;
+            font-size: 14px;
         }
 
         .btn-outline {
             background-color: transparent;
             color: #ffffff;
             text-decoration: none;
-            padding: 12px 24px;
+            padding: 14px 28px;
             border-radius: 6px;
             border: 1px solid rgba(255, 255, 255, 0.3);
-            font-size: 13px;
+            font-size: 14px;
         }
 
-        /* 3. नीचे का सेवाएं (Services) सेक्शन */
+        /* 4. दाईं तरफ का लैपटॉप मॉकअप */
+        .hero-display {
+            flex: 1;
+            max-width: 45%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mockup-container {
+            width: 100%;
+            max-width: 440px;
+            background: #111111;
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mockup-screen {
+            background: linear-gradient(135deg, #001122, #004488);
+            border-radius: 6px;
+            padding: 55px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mockup-screen h2 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        .mockup-screen p {
+            font-size: 13px;
+            color: #a2b7d4;
+            margin-bottom: 22px;
+        }
+
+        .mockup-btn {
+            background-color: #00d2ff;
+            color: #001A39;
+            font-size: 12px;
+            padding: 10px 22px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* 5. नीचे का सेवाएँ (Services) सेक्शन */
         .services-area {
             background-color: #ffffff;
             color: #333333;
-            padding: 60px 6%;
+            padding: 80px 8%;
         }
 
         .services-top {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            margin-bottom: 35px;
+            margin-bottom: 50px;
         }
 
         .services-title-box h4 {
-            color: #00a2ff;
-            font-size: 13px;
+            color: #00d2ff;
+            font-size: 14px;
             font-weight: 600;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
         }
 
         .services-title-box h2 {
-            font-size: 26px;
-            color: #051932;
+            font-size: 32px;
+            color: #001A39;
             font-weight: 700;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
 
         .services-title-box p {
             color: #666666;
-            font-size: 13px;
+            font-size: 14px;
         }
 
         .all-services-link {
-            color: #00a2ff;
+            color: #00d2ff;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 600;
         }
 
-        /* 5 कॉलम ग्रिड लेआउट */
+        /* मॉर्डन CSS ग्रिड (5 डिब्बे एक ही लाइन में) */
         .services-row {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
-            gap: 15px;
+            gap: 24px;
         }
 
         .service-box {
             background-color: #ffffff;
             border: 1px solid #eef2f6;
             border-radius: 8px;
-            padding: 20px 10px;
+            padding: 35px 20px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        /* 5 रंगीन आइकॉन बैकग्राउंड्स */
         .icon-wrapper {
-            width: 42px;
-            height: 42px;
-            border-radius: 6px;
-            margin: 0 auto 15px auto;
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            margin: 0 auto 20px auto;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #ffffff;
-            font-size: 16px;
+            font-size: 20px;
         }
 
         .icon-blue { background-color: #007bff; }
@@ -242,22 +304,23 @@
         .icon-purple { background-color: #6f42c1; }
 
         .service-box span {
-            font-size: 13px;
+            font-size: 15px;
             font-weight: 600;
             color: #111111;
             display: block;
         }
 
-        /* मोबाइल रेस्पॉन्सिव सेटिंग्स */
+        /* रेस्पॉन्सिव सेटिंग्स */
         @media (max-width: 992px) {
-            .hero-banner { padding: 60px 6%; text-align: center; justify-content: center; }
+            .hero-banner { flex-direction: column; text-align: center; padding: 60px 8%; }
             .hero-content { max-width: 100%; }
+            .hero-display { max-width: 100%; width: 100%; }
             .action-btns { justify-content: center; }
             .services-row { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 576px) {
             .services-row { grid-template-columns: 1fr; }
-            .main-header { flex-direction: column; gap: 12px; }
+            .main-header { flex-direction: column; gap: 15px; }
         }
     </style>
 </head>
@@ -284,46 +347,8 @@
         <a href="#" class="whatsapp-button">WhatsApp पर बात करें</a>
     </header>
 
-    <!-- 2. मुख्य हीरो बैनर (फोटो बैकग्राउंड के साथ) -->
+    <!-- 2. हीरो बैनर सेक्शन -->
     <section class="hero-banner">
         <div class="hero-content">
             <div class="info-tag">◆ अपने विचारों को डिजिटल बनाएं</div>
             <h1>GS Digital Solutions<br>आपके हर डिजिटल काम का भरोसेमंद साथी</h1>
-            <p>हम वेबसाइट डिजाइन, ग्राफिक डिजाइन, डिजिटल मार्केटिंग, ऑनलाइन सेवाएं और कई तरह की डिजिटल सुविधाएं प्रदान करने के लिए तैयार हैं। आपका काम, हमारी जिम्मेदारी।</p>
-            <div class="action-btns">
-                <a href="#" class="btn-cyan">हमारी सेवाएँ देखें ➔</a>
-                <a href="#" class="btn-outline">हमसे संपर्क करें</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. सेवाएं (Services) सेक्शन -->
-    <section class="services-area">
-        <div class="services-top">
-            <div class="services-title-box">
-                <h4>हमारी सेवाएं</h4>
-                <h2>हम क्या-क्या करते हैं?</h2>
-                <p>हम आपकी डिजिटल जरूरतों के लिए एक ही जगह पर पूरी सहायता देते हैं।</p>
-            </div>
-            <a href="#" class="all-services-link">सभी सेवाएँ देखें ➔</a>
-        </div>
-
-        <div class="services-row">
-            <div class="service-box">
-                <div class="icon-wrapper icon-blue">&lt;/&gt;</div>
-                <span>वेबसाइट डिजाइन</span>
-            </div>
-            <div class="service-box">
-                <div class="icon-wrapper icon-pink">🎨</div>
-                <span>ग्राफिक डिजाइन</span>
-            </div>
-            <div class="service-box">
-                <div class="icon-wrapper icon-green">📢</div>
-                <span>डिजिटल मार्केटिंग</span>
-            </div>
-            <div class="service-box">
-                <div class="icon-wrapper icon-orange">🖥️</div>
-                <span>ONLINE SERVICES</span>
-            </div>
-            <div class="service-box">
-                <div class="icon-wrapper icon-purple">📱</div>
