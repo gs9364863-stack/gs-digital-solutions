@@ -1,94 +1,381 @@
-html
 <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GS Digital Solutions</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font for Professional Look -->
-    <link href="https://googleapis.com" rel="stylesheet">
-</head>
-<body>
+    <title>GS Digital Solutions - Exact Design</title>
+    <!-- FontAwesome Icons Setup -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        /* --- BRANDING & EXACT COLOR PALETTE --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
 
-    <!-- Main Section Start -->
-    <section class="hero-section">
-        <div class="container">
-            
-            <!-- Left Side: Content & Blue Box -->
-            <div class="content-box">
-                <!-- Top Badge -->
-                <div class="badge">✦ आपके विकास का डिजिटल साथी</div>
-                
-                <!-- Main Branding -->
-                <div class="brand-logo">
-                    <span class="logo-bold">GS</span> 
-                    <span class="logo-sub">GS Digital<br>Solutions<br><small>Your Vision. Our Digital Wave.</small></span>
-                </div>
+        body {
+            background-color: #03011e;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
 
-                <!-- Main Heading -->
-                <h1>GS Digital Solutions</h1>
-                <h2>आपके हर डिजिटल काम का<br>भरोसेमंद साथी</h2>
+        /* 1. Exact Header Layout */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 6%;
+            background-color: #03011e;
+        }
 
-                <!-- Subtitle / Paragraph -->
-                <p>हम वेबसाइट डिज़ाइन, ग्राफिक डिज़ाइन, डिजिटल मार्केटिंग, ऑनलाइन वर्क और कई तरह की डिजिटल सुविधाएं प्रदान करने के लिए तैयार हैं। आपका काम, हमारी जिम्मेदारी।</p>
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
-                <!-- Action Buttons -->
-                <div class="cta-buttons">
-                    <a href="#" class="btn btn-primary">अभी संपर्क करें ➔</a>
-                    <a href="#" class="btn btn-secondary">🌐 हमारे बारे में</a>
-                </div>
-            </div>
+        .logo-box {
+            background: linear-gradient(135deg, #0072ff, #00c6ff);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: 800;
+            font-size: 22px;
+            color: #fff;
+        }
 
-            <!-- Right Side: Laptop & Desk Elements (Designed via CSS) -->
-            <div class="visual-box">
-                <!-- Desk Surface Background -->
-                <div class="desk-surface"></div>
-                
-                <!-- Plant / Pot Mockup -->
-                <div class="desk-plant">
-                    <div class="leaves"></div>
-                    <div class="pot"></div>
-                </div>
+        .logo-text h3 {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
 
-                <!-- Diary / Notebook Mockup -->
-                <div class="notebook">
-                    <div class="pen"></div>
-                </div>
+        .logo-text p {
+            font-size: 11px;
+            color: #00f2fe;
+            margin-top: 2px;
+        }
 
-                <!-- Laptop Mockup -->
-                <div class="laptop-wrapper">
-                    <div class="laptop-screen">
-                        <div class="screen-content">
-                            <span class="screen-logo">GS</span>
-                            <h3>Build Your<br>Dream Website</h3>
-                            <div class="screen-lines">
-                                <span></span><span></span><span></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="laptop-base"></div>
-                </div>
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+        }
 
-                <!-- Floating Tags -->
-                <div class="floating-tag tag-ideas">Ideas</div>
-                <div class="floating-tag tag-design">Design</div>
-                <div class="floating-tag tag-growth">Digital Growth</div>
+        .nav-menu a {
+            color: #a0aec0;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
 
-                <!-- WhatsApp Sticky Button -->
-                <a href="#" class="whatsapp-btn">
-                    <span>WhatsApp पर बात करें</span>
-                </a>
-            </div>
+        .nav-menu a.active, .nav-menu a:hover {
+            color: #00f2fe;
+        }
 
-        </div>
-    </section>
-    <!-- Main Section End -->
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
 
-    <!-- Services Section -->
-    <section class="services-title-section">
-        <h2>हम क्या-क्या करते हैं?</h2>
-    </section>
+        .whatsapp-top-btn {
+            background-color: #25D366;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: transform 0.2s;
+        }
 
-</body>
-</html>
+        .whatsapp-top-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .hamburger-menu {
+            font-size: 18px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* 2. Hero Section Settings */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 6% 100px;
+            position: relative;background: radial-gradient(circle at 75% 40%, rgba(115, 3, 192, 0.25), transparent 60%);
+        }
+
+        .hero-left-content {
+            max-width: 52%;
+        }
+
+        .hero-tag-badge {
+            background: rgba(0, 242, 254, 0.08);
+            color: #00f2fe;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 242, 254, 0.25);
+        }
+
+        .hero-left-content h1 {
+            font-size: 44px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 25px;
+        }
+
+        .hero-left-content h1 span {
+            color: #00f2fe;
+            display: block;
+            font-size: 32px;
+            margin-top: 8px;
+        }
+
+        .hero-left-content p {
+            color: #cbd5e0;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+
+        .hero-action-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-glow-cyan {
+            background: linear-gradient(90deg, #00f2fe, #4facfe);
+            color: #03011e;
+            text-decoration: none;
+            padding: 12px 26px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2);
+        }
+
+        .btn-outline-border {
+            border: 1px solid #718096;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 26px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-right-mockup {
+            max-width: 42%;
+            position: relative;
+        }
+
+        .hero-right-mockup img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 15px 30px rgba(0, 198, 255, 0.25));
+        }
+
+        /* Right Floating Indicator Dots */
+        .right-indicator-dots {
+            position: absolute;
+            right: 20px;
+            top: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .single-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        .single-dot.active {
+            background-color: #00f2fe;
+            box-shadow: 0 0 8px #00f2fe;
+        }
+
+        /* 3. Services Grid Section Layout */
+        .services-container {
+            padding: 40px 6% 80px;
+        }
+
+        .services-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 35px;
+            border-bottom: 1.5px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 15px;
+        }
+
+        .services-titles-box p {
+            color: #00f2fe;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .services-titles-box h2 {
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .view-all-services {
+            color: #00f2fe;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .services-five-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+
+        .service-block-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 25px 18px;
+            border-radius: 6px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .service-block-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(0, 242, 254, 0.3);
+        }
+
+        .icon-wrapper-box {
+            width: 44px;
+            height: 44px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+
+        /* Dynamic Colors for Custom Services Icons */
+        .color-blue { background: rgba(0, 114, 255, 0.15); color: #0072ff; }
+        .color-pink { background: rgba(255, 0, 128, 0.15); color: #ff0080; }
+        .color-green { background: rgba(46, 213, 115, 0.15); color: #2ed573; }
+        .color-orange { background: rgba(255, 165, 0, 0.15); color: #ffa500; }
+        .color-purple { background: rgba(115, 3, 192, 0.15); color: #7303c0; }
+
+        .service-block-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .service-block-card p {
+            color: #a0aec0;
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            height: 36px;
+            overflow: hidden;
+        }
+
+        .learn-more-action {
+            color: #00f2fe;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* 4. Trust Solid Blue Banner Settings */
+        .trust-solid-blue-banner {
+            background: linear-gradient(90deg, #0056d6 0%, #0076ff 100%);
+            margin: 0 6% 60px;
+            border-radius: 8px;
+            padding: 30px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .trust-banner-info {
+            max-width: 35%;
+        }
+
+        .trust-banner-info h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .trust-banner-info p {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.4;
+        }
+
+        .trust-four-metrics {
+            display: flex;
+            gap: 40px;
+        }
+
+        .metric-card-item {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .metric-card-item i {
+            font-size: 20px;
+            margin-bottom: 6px;
+            opacity: 0.9;
+        }
+
+        .metric-card-item p {
+            font-size: 11px;
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .trust-right-cta-box {
+            text-align: right;
+        }
+
+        .trust-right-cta-box span {
+            font-size: 12px;
+            display: block;
+            margin-bottom: 6px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .whatsapp-solid-btn {
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 700;
+            display: inline-flex;
