@@ -1,32 +1,105 @@
+
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GS Digital Solutions - 91+7247648545</title>
+<title>GS Digital Solutions | Premium Digital Agency</title>
+<meta name="description" content="GS Digital Solutions - Website design, online forms, typing and digital services.">
 <style>
-  *{margin:0;padding:0}
-  body{background:#000}
-  img{width:100%;height:auto;display:block}
-  /* Chalti line ka simple code - chaho to hata sakte ho */
-  .line{
-    background:#ff6a00;color:#fff;padding:7px 0;
-    overflow:hidden;white-space:nowrap;font-weight:700;font-size:14px;
-    font-family:sans-serif;
-  }
-  .line span{display:inline-block;animation:run 20s linear infinite}
-  @keyframes run{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#080d20;color:white;line-height:1.6}
+html{scroll-behavior:smooth}
+header{padding:22px 8%;display:flex;justify-content:space-between;align-items:center;background:#101831;position:sticky;top:0;z-index:10;border-bottom:1px solid #29375a}
+.logo{font-size:24px;font-weight:900;color:#a78bfa}
+nav a{color:white;text-decoration:none;margin-left:22px;font-size:14px}
+.hero{padding:100px 8%;min-height:590px;display:flex;align-items:center;background:radial-gradient(circle at 80% 40%,#48318b 0%,#171b48 35%,#080d20 75%)}
+.hero-content{max-width:720px}
+.tag{color:#b9a5ff;letter-spacing:3px;font-size:12px}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.08;margin:22px 0}
+h1 span{color:#a78bfa}
+.hero p{color:#c4c9dc;font-size:17px;max-width:570px}
+.btn{display:inline-block;margin-top:30px;padding:15px 27px;border-radius:30px;text-decoration:none;font-weight:bold;background:linear-gradient(100deg,#7655ed,#b14ee9);color:white;box-shadow:0 8px 30px #7045e966}
+section{padding:85px 8%}
+.heading{text-align:center;margin-bottom:45px}
+.heading h2{font-size:38px}
+.heading p{color:#aab3cf;margin-top:10px}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.card{background:linear-gradient(145deg,#192344,#10172e);padding:30px;border:1px solid #34436c;border-radius:20px;transition:.3s}
+.card:hover{transform:translateY(-8px);border-color:#a78bfa}
+.card .emoji{font-size:38px}
+.card h3{margin:17px 0 10px}
+.card p{color:#aeb8d2;font-size:14px}
+.about{background:#101831}
+.about-content{max-width:750px;margin:auto;text-align:center}
+.about-content p{color:#bdc5dc;margin-top:18px}
+.contact{text-align:center;background:radial-gradient(circle at center,#33256c,#080d20 70%)}
+footer{text-align:center;padding:28px;color:#9ca8c5;background:#070b18;font-size:13px}
+@media(max-width:650px){
+header{padding:18px 5%;flex-direction:column;gap:12px}
+nav a{margin:0 7px;font-size:12px}
+.hero{padding:75px 6%;min-height:500px}
+section{padding:65px 6%}
+.heading h2{font-size:30px}
+}
 </style>
 </head>
 <body>
 
-<!-- Agar upar chalti line chahiye to ye rakho, nahi chahiye to hata do -->
-<div class="line">
-  <span>🔥 CO-OLD Website Offer: Purani Website ko Naya Banaye 50% OFF • Call 91+7247648545 • Email: gs9364863@gmail.com • Free Audit • 🔥</span>
+<header>
+<div class="logo">GS DIGITAL SOLUTIONS</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<div class="hero" id="home">
+<div class="hero-content">
+<div class="tag">WELCOME TO THE DIGITAL WORLD</div>
+<h1>Build Your <span>Digital Future</span> With Us.</h1>
+<p>Your trusted partner for website design, online forms, digital assistance and professional typing services.</p>
+<a class="btn" href="#services">Explore Our Services →</a>
+</div>
 </div>
 
-<!-- Yahi tumhari puri website hai - sirf ye photo -->
-<img src="gs.jpg" alt="GS Digital Solutions">
+<section id="services">
+<div class="heading">
+<h2>Our Premium Services</h2>
+<p>Smart digital solutions for your needs.</p>
+</div>
+<div class="services">
+<div class="card"><div class="emoji">🌐</div><h3>Website Design</h3><p>Modern, professional and responsive websites for your business.</p></div>
+<div class="card"><div class="emoji">📋</div><h3>Online Forms</h3><p>Assistance with online applications and form filling.</p></div>
+<div class="card"><div class="emoji">⌨️</div><h3>Typing Services</h3><p>Hindi and English typing and document preparation.</p></div>
+<div class="card"><div class="emoji">💻</div><h3>Digital Assistance</h3><p>Helpful digital services and online documentation support.</p></div>
+<div class="card"><div class="emoji">📄</div><h3>Document Services</h3><p>Document formatting and digital file assistance.</p></div>
+<div class="card"><div class="emoji">🚀</div><h3>Business Support</h3><p>Digital presence and online support for small businesses.</p></div>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="about-content">
+<div class="tag">WHO WE ARE</div>
+<h2 style="font-size:38px;margin-top:12px">Your Trusted Digital Partner</h2>
+<p>GS Digital Solutions is focused on making digital services simple, accessible and professional. We help individuals and businesses move forward in the digital world.</p>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="heading">
+<div class="tag">LET'S CONNECT</div>
+<h2>Ready to Get Started?</h2>
+<p>Contact us for digital services and assistance.</p>
+<a class="btn" href="https://wa.me/917247648515?text=Hello%20GS%20Digital%20Solutions%2C%20I%20need%20your%20services." target="_blank" rel="noopener">💬 Contact on WhatsApp</a>
+</div>
+</section>
+
+<footer>
+© 2026 GS Digital Solutions. All Rights Reserved.
+</footer>
 
 </body>
 </html>
