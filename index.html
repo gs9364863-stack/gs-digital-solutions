@@ -3,512 +3,285 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f8f6ff">
-<meta name="description" content="GS Digital Solutions - Websites, digital services, online form assistance, typing and document support.">
-<title>GS Digital Solutions | Digital Experiences</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="GS Digital Solutions - Websites and digital services.">
+<title>GS Digital Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --ink:#11132f;
-  --muted:#686984;
-  --purple:#803cff;
-  --blue:#3479ed;
-  --cyan:#31c5c6;
-  --glass:rgba(255,255,255,.72);
-  --line:rgba(119,105,180,.15);
-  --shadow:0 18px 55px rgba(62,45,120,.10);
-}
+:root{--purple:#803cff;--blue:#3479ed;--cyan:#31c5c6;--ink:#15142f;--muted:#686984;--glass:rgba(255,255,255,.72);--line:rgba(119,105,180,.16);--shadow:0 18px 55px rgba(62,45,120,.10)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
-body{
-  font-family:'DM Sans',sans-serif;
-  color:var(--ink);
-  background:
-    radial-gradient(ellipse at 10% 5%,#e9dcff 0,transparent 34%),
-    radial-gradient(ellipse at 90% 25%,#dff5ff 0,transparent 32%),
-    radial-gradient(ellipse at 50% 70%,#f2e8ff 0,transparent 40%),
-    #faf9ff;
-  overflow-x:hidden;
-}
-body:before{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
-  background-image:linear-gradient(rgba(112,90,170,.035) 1px,transparent 1px),
-  linear-gradient(90deg,rgba(112,90,170,.035) 1px,transparent 1px);
-  background-size:58px 58px;
-}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:radial-gradient(ellipse at 10% 5%,#e9dcff,transparent 34%),radial-gradient(ellipse at 90% 25%,#dff5ff,transparent 32%),#faf9ff;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(#8068a008 1px,transparent 1px),linear-gradient(90deg,#8068a008 1px,transparent 1px);background-size:55px 55px}
 a{text-decoration:none;color:inherit}
-button{font:inherit}
-.container{width:min(1160px,calc(100% - 40px));margin:auto}
-.glass{
-  background:var(--glass);
-  border:1px solid rgba(255,255,255,.9);
-  box-shadow:var(--shadow);
-  backdrop-filter:blur(22px);
-  -webkit-backdrop-filter:blur(22px);
-}
-.nav-wrap{position:sticky;top:12px;z-index:100;padding-top:12px}
-nav{
-  min-height:78px;border-radius:50px;padding:12px 24px;
-  display:flex;align-items:center;justify-content:space-between;
-}
-.logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:22px;letter-spacing:-1px}
-.logo-mark{
-  width:43px;height:43px;border-radius:14px;
-  display:grid;place-items:center;color:white;font-size:19px;
-  background:linear-gradient(135deg,var(--purple),var(--blue),var(--cyan));
-  box-shadow:0 8px 20px #8a5aff45;
-}
-.logo small{display:block;font-size:9px;letter-spacing:3px;color:var(--muted);font-weight:700}
-.nav-links{display:flex;gap:27px;align-items:center;font-size:13px;font-weight:700;color:#51516c}
-.nav-links a:hover{color:var(--purple)}
-.nav-cta,.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  border:0;border-radius:50px;padding:15px 23px;font-weight:800;
-  transition:.25s;cursor:pointer;
-}
-.nav-cta,.btn-primary{
-  color:white;background:linear-gradient(110deg,#803cff,#a04cf4);
-  box-shadow:0 12px 28px #8545ed35;
-}
-.nav-cta:hover,.btn:hover{transform:translateY(-3px);box-shadow:0 16px 32px #8545ed35}
-.menu-btn{display:none;border:0;background:transparent;font-size:27px;color:var(--ink);cursor:pointer}
-.hero{padding:75px 0 80px;position:relative}
-.hero-topline{
-  display:inline-flex;align-items:center;gap:9px;padding:12px 19px;
-  border-radius:50px;font-size:12px;font-weight:800;color:#555574;
-}
-.dot{width:8px;height:8px;background:#20c9a0;border-radius:50%;box-shadow:0 0 0 5px #20c9a022}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center;margin-top:40px}
-.eyebrow{color:var(--purple);font-size:12px;letter-spacing:3px;font-weight:800;text-transform:uppercase}
-h1{
-  font-family:'Playfair Display',serif;font-size:clamp(47px,6vw,76px);
-  line-height:1.06;letter-spacing:-2.7px;margin:20px 0;
-}
-.gradient-text{
-  background:linear-gradient(100deg,#7136ed,#367fe9,#28bdbb);
-  color:transparent;background-clip:text;-webkit-background-clip:text;
-  font-style:italic;
-}
-.hero-copy{font-size:17px;line-height:1.85;color:var(--muted);max-width:570px}
-.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
-.btn{padding:17px 25px;font-size:14px}
-.btn-light{background:white;color:var(--ink);border:1px solid var(--line)}
-.hero-note{font-size:12px;color:var(--muted);margin-top:20px}
-.hero-visual{position:relative;min-height:430px;display:grid;place-items:center}
-.orb{
-  position:absolute;width:340px;height:340px;border-radius:50%;
-  background:linear-gradient(135deg,#c8a9ff88,#87dff088);
-  filter:blur(2px);animation:float 7s ease-in-out infinite;
-}
-.browser{
-  position:relative;width:100%;max-width:490px;border-radius:25px;
-  overflow:hidden;transform:rotate(-2deg);
-}
-.browser-bar{height:44px;background:#fff;display:flex;align-items:center;gap:7px;padding:0 16px;border-bottom:1px solid var(--line)}
-.browser-bar i{width:8px;height:8px;border-radius:50%;background:#d6d1e5}
-.browser-title{margin-left:10px;font-size:10px;color:#85839d}
-.browser-content{padding:28px;background:linear-gradient(145deg,#211b49,#5741a2 55%,#258fbd);color:white;min-height:310px}
-.browser-content small{color:#d9caff;letter-spacing:2px;font-size:9px}
-.browser-content h2{font-family:'Playfair Display',serif;font-size:36px;line-height:1.15;margin:18px 0}
-.browser-content p{font-size:12px;line-height:1.7;color:#e5e0ff}
-.mini-btn{display:inline-block;margin-top:20px;padding:10px 17px;border-radius:30px;background:white;color:#34236c;font-size:10px;font-weight:800}
-.mini-stats{display:flex;gap:10px;margin-top:28px}
-.mini-stats div{flex:1;background:#ffffff18;border:1px solid #ffffff2c;padding:12px;border-radius:13px}
-.mini-stats b{display:block;font-size:17px}.mini-stats span{font-size:9px;color:#e5e0ff}
-.floating-card{
-  position:absolute;right:-4px;bottom:22px;padding:16px 19px;border-radius:18px;
-  font-size:12px;font-weight:800;animation:float 5s ease-in-out infinite;
-}
-.floating-card span{display:block;color:var(--muted);font-weight:500;margin-top:5px}
+.container{width:min(1160px,calc(100% - 36px));margin:auto}
+.glass{background:var(--glass);border:1px solid #ffffffd9;box-shadow:var(--shadow);backdrop-filter:blur(22px)}
+nav{position:sticky;top:12px;z-index:20;margin-top:12px;min-height:76px;padding:12px 22px;border-radius:50px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:11px;font-size:20px;font-weight:800}
+.logo-icon{width:44px;height:44px;border-radius:15px;display:grid;place-items:center;color:white;background:linear-gradient(135deg,var(--purple),var(--blue),var(--cyan))}
+.logo small{display:block;font-size:9px;letter-spacing:3px;color:var(--muted)}
+.links{display:flex;gap:22px;font-size:13px;font-weight:700;color:#555570}
+.links a:hover{color:var(--purple)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 25px;border-radius:50px;font-weight:800;font-size:14px;transition:.25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 15px 30px #803cff35}
+.primary{background:linear-gradient(110deg,#803cff,#a04cf4);color:white}
+.secondary{background:white;border:1px solid var(--line)}
+.menu{display:none;border:0;background:none;font-size:27px}
+.hero{padding:75px 0 70px}
+.pill{display:inline-flex;gap:9px;align-items:center;padding:12px 18px;border-radius:40px;font-size:12px;font-weight:800;color:#555570}
+.dot{width:8px;height:8px;border-radius:50%;background:#20c99a;box-shadow:0 0 0 5px #20c99a22}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:38px}
+.eyebrow{font-size:12px;letter-spacing:3px;color:var(--purple);font-weight:800}
+h1{font:700 clamp(48px,6vw,76px)/1.08 'Playfair Display',serif;letter-spacing:-2px;margin:18px 0 22px}
+.gradient{font-style:italic;background:linear-gradient(100deg,#7136ed,#367fe9,#28bdbb);color:transparent;background-clip:text;-webkit-background-clip:text}
+.hero h1 .gradient{display:inline-block;position:relative;padding-bottom:15px}
+.hero h1 .gradient:after{content:"";position:absolute;left:0;bottom:2px;width:100%;height:12px;border-bottom:4px solid #b98cff;border-radius:50%;transform:scaleX(.1);transform-origin:left;animation:purpleLine 2s ease-in-out infinite alternate}
+@keyframes purpleLine{from{transform:scaleX(.1)}to{transform:scaleX(1)}}
+.copy{font-size:16px;line-height:1.9;color:var(--muted)}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
+.note{font-size:12px;color:var(--muted);margin-top:20px}
+.visual{min-height:410px;display:grid;place-items:center;position:relative}
+.orb{position:absolute;width:320px;height:320px;border-radius:50%;background:linear-gradient(135deg,#c8a9ff99,#87dff099);animation:float 6s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-13px)}}
-.section{padding:85px 0}
-.section-head{text-align:center;max-width:680px;margin:0 auto 43px}
-.section-head h2{font-family:'Playfair Display',serif;font-size:clamp(34px,4vw,48px);line-height:1.15;margin:13px 0}
-.section-head p{color:var(--muted);line-height:1.8;font-size:14px}
-.trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:35px}
-.trust-card{padding:22px;border-radius:20px;text-align:center}
-.trust-card b{font-size:15px;display:block}
-.trust-card span{font-size:11px;color:var(--muted)}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.service-card{padding:27px;border-radius:24px;transition:.3s}
-.service-card:hover,.project-card:hover{transform:translateY(-7px)}
-.icon-box{
-  width:52px;height:52px;border-radius:17px;display:grid;place-items:center;
-  background:linear-gradient(135deg,#eee5ff,#e2f6ff);font-size:23px;margin-bottom:20px;
-}
-.service-card h3{font-size:18px;margin-bottom:10px}
-.service-card p{font-size:13px;line-height:1.8;color:var(--muted)}
-.service-card ul{list-style:none;margin-top:17px}
-.service-card li{font-size:12px;color:#565671;margin:9px 0}
-.service-card li:before{content:"✦";color:var(--purple);margin-right:9px}
-.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.project-card{border-radius:25px;overflow:hidden;transition:.3s}
-.project-image{height:220px;padding:24px;display:flex;align-items:flex-end;color:white;position:relative;overflow:hidden}
-.project-image:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#30235f,#6b43ad,#208caa)}
-.project-image.school:before{background:linear-gradient(135deg,#4d3553,#bd8a5b,#202d47)}
-.project-image.store:before{background:linear-gradient(135deg,#1d4563,#278f9b,#8ac8c4)}
-.project-image.personal:before{background:linear-gradient(135deg,#24243e,#7046a4,#d17cb3)}
-.project-image div{position:relative;z-index:1}
-.project-image small{letter-spacing:2px;font-size:9px;opacity:.8}
-.project-image h3{font-size:28px;margin-top:8px}
+.browser{position:relative;width:100%;max-width:470px;border-radius:25px;overflow:hidden;transform:rotate(-2deg)}
+.browser-top{height:42px;background:white;display:flex;align-items:center;gap:7px;padding:0 15px}
+.browser-top i{width:8px;height:8px;border-radius:50%;background:#d6d1e5}
+.screen{padding:30px;background:linear-gradient(135deg,#211b49,#5741a2 55%,#258fbd);color:white;min-height:300px}
+.screen small{font-size:9px;letter-spacing:2px;color:#ddd1ff}
+.screen h2{font:700 36px/1.2 'Playfair Display',serif;margin:20px 0}
+.screen p{font-size:12px;line-height:1.8;color:#e8e2ff}
+.screen .mini{display:inline-block;background:white;color:#39236c;padding:10px 16px;border-radius:30px;margin-top:20px;font-size:10px;font-weight:800}
+.float-card{position:absolute;right:0;bottom:15px;padding:16px;border-radius:17px;font-size:12px;font-weight:800}
+.float-card span{display:block;color:var(--muted);font-weight:500;margin-top:5px}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:35px}
+.trust div{padding:20px;border-radius:20px;text-align:center}
+.trust b{display:block;font-size:14px}.trust span{font-size:11px;color:var(--muted)}
+section.content{padding:78px 0}
+.heading{text-align:center;max-width:680px;margin:0 auto 40px}
+.heading h2{font:700 clamp(34px,4vw,48px)/1.2 'Playfair Display',serif;margin:12px 0}
+.heading p{font-size:14px;line-height:1.8;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{padding:26px;border-radius:23px;transition:.3s}
+.card:hover,.project:hover{transform:translateY(-6px)}
+.icon{width:50px;height:50px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,#eee5ff,#e2f6ff);font-size:22px;margin-bottom:17px}
+.card h3{font-size:18px;margin-bottom:9px}
+.card p,.project p{font-size:13px;line-height:1.8;color:var(--muted)}
+.card ul{list-style:none;margin-top:14px}
+.card li{font-size:12px;margin:9px 0;color:#555570}
+.card li:before{content:"✦";color:var(--purple);margin-right:9px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.project{border-radius:23px;overflow:hidden;transition:.3s}
+.project-art{height:210px;padding:25px;display:flex;align-items:end;color:white;background:linear-gradient(135deg,#4d3553,#bd8a5b,#202d47)}
+.project:nth-child(2) .project-art{background:linear-gradient(135deg,#1d4563,#278f9b,#8ac8c4)}
+.project:nth-child(3) .project-art{background:linear-gradient(135deg,#24243e,#7046a4,#d17cb3)}
+.project:nth-child(4) .project-art{background:linear-gradient(135deg,#30235f,#6b43ad,#208caa)}
+.project-art h3{font-size:28px}
 .project-info{padding:22px}
-.project-info span{font-size:10px;letter-spacing:2px;color:var(--purple);font-weight:800}
-.project-info p{font-size:13px;color:var(--muted);line-height:1.7;margin-top:9px}
-.demo-label{font-size:10px!important;color:#8b6b00!important;background:#fff3c8;padding:7px 10px;border-radius:30px;display:inline-block;margin-top:12px;letter-spacing:0!important}
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.process-card{padding:25px;border-radius:22px}
-.step{font-size:34px;font-weight:800;color:#c9b2ff}
-.process-card h3{font-size:16px;margin:13px 0 9px}
-.process-card p{font-size:12px;color:var(--muted);line-height:1.8}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.about-visual{padding:30px;border-radius:28px;min-height:330px;display:grid;place-items:center;background:linear-gradient(135deg,#e8dcff99,#d8f3ff99)}
-.about-art{text-align:center}
-.about-art .logo-mark{width:90px;height:90px;font-size:34px;border-radius:28px;margin:0 auto 20px}
-.about-art h3{font-family:'Playfair Display',serif;font-size:29px}
-.about-art p{font-size:12px;color:var(--muted);margin-top:9px}
-.about-copy h2{font-family:'Playfair Display',serif;font-size:43px;line-height:1.15;margin:15px 0}
-.about-copy p{font-size:14px;color:var(--muted);line-height:1.9;margin:12px 0}
-.check-list{list-style:none;margin-top:20px}
-.check-list li{margin:13px 0;font-size:13px;font-weight:700}
-.check-list li:before{content:"✓";color:#14b88b;margin-right:12px;font-size:17px}
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
-.why-card{padding:25px;border-radius:22px}
-.why-card h3{font-size:16px;margin:13px 0 8px}
-.why-card p{font-size:12px;color:var(--muted);line-height:1.8}
-.price-card{max-width:720px;margin:auto;padding:38px;border-radius:28px;text-align:center}
-.price-card h3{font-size:24px;margin:12px 0}
-.price-card p{font-size:14px;color:var(--muted);line-height:1.8}
-.price-card .btn{margin-top:20px}
-.faq-list{max-width:800px;margin:auto}
-details{padding:20px 23px;border-radius:17px;margin:12px 0}
-summary{font-weight:800;font-size:14px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:15px}
+.project-info small{color:var(--purple);font-weight:800;letter-spacing:2px}
+.demo{display:inline-block;background:#fff3c8;color:#806000;padding:6px 9px;border-radius:20px;margin-top:10px;font-size:10px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.step{padding:23px;border-radius:20px}
+.step strong{font-size:32px;color:#b99bfa}
+.step h3{font-size:16px;margin:10px 0}
+.step p{font-size:12px;color:var(--muted);line-height:1.8}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about-art{min-height:310px;border-radius:27px;display:grid;place-items:center;text-align:center}
+.about-art .logo-icon{width:85px;height:85px;font-size:30px;margin:auto auto 18px;border-radius:26px}
+.about-art h3{font:700 29px 'Playfair Display',serif}
+.about-art p{font-size:12px;color:var(--muted);margin-top:10px}
+.about-text h2{font:700 42px/1.2 'Playfair Display',serif;margin:15px 0}
+.about-text p{font-size:14px;line-height:1.9;color:var(--muted);margin:12px 0}
+.checks{list-style:none;margin-top:18px}
+.checks li{font-size:13px;font-weight:700;margin:13px 0}
+.checks li:before{content:"✓";color:#14b88b;margin-right:10px}
+.price{max-width:700px;margin:auto;padding:35px;border-radius:25px;text-align:center}
+.price h3{font-size:24px;margin:15px}
+.price p{font-size:14px;color:var(--muted);line-height:1.8}
+.price .btn{margin-top:20px}
+.faq{max-width:800px;margin:auto}
+details{padding:20px 22px;border-radius:17px;margin:12px 0}
+summary{cursor:pointer;font-weight:800;font-size:14px;list-style:none;display:flex;justify-content:space-between}
 summary:after{content:"+";color:var(--purple);font-size:20px}
 details[open] summary:after{content:"−"}
-details p{font-size:13px;line-height:1.8;color:var(--muted);padding-top:14px}
-.contact-box{
-  padding:48px;border-radius:30px;text-align:center;
-  background:linear-gradient(125deg,#251c55,#6241a6 58%,#268eaa);color:white;
-  box-shadow:0 25px 60px #42307825;
-}
-.contact-box h2{font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,52px);margin:14px 0}
-.contact-box p{color:#e8e2ff;font-size:14px;line-height:1.8;max-width:600px;margin:0 auto}
-.contact-box .btn{margin-top:25px;background:white;color:#34236c}
-footer{padding:45px 0 25px}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px}
-footer p{font-size:12px;color:var(--muted);line-height:1.8;margin-top:13px;max-width:340px}
-footer h4{margin-bottom:15px}
-footer a{display:block;font-size:12px;color:var(--muted);margin:10px 0}
-footer a:hover{color:var(--purple)}
-.copyright{border-top:1px solid var(--line);margin-top:35px;padding-top:20px;text-align:center;font-size:11px;color:var(--muted)}
-.float-contact{position:fixed;right:20px;bottom:20px;z-index:90;display:flex;flex-direction:column;gap:10px}
-.float-contact a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:white;font-size:22px;box-shadow:0 10px 25px #5330a344;background:linear-gradient(135deg,#803cff,#b34ff0)}
-.float-contact a:last-child{background:#18b77a}
-.reveal{opacity:0;transform:translateY(22px);transition:.7s}
-.reveal.visible{opacity:1;transform:none}
+details p{padding-top:13px;color:var(--muted);font-size:13px;line-height:1.8}
+.contact{padding:48px 25px;border-radius:30px;text-align:center;color:white;background:linear-gradient(125deg,#251c55,#6241a6 58%,#268eaa)}
+.contact h2{font:700 clamp(34px,5vw,50px) 'Playfair Display',serif;margin:15px 0}
+.contact p{font-size:14px;line-height:1.8;color:#e8e2ff;max-width:600px;margin:auto}
+.contact .btn{background:white;color:#34236c;margin-top:25px}
+footer{padding:45px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:25px}
+footer p,footer a{font-size:12px;color:var(--muted);line-height:1.9}
+footer h4{margin-bottom:12px}
+footer a{display:block;margin:8px 0}
+.copyright{text-align:center;border-top:1px solid var(--line);margin-top:30px;padding-top:18px;font-size:11px;color:var(--muted)}
+.floating{position:fixed;right:18px;bottom:18px;z-index:30;display:flex;flex-direction:column;gap:10px}
+.floating a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:white;font-size:21px;background:linear-gradient(135deg,#803cff,#b34ff0);box-shadow:0 8px 25px #5330a344}
+.floating a:last-child{background:#18b77a}
+.reveal{opacity:0;transform:translateY(20px);transition:.7s}
+.reveal.show{opacity:1;transform:none}
 @media(max-width:850px){
- .nav-links{display:none;position:absolute;top:88px;left:0;right:0;padding:22px;border-radius:22px;background:#fff;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:18px}
- .nav-links.open{display:flex}.nav-cta{display:none}.menu-btn{display:block}
- .hero-grid,.about-grid{grid-template-columns:1fr}
- .hero{padding-top:55px}.hero-visual{min-height:390px}
- .services-grid{grid-template-columns:repeat(2,1fr)}
- .process-grid{grid-template-columns:repeat(2,1fr)}
+.links{display:none;position:absolute;top:85px;left:0;right:0;padding:22px;background:white;border-radius:20px;box-shadow:var(--shadow);flex-direction:column}
+.links.open{display:flex}.menu{display:block}
+.hero-grid,.about-grid{grid-template-columns:1fr}
+.cards{grid-template-columns:repeat(2,1fr)}
+.steps{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:560px){
- .container{width:min(100% - 28px,1160px)}
- nav{min-height:66px;padding:10px 16px}
- .logo{font-size:18px}.logo-mark{width:38px;height:38px}
- h1{font-size:48px;letter-spacing:-1.8px}
- .hero{padding:48px 0 55px}.hero-grid{gap:15px}
- .hero-copy{font-size:15px}
- .hero-visual{min-height:330px}
- .orb{width:260px;height:260px}
- .browser-content{min-height:260px;padding:22px}
- .browser-content h2{font-size:29px}
- .floating-card{right:0;bottom:0}
- .section{padding:65px 0}
- .trust-row{grid-template-columns:1fr}
- .services-grid,.project-grid,.why-grid{grid-template-columns:1fr}
- .process-grid{grid-template-columns:1fr 1fr}
- .project-image{height:185px}
- .about-copy h2{font-size:36px}
- .price-card,.contact-box{padding:28px 20px}
- .footer-grid{grid-template-columns:1fr 1fr}
- .footer-grid>div:first-child{grid-column:1/-1}
+.container{width:calc(100% - 28px)}
+.hero{padding-top:50px}
+h1{font-size:48px}
+.visual{min-height:330px}
+.orb{width:260px;height:260px}
+.screen{min-height:260px;padding:22px}
+.screen h2{font-size:30px}
+.trust{grid-template-columns:1fr}
+.cards,.projects{grid-template-columns:1fr}
+.steps{grid-template-columns:1fr 1fr}
+.about-text h2{font-size:35px}
+.footer-grid{grid-template-columns:1fr 1fr}
+.footer-grid>div:first-child{grid-column:1/-1}
 }
-@media(prefers-reduced-motion:reduce){
- *,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
-}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
-
 <body>
-<div class="nav-wrap container">
+
+<header class="container">
 <nav class="glass">
-  <a href="#home" class="logo">
-    <span class="logo-mark">GS</span>
-    <span>GS DIGITAL<small>SOLUTIONS</small></span>
-  </a>
-  <div class="nav-links" id="navLinks">
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#work">Our Work</a>
-    <a href="#about">About</a>
-    <a href="#process">Process</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <a class="nav-cta" href="#contact">Start a Project ↗</a>
-  <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
-</nav>
+<a href="#home" class="logo"><span class="logo-icon">GS</span><span>GS DIGITAL<small>SOLUTIONS</small></span></a>
+<div class="links" id="links">
+<a href="#home">Home</a><a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About</a><a href="#process">Process</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
 </div>
+<a class="btn primary" href="#contact">Start a Project ↗</a>
+<button class="menu" id="menu" aria-label="Open menu">☰</button>
+</nav>
+</header>
 
 <main>
 <section class="hero container" id="home">
-  <div class="hero-topline glass"><span class="dot"></span> DIGITAL SERVICES · BUILT WITH CARE</div>
-  <div class="hero-grid">
-    <div>
-      <div class="eyebrow">WELCOME TO GS DIGITAL SOLUTIONS</div>
-      <h1>Ideas Into <span class="gradient-text">Digital</span> Experiences.</h1>
-      <p class="hero-copy">आपके बिजनेस और डिजिटल जरूरतों के लिए आधुनिक वेबसाइट, ऑनलाइन फॉर्म सहायता, टाइपिंग और भरोसेमंद डिजिटल सर्विस सपोर्ट।</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#work">Explore Our Work <span>→</span></a>
-        <a class="btn btn-light" href="#contact">Start a Project ↗</a>
-      </div>
-      <p class="hero-note">✦ Simple process &nbsp; ✦ Clear communication &nbsp; ✦ Customer-focused support</p>
-    </div>
-    <div class="hero-visual">
-      <div class="orb"></div>
-      <div class="browser glass">
-        <div class="browser-bar"><i></i><i></i><i></i><span class="browser-title">gsdigitalsolutions.in</span></div>
-        <div class="browser-content">
-          <small>DESIGN · DIGITAL · SUPPORT</small>
-          <h2>Make Your<br>Digital Presence<br>Remarkable.</h2>
-          <p>Thoughtful digital solutions for people, creators and growing businesses.</p>
-          <a class="mini-btn" href="#services">DISCOVER SERVICES ↗</a>
-          <div class="mini-stats">
-            <div><b>01</b><span>Understand</span></div>
-            <div><b>02</b><span>Create</span></div>
-            <div><b>03</b><span>Deliver</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="floating-card glass">✦ Your Digital Partner<span>Ideas deserve a great online presence.</span></div>
-    </div>
-  </div>
-  <div class="trust-row">
-    <div class="trust-card glass"><b>✧ Modern Design</b><span>Clean and premium visual experience</span></div>
-    <div class="trust-card glass"><b>▣ Mobile Friendly</b><span>Designed for phone, tablet and desktop</span></div>
-    <div class="trust-card glass"><b>♡ Helpful Support</b><span>Clear guidance at every step</span></div>
-  </div>
+<div class="pill glass"><span class="dot"></span> DIGITAL SERVICES · BUILT WITH CARE</div>
+<div class="hero-grid">
+<div>
+<div class="eyebrow">WELCOME TO GS DIGITAL SOLUTIONS</div>
+<h1>Ideas Into <span class="gradient">Digital</span> Experiences.</h1>
+<p class="copy">आपके बिजनेस और डिजिटल जरूरतों के लिए आधुनिक वेबसाइट, ऑनलाइन फॉर्म सहायता, टाइपिंग और उपयोगी डिजिटल सर्विस सपोर्ट।</p>
+<div class="actions"><a class="btn primary" href="#work">Explore Our Work →</a><a class="btn secondary" href="#contact">Start a Project ↗</a></div>
+<p class="note">✦ Modern Design &nbsp; ✦ Clear Communication &nbsp; ✦ Helpful Support</p>
+</div>
+<div class="visual">
+<div class="orb"></div>
+<div class="browser glass">
+<div class="browser-top"><i></i><i></i><i></i></div>
+<div class="screen"><small>DESIGN · DIGITAL · SUPPORT</small><h2>Make Your<br>Digital Presence<br>Remarkable.</h2><p>Thoughtful digital solutions for people and growing businesses.</p><a href="#services" class="mini">DISCOVER SERVICES ↗</a></div>
+</div>
+<div class="float-card glass">✦ Your Digital Partner<span>Ideas deserve a great online presence.</span></div>
+</div>
+</div>
+<div class="trust">
+<div class="glass"><b>✧ Modern Design</b><span>Clean premium experience</span></div>
+<div class="glass"><b>▣ Mobile Friendly</b><span>Phone, tablet and desktop</span></div>
+<div class="glass"><b>♡ Helpful Support</b><span>Clear guidance at every step</span></div>
+</div>
 </section>
 
-<section class="section container" id="services">
-  <div class="section-head reveal">
-    <div class="eyebrow">WHAT WE DO</div>
-    <h2>Digital Services for <span class="gradient-text">Every Need.</span></h2>
-    <p>एक ही जगह पर आपकी वेबसाइट, ऑनलाइन काम और डिजिटल जरूरतों के लिए उपयोगी सेवाएँ।</p>
-  </div>
-  <div class="services-grid">
-    <article class="service-card glass reveal">
-      <div class="icon-box">✧</div><h3>Website Design</h3>
-      <p>आपके बिजनेस, दुकान या व्यक्तिगत ब्रांड के लिए आकर्षक और मोबाइल-फ्रेंडली वेबसाइट।</p>
-      <ul><li>Business websites</li><li>Personal portfolio</li><li>Landing pages</li><li>Responsive layout</li></ul>
-    </article>
-    <article class="service-card glass reveal">
-      <div class="icon-box">▤</div><h3>Online Form Assistance</h3>
-      <p>ऑनलाइन आवेदन और फॉर्म भरने की प्रक्रिया में सावधानीपूर्वक सहायता।</p>
-      <ul><li>Form filling guidance</li><li>Application assistance</li><li>Document checklist</li><li>Submission guidance</li></ul>
-    </article>
-    <article class="service-card glass reveal">
-      <div class="icon-box">⌨</div><h3>Typing Services</h3>
-      <p>हिंदी और अंग्रेजी में साफ-सुथरा टाइपिंग और डॉक्यूमेंट तैयार करने का काम।</p>
-      <ul><li>Hindi typing</li><li>English typing</li><li>Document formatting</li><li>Basic data entry</li></ul>
-    </article>
-    <article class="service-card glass reveal">
-      <div class="icon-box">▧</div><h3>Document Support</h3>
-      <p>डिजिटल दस्तावेजों को व्यवस्थित करने और सामान्य डॉक्यूमेंट सहायता।</p>
-      <ul><li>PDF assistance</li><li>Document formatting</li><li>File organization</li><li>Print-ready documents</li></ul>
-    </article>
-    <article class="service-card glass reveal">
-      <div class="icon-box">◈</div><h3>Digital Business Support</h3>
-      <p>छोटे बिजनेस और दुकानों के लिए ऑनलाइन मौजूदगी बनाने में सहायता।</p>
-      <ul><li>Business profile guidance</li><li>Digital contact setup</li><li>Online presence</li><li>Basic tech support</li></ul>
-    </article>
-    <article class="service-card glass reveal">
-      <div class="icon-box">✦</div><h3>Creative Digital Work</h3>
-      <p>आपकी जरूरत के अनुसार डिजिटल डिजाइन और ऑनलाइन सामग्री तैयार करने में सहायता।</p>
-      <ul><li>Social media creatives</li><li>Basic banners</li><li>Digital presentations</li><li>Custom requests</li></ul>
-    </article>
-  </div>
+<section class="content container" id="services">
+<div class="heading reveal"><div class="eyebrow">WHAT WE DO</div><h2>Digital Services for <span class="gradient">Every Need.</span></h2><p>आपकी वेबसाइट, ऑनलाइन काम और डिजिटल जरूरतों के लिए उपयोगी सेवाएँ।</p></div>
+<div class="cards">
+<article class="card glass reveal"><div class="icon">✧</div><h3>Website Design</h3><p>बिजनेस, दुकान या व्यक्तिगत ब्रांड के लिए आकर्षक वेबसाइट।</p><ul><li>Business websites</li><li>Personal portfolio</li><li>Landing pages</li><li>Responsive design</li></ul></article>
+<article class="card glass reveal"><div class="icon">▤</div><h3>Online Form Assistance</h3><p>ऑनलाइन आवेदन और फॉर्म प्रक्रिया में सहायता।</p><ul><li>Form filling guidance</li><li>Application assistance</li><li>Document checklist</li><li>Submission guidance</li></ul></article>
+<article class="card glass reveal"><div class="icon">⌨</div><h3>Typing Services</h3><p>हिंदी और अंग्रेजी में टाइपिंग और डॉक्यूमेंट तैयार करना।</p><ul><li>Hindi typing</li><li>English typing</li><li>Document formatting</li><li>Basic data entry</li></ul></article>
+<article class="card glass reveal"><div class="icon">▧</div><h3>Document Support</h3><p>डिजिटल दस्तावेजों को व्यवस्थित करने में सहायता।</p><ul><li>PDF assistance</li><li>Document formatting</li><li>File organization</li><li>Print-ready documents</li></ul></article>
+<article class="card glass reveal"><div class="icon">◈</div><h3>Digital Business Support</h3><p>छोटे बिजनेस के लिए ऑनलाइन मौजूदगी बनाने में सहायता।</p><ul><li>Business profile guidance</li><li>Digital contact setup</li><li>Online presence</li><li>Basic tech support</li></ul></article>
+<article class="card glass reveal"><div class="icon">✦</div><h3>Creative Digital Work</h3><p>आपकी जरूरत के अनुसार डिजिटल डिजाइन और सामग्री।</p><ul><li>Social media creatives</li><li>Basic banners</li><li>Digital presentations</li><li>Custom requests</li></ul></article>
+</div>
 </section>
 
-<section class="section container" id="work">
-  <div class="section-head reveal">
-    <div class="eyebrow">SELECTED CONCEPTS</div>
-    <h2>Ideas Made <span class="gradient-text">Visible.</span></h2>
-    <p>यहाँ कुछ डेमो डिजाइन कॉन्सेप्ट हैं। वास्तविक ग्राहक प्रोजेक्ट मिलने पर उन्हें यहाँ जोड़ा जा सकता है।</p>
-  </div>
-  <div class="project-grid">
-    <article class="project-card glass reveal">
-      <div class="project-image school"><div><small>EDUCATION WEBSITE CONCEPT</small><h3>Learning Space</h3></div></div>
-      <div class="project-info"><span>DEMO CONCEPT · 01</span><p>स्कूल या कोचिंग संस्थान के लिए वेबसाइट का एक डिजाइन कॉन्सेप्ट।</p><span class="demo-label">Sample design — not a client project</span></div>
-    </article>
-    <article class="project-card glass reveal">
-      <div class="project-image store"><div><small>BUSINESS WEBSITE CONCEPT</small><h3>Modern Business</h3></div></div>
-      <div class="project-info"><span>DEMO CONCEPT · 02</span><p>स्थानीय दुकान या सर्विस बिजनेस के लिए डिजिटल वेबसाइट कॉन्सेप्ट।</p><span class="demo-label">Sample design — not a client project</span></div>
-    </article>
-    <article class="project-card glass reveal">
-      <div class="project-image personal"><div><small>PERSONAL PORTFOLIO</small><h3>Creative Profile</h3></div></div>
-      <div class="project-info"><span>DEMO CONCEPT · 03</span><p>फ्रीलांसर या क्रिएटर के लिए पर्सनल पोर्टफोलियो का नमूना।</p><span class="demo-label">Sample design — not a client project</span></div>
-    </article>
-    <article class="project-card glass reveal">
-      <div class="project-image"><div><small>DIGITAL SERVICE CONCEPT</small><h3>Service Hub</h3></div></div>
-      <div class="project-info"><span>DEMO CONCEPT · 04</span><p>ऑनलाइन सेवाओं और ग्राहक संपर्क के लिए एक सरल वेबसाइट कॉन्सेप्ट।</p><span class="demo-label">Sample design — not a client project</span></div>
-    </article>
-  </div>
+<section class="content container" id="work">
+<div class="heading reveal"><div class="eyebrow">SELECTED CONCEPTS</div><h2>Ideas Made <span class="gradient">Visible.</span></h2><p>ये डेमो डिजाइन कॉन्सेप्ट हैं, वास्तविक ग्राहक प्रोजेक्ट नहीं।</p></div>
+<div class="projects">
+<article class="project glass reveal"><div class="project-art"><h3>Learning Space</h3></div><div class="project-info"><small>EDUCATION CONCEPT</small><p>स्कूल या कोचिंग संस्थान के लिए वेबसाइट का नमूना।</p><span class="demo">Sample design</span></div></article>
+<article class="project glass reveal"><div class="project-art"><h3>Modern Business</h3></div><div class="project-info"><small>BUSINESS CONCEPT</small><p>स्थानीय दुकान या सर्विस बिजनेस के लिए डिजाइन।</p><span class="demo">Sample design</span></div></article>
+<article class="project glass reveal"><div class="project-art"><h3>Creative Profile</h3></div><div class="project-info"><small>PORTFOLIO CONCEPT</small><p>फ्रीलांसर या क्रिएटर के लिए पर्सनल पोर्टफोलियो।</p><span class="demo">Sample design</span></div></article>
+<article class="project glass reveal"><div class="project-art"><h3>Service Hub</h3></div><div class="project-info"><small>DIGITAL SERVICE CONCEPT</small><p>ऑनलाइन सेवाओं और ग्राहक संपर्क के लिए नमूना।</p><span class="demo">Sample design</span></div></article>
+</div>
 </section>
 
-<section class="section container" id="process">
-  <div class="section-head reveal">
-    <div class="eyebrow">HOW WE WORK</div>
-    <h2>A Simple Process. <span class="gradient-text">Clear Results.</span></h2>
-    <p>काम शुरू करने से लेकर पूरा होने तक हर स्टेप आपको स्पष्ट बताया जाएगा।</p>
-  </div>
-  <div class="process-grid">
-    <div class="process-card glass reveal"><div class="step">01</div><h3>Understand</h3><p>पहले आपकी जरूरत, लक्ष्य और काम की जानकारी समझेंगे।</p></div>
-    <div class="process-card glass reveal"><div class="step">02</div><h3>Plan & Design</h3><p>आपके काम के अनुसार सही डिजाइन और प्रक्रिया तय करेंगे।</p></div>
-    <div class="process-card glass reveal"><div class="step">03</div><h3>Create</h3><p>तय किए गए काम को तैयार करके आपको दिखाएँगे।</p></div>
-    <div class="process-card glass reveal"><div class="step">04</div><h3>Deliver</h3><p>जाँच के बाद काम पूरा करके जरूरी जानकारी देंगे।</p></div>
-  </div>
+<section class="content container" id="process">
+<div class="heading reveal"><div class="eyebrow">HOW WE WORK</div><h2>A Simple Process. <span class="gradient">Clear Results.</span></h2><p>काम शुरू होने से पूरा होने तक हर स्टेप स्पष्ट रहेगा।</p></div>
+<div class="steps">
+<div class="step glass reveal"><strong>01</strong><h3>Understand</h3><p>आपकी जरूरत और लक्ष्य समझेंगे।</p></div>
+<div class="step glass reveal"><strong>02</strong><h3>Plan & Design</h3><p>काम के अनुसार डिजाइन और प्रक्रिया तय करेंगे।</p></div>
+<div class="step glass reveal"><strong>03</strong><h3>Create</h3><p>तय किए गए काम को तैयार करेंगे।</p></div>
+<div class="step glass reveal"><strong>04</strong><h3>Deliver</h3><p>जाँच के बाद काम पूरा करके देंगे।</p></div>
+</div>
 </section>
 
-<section class="section container" id="about">
-  <div class="about-grid">
-    <div class="about-visual glass reveal">
-      <div class="about-art">
-        <div class="logo-mark">GS</div>
-        <h3>GS Digital Solutions</h3>
-        <p>Simple ideas. Thoughtful digital work.</p>
-      </div>
-    </div>
-    <div class="about-copy reveal">
-      <div class="eyebrow">ABOUT GS</div>
-      <h2>Your Ideas Deserve a <span class="gradient-text">Digital Home.</span></h2>
-      <p>GS Digital Solutions का उद्देश्य लोगों और छोटे बिजनेस को डिजिटल दुनिया में आगे बढ़ने में मदद करना है।</p>
-      <p>हम वेबसाइट डिजाइन, ऑनलाइन फॉर्म सहायता, टाइपिंग और डॉक्यूमेंट से जुड़ी उपयोगी सेवाओं पर ध्यान देते हैं। हमारा फोकस है—सरल प्रक्रिया, साफ काम और स्पष्ट बातचीत।</p>
-      <ul class="check-list">
-        <li>आपकी जरूरत के अनुसार समाधान</li>
-        <li>काम शुरू करने से पहले स्पष्ट जानकारी</li>
-        <li>मोबाइल और कंप्यूटर दोनों के लिए उपयोगी डिजाइन</li>
-        <li>ईमानदार और स्पष्ट सेवा जानकारी</li>
-      </ul>
-    </div>
-  </div>
+<section class="content container" id="about">
+<div class="about-grid">
+<div class="about-art glass reveal"><div><div class="logo-icon">GS</div><h3>GS Digital Solutions</h3><p>Simple ideas. Thoughtful digital work.</p></div></div>
+<div class="about-text reveal"><div class="eyebrow">ABOUT GS</div><h2>Your Ideas Deserve a <span class="gradient">Digital Home.</span></h2><p>GS Digital Solutions का उद्देश्य लोगों और छोटे बिजनेस को डिजिटल दुनिया में आगे बढ़ने में मदद करना है।</p><p>हम वेबसाइट डिजाइन, ऑनलाइन फॉर्म सहायता, टाइपिंग और डॉक्यूमेंट से जुड़ी उपयोगी सेवाओं पर ध्यान देते हैं।</p><ul class="checks"><li>आपकी जरूरत के अनुसार समाधान</li><li>काम से पहले स्पष्ट जानकारी</li><li>मोबाइल और कंप्यूटर के लिए डिजाइन</li><li>ईमानदार सेवा जानकारी</li></ul></div>
+</div>
 </section>
 
-<section class="section container">
-  <div class="section-head reveal">
-    <div class="eyebrow">THE GS APPROACH</div>
-    <h2>Why Choose <span class="gradient-text">GS?</span></h2>
-    <p>डिजिटल काम में अच्छे डिजाइन के साथ भरोसा और स्पष्टता भी जरूरी है।</p>
-  </div>
-  <div class="why-grid">
-    <div class="why-card glass reveal"><div class="icon-box">◇</div><h3>Thoughtful Design</h3><p>सिर्फ सुंदर नहीं, बल्कि समझने और इस्तेमाल करने में आसान डिजाइन।</p></div>
-    <div class="why-card glass reveal"><div class="icon-box">◎</div><h3>Clear Communication</h3><p>काम, समय और जरूरी जानकारी के बारे में पहले से स्पष्ट बातचीत।</p></div>
-    <div class="why-card glass reveal"><div class="icon-box">↗</div><h3>Practical Solutions</h3><p>आपकी वास्तविक जरूरत के हिसाब से सरल और उपयोगी डिजिटल सहायता।</p></div>
-  </div>
+<section class="content container">
+<div class="heading reveal"><div class="eyebrow">THE GS APPROACH</div><h2>Why Choose <span class="gradient">GS?</span></h2><p>डिजिटल काम में अच्छे डिजाइन के साथ भरोसा और स्पष्टता जरूरी है।</p></div>
+<div class="cards">
+<div class="card glass reveal"><div class="icon">◇</div><h3>Thoughtful Design</h3><p>सुंदर और इस्तेमाल करने में आसान डिजाइन।</p></div>
+<div class="card glass reveal"><div class="icon">◎</div><h3>Clear Communication</h3><p>काम और जरूरी जानकारी के बारे में स्पष्ट बातचीत।</p></div>
+<div class="card glass reveal"><div class="icon">↗</div><h3>Practical Solutions</h3><p>आपकी वास्तविक जरूरत के हिसाब से उपयोगी सहायता।</p></div>
+</div>
 </section>
 
-<section class="section container" id="pricing">
-  <div class="section-head reveal">
-    <div class="eyebrow">SIMPLE & TRANSPARENT</div>
-    <h2>Let's Discuss Your <span class="gradient-text">Project.</span></h2>
-    <p>हर काम की जरूरत अलग होती है, इसलिए सही जानकारी मिलने के बाद ही कीमत बताई जाएगी।</p>
-  </div>
-  <div class="price-card glass reveal">
-    <div class="icon-box" style="margin:0 auto">✧</div>
-    <h3>Custom Service Quote</h3>
-    <p>वेबसाइट, टाइपिंग, फॉर्म सहायता या डॉक्यूमेंट काम—अपनी जरूरत बताएँ। काम की जानकारी देखकर आपको स्पष्ट अनुमान दिया जाएगा।</p>
-    <a class="btn btn-primary" href="#contact">Request a Quote →</a>
-  </div>
+<section class="content container" id="pricing">
+<div class="heading reveal"><div class="eyebrow">SIMPLE & TRANSPARENT</div><h2>Let's Discuss Your <span class="gradient">Project.</span></h2><p>हर काम की जरूरत अलग होती है। कीमत काम की जानकारी मिलने के बाद बताई जाएगी।</p></div>
+<div class="price glass reveal"><div class="icon" style="margin:auto">✧</div><h3>Custom Service Quote</h3><p>वेबसाइट, टाइपिंग, फॉर्म सहायता या डॉक्यूमेंट काम—अपनी जरूरत बताएँ।</p><a class="btn primary" href="#contact">Request a Quote →</a></div>
 </section>
 
-<section class="section container" id="faq">
-  <div class="section-head reveal">
-    <div class="eyebrow">HAVE QUESTIONS?</div>
-    <h2>Frequently Asked <span class="gradient-text">Questions.</span></h2>
-    <p>GS Digital Solutions की सेवाओं से जुड़े कुछ सामान्य सवाल।</p>
-  </div>
-  <div class="faq-list">
-    <details class="glass"><summary>GS Digital Solutions कौन-कौन सी सेवाएँ देता है?</summary><p>वेबसाइट डिजाइन, ऑनलाइन फॉर्म सहायता, हिंदी-अंग्रेजी टाइपिंग, डॉक्यूमेंट सपोर्ट और अन्य डिजिटल कामों में सहायता उपलब्ध है।</p></details>
-    <details class="glass"><summary>क्या मोबाइल के लिए भी वेबसाइट बनाई जाती है?</summary><p>हाँ, वेबसाइट को मोबाइल, टैबलेट और कंप्यूटर स्क्रीन के अनुसार responsive डिजाइन किया जाता है।</p></details>
-    <details class="glass"><summary>किसी काम की कीमत कैसे पता चलेगी?</summary><p>आप पहले काम की जानकारी भेजें। जरूरत और काम की जटिलता समझकर कीमत बताई जाएगी।</p></details>
-    <details class="glass"><summary>काम शुरू करने के लिए क्या जानकारी देनी होगी?</summary><p>आपको किस प्रकार की सेवा चाहिए, उसकी जानकारी और जरूरी सामग्री साझा करनी होगी। संवेदनशील पासवर्ड या OTP कभी साझा न करें।</p></details>
-    <details class="glass"><summary>क्या वेबसाइट बनने के बाद बदलाव हो सकते हैं?</summary><p>हाँ, जरूरत के अनुसार बदलाव और अपडेट के लिए अलग से बात की जा सकती है।</p></details>
-    <details class="glass"><summary>ऑनलाइन फॉर्म भरने में क्या सहायता मिल सकती है?</summary><p>फॉर्म की जानकारी समझने, जरूरी दस्तावेजों की सूची और आवेदन प्रक्रिया में मार्गदर्शन दिया जा सकता है। अंतिम जानकारी संबंधित आधिकारिक पोर्टल से जाँचें।</p></details>
-  </div>
+<section class="content container" id="faq">
+<div class="heading reveal"><div class="eyebrow">HAVE QUESTIONS?</div><h2>Frequently Asked <span class="gradient">Questions.</span></h2></div>
+<div class="faq">
+<details class="glass"><summary>कौन-कौन सी सेवाएँ उपलब्ध हैं?</summary><p>वेबसाइट डिजाइन, ऑनलाइन फॉर्म सहायता, हिंदी-अंग्रेजी टाइपिंग और डॉक्यूमेंट सपोर्ट।</p></details>
+<details class="glass"><summary>क्या मोबाइल के लिए वेबसाइट बनेगी?</summary><p>हाँ, वेबसाइट मोबाइल, टैबलेट और कंप्यूटर के अनुसार responsive बनाई जाएगी।</p></details>
+<details class="glass"><summary>सेवा की कीमत कैसे पता चलेगी?</summary><p>काम की जानकारी मिलने के बाद कीमत बताई जाएगी।</p></details>
+<details class="glass"><summary>काम शुरू करने के लिए क्या चाहिए?</summary><p>आपको किस सेवा की जरूरत है, उसकी जानकारी और जरूरी सामग्री। पासवर्ड या OTP कभी साझा न करें।</p></details>
+<details class="glass"><summary>क्या वेबसाइट में बदलाव हो सकते हैं?</summary><p>हाँ, जरूरत के अनुसार अपडेट के बारे में बात की जा सकती है।</p></details>
+<details class="glass"><summary>ऑनलाइन फॉर्म में कैसी सहायता मिलेगी?</summary><p>फॉर्म समझने, दस्तावेजों की सूची और आवेदन प्रक्रिया में मार्गदर्शन। आधिकारिक जानकारी संबंधित पोर्टल पर जाँचें।</p></details>
+</div>
 </section>
 
-<section class="section container" id="contact">
-  <div class="contact-box reveal">
-    <div class="eyebrow" style="color:#d9c8ff">LET'S CONNECT</div>
-    <h2>Let's Make Something <em>Meaningful.</em></h2>
-    <p>आपको वेबसाइट बनवानी है या किसी डिजिटल काम में सहायता चाहिए? अपनी जरूरत बताइए, हम बातचीत से शुरुआत करेंगे।</p>
-    <a class="btn" id="mainWhatsApp" href="https://wa.me/?text=Hello%20GS%20Digital%20Solutions%2C%20I%20need%20your%20services." target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
-  </div>
+<section class="content container" id="contact">
+<div class="contact reveal"><div class="eyebrow" style="color:#d9c8ff">LET'S CONNECT</div><h2>Let's Make Something Meaningful.</h2><p>आपको वेबसाइट बनवानी है या किसी डिजिटल काम में सहायता चाहिए? अपनी जरूरत बताइए।</p><a class="btn" href="https://wa.me/?text=Hello%20GS%20Digital%20Solutions%2C%20I%20need%20your%20services." target="_blank" rel="noopener">Chat on WhatsApp ↗</a></div>
 </section>
 </main>
 
 <footer class="container">
-  <div class="footer-grid">
-    <div>
-      <a href="#home" class="logo"><span class="logo-mark">GS</span><span>GS DIGITAL<small>SOLUTIONS</small></span></a>
-      <p>आपकी डिजिटल जरूरतों के लिए वेबसाइट, ऑनलाइन सहायता और उपयोगी डिजिटल सर्विस समाधान।</p>
-    </div>
-    <div><h4>Explore</h4><a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About Us</a><a href="#process">Our Process</a></div>
-    <div><h4>Get in Touch</h4><a href="#contact">Contact</a><a href="#faq">FAQs</a><a href="#contact">Request a Quote</a></div>
-  </div>
-  <div class="copyright">© <span id="year"></span> GS Digital Solutions. All rights reserved.</div>
+<div class="footer-grid">
+<div><a href="#home" class="logo"><span class="logo-icon">GS</span><span>GS DIGITAL<small>SOLUTIONS</small></span></a><p>आपकी डिजिटल जरूरतों के लिए वेबसाइट, ऑनलाइन सहायता और उपयोगी डिजिटल सेवाएँ।</p></div>
+<div><h4>Explore</h4><a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About Us</a><a href="#process">Our Process</a></div>
+<div><h4>Get in Touch</h4><a href="#contact">Contact</a><a href="#faq">FAQs</a><a href="#pricing">Request a Quote</a></div>
+</div>
+<div class="copyright">© <span id="year"></span> GS Digital Solutions. All rights reserved.</div>
 </footer>
 
-<div class="float-contact">
-  <a href="#contact" aria-label="Contact">✉</a>
-  <a href="https://wa.me/?text=Hello%20GS%20Digital%20Solutions" target="_blank" rel="noopener" aria-label="WhatsApp">◉</a>
-</div>
+<div class="floating"><a href="#contact" aria-label="Contact">✉</a><a href="https://wa.me/?text=Hello%20GS%20Digital%20Solutions" target="_blank" rel="noopener" aria-label="WhatsApp">◉</a></div>
 
 <script>
-const menuBtn=document.getElementById('menuBtn');
-const navLinks=document.getElementById('navLinks');
-
-menuBtn.addEventListener('click',()=>{
-  navLinks.classList.toggle('open');
-  menuBtn.textContent=navLinks.classList.contains('open')?'×':'☰';
+const menu=document.getElementById('menu');
+const links=document.getElementById('links');
+menu.addEventListener('click',()=>{
+links.classList.toggle('open');
+menu.textContent=links.classList.contains('open')?'×':'☰';
 });
-
-navLinks.querySelectorAll('a').forEach(link=>{
-  link.addEventListener('click',()=>{
-    navLinks.classList.remove('open');
-    menuBtn.textContent='☰';
-  });
-});
-
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+links.classList.remove('open');menu.textContent='☰';
+}));
 document.getElementById('year').textContent=new Date().getFullYear();
-
 const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target);}
+});
 },{threshold:.12});
-
-document.querySelectorAll('.reveal').forEach(item=>observer.observe(item));
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
 </body>
 </html>
