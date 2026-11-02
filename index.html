@@ -1,37 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100d20">
+<meta name="description" content="GS Digital Solutions - Websites, online form assistance, typing and digital services.">
+<title>GS Digital Solutions | Your Digital Partner</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
+:root {
+  --bg: #0d0b18;
+  --panel: rgba(255,255,255,.055);
+  --border: rgba(255,255,255,.12);
+  --white: #fff;
+  --muted: #aaa5bd;
+  --purple: #a98bff;
+  --pink: #ed9ad9;
+  --gradient: linear-gradient(110deg,#a98bff,#ed9ad9);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
+
+.bg-glow {
+  position: fixed;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: .15;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.glow-one {
+  background: #8458ff;
+  top: -150px;
+  left: -150px;
+}
+
+.glow-two {
+  background: #e66acb;
+  right: -180px;
+  top: 500px;
+}
+
+/* NAVIGATION */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(13,11,24,.82);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  min-height: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-family: 'Outfit', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--purple);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #d0ccdc;
+  font-size: 14px;
+  transition: .3s;
+}
+
+.nav-links a:hover {
+  color: var(--purple);
+}
+
+.nav-cta, .btn-primary {
+  background: var(--gradient);
+  color: #171020;
+  font-weight: 800;
+  border-radius: 30px;
+  padding: 13px 22px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+}
+
+.nav-cta:hover, .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(169,139,255,.25);
+}
+
+.menu-btn {
+  display: none;
+  background: transparent;
+  color: white;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 22px;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 690px;
+  display: flex;
+  align-items: center;
+  padding: 90px 0 100px;
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 15px;
+  border: 1px solid var(--border);
+  border-radius: 40px;
+  color: #d5c8ff;
+  background: rgba(169,139,255,.08);
+  font-size: 12px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.eyebrow i {
+  height: 7px;
+  width: 7px;
+  background: #9dffbd;
+  border-radius: 50%;
+}
+
+.hero h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(43px,6vw,76px);
+  line-height: 1.06;
+  letter-spacing: -3px;
+  margin: 25px 0;
+}
+
+.gradient-text {
+  background: var(--gradient);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.hero p {
+  max-width: 560px;
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 16px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 32px;
+}
+
+.btn-outline {
+  border: 1px solid var(--border);
+  padding: 13px 22px;
+  border-radius: 30px;
+  color: white;
+  transition: .3s;
+}
+
+.btn-outline:hover {
+  border-color: var(--purple);
+  background: rgba(169,139,255,.08);
+}
+
+.hero-visual {
+  min-height: 420px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visual-card {
+  width: min(390px,100%);
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 28px;
+  background: linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.025));
+  backdrop-filter: blur(20px);
+  box-shadow: 0 30px 100px rgba(0,0,0,.35);
+  transform: rotate(-3deg);
+}
+
+.visual-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  color: #c9c1df;
+  font-size: 13px;
+}
+
+.visual-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.visual-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--purple);
+}
+
+.visual-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.visual-desc {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.visual-line {
+  height: 9px;
+  background: rgba(255,255,255,.08);
+  border-radius: 20px;
+  margin-top: 17px;
+}
+
+.visual-line.short {
+  width: 65%;
+}
+
+.visual-boxes {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.visual-boxes div {
+  height: 75px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: rgba(169,139,255,.10);
+}
+
+.floating-label {
+  position: absolute;
+  right: -5px;
+  bottom: 25px;
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  background: #211a36;
+  border-radius: 15px;
+  color: #e3d9ff;
+  font-size: 13px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.3);
+}
+
+/* MOVING MARQUEE */
+
 .marquee-band {
   width: 100%;
   overflow: hidden;
-  padding: 22px 0;
-  background: linear-gradient(100deg, #17112d, #30205a, #17112d);
+  padding: 23px 0;
+  background: linear-gradient(100deg,#17112d,#30205a,#17112d);
   border-top: 1px solid rgba(255,255,255,.12);
   border-bottom: 1px solid rgba(255,255,255,.12);
 }
+
 .marquee-track {
   display: flex;
   width: max-content;
   animation: gsMarquee 28s linear infinite;
 }
+
 .marquee-group {
   display: flex;
   align-items: center;
   flex-shrink: 0;
   white-space: nowrap;
 }
+
 .marquee-group span {
   color: white;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 2px;
-  padding: 0 24px;
+  padding: 0 22px;
 }
+
 .marquee-group .star {
   color: #b99aff;
   font-size: 20px;
-  padding: 0 5px;
+  padding: 0 4px;
 }
+
+.marquee-band:hover .marquee-track {
+  animation-play-state: paused;
+}
+
 @keyframes gsMarquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+
+/* COMMON SECTIONS */
+
+section.content-section {
+  padding: 105px 0;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 55px;
+}
+
+.section-heading .small-title {
+  color: var(--purple);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(32px,4vw,49px);
+  letter-spacing: -1.5px;
+  margin: 14px 0;
+}
+
+.section-heading p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* SERVICES */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.service-card {
+  padding: 30px;
+  border-radius: 22px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  transition: .35s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(169,139,255,.5);
+  background: rgba(169,139,255,.09);
+}
+
+.service-icon {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  border-radius: 16px;
+  background: rgba(169,139,255,.14);
+  margin-bottom: 23px;
+}
+
+.service-card h3 {
+  font-family: 'Outfit',sans-serif;
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+/* SHOWCASE */
+
+.showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.showcase-card {
+  min-height: 260px;
+  padding: 35px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  background: linear-gradient(145deg,rgba(169,139,255,.12),rgba(255,255,255,.025));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.showcase-card:nth-child(2) {
+  background: linear-gradient(145deg,rgba(237,154,217,.13),rgba(255,255,255,.025));
+}
+
+.showcase-card .tag {
+  color: var(--purple);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.showcase-card h3 {
+  font-family: 'Outfit',sans-serif;
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+.showcase-card p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* ABOUT */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.about-art {
+  min-height: 330px;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  background: radial-gradient(circle at 30% 30%,rgba(169,139,255,.3),transparent 55%),#171329;
+  display: grid;
+  place-items: center;
+}
+
+.about-monogram {
+  font-family: 'Outfit',sans-serif;
+  font-size: 100px;
+  font-weight: 800;
+  background: var(--gradient);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.about-text h2 {
+  font-family: 'Outfit',sans-serif;
+  font-size: 43px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 15px;
+}
+
+.about-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.about-points span {
+  color: #ded5f5;
+  font-size: 14px;
+}
+
+/* PROCESS */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.process-card {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+  background: var(--panel);
+}
+
+.process-number {
+  font-family: 'Outfit',sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--purple);
+  margin-bottom: 18px;
+}
+
+.process-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.process-card p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+/* CTA */
+
+.cta-box {
+  padding: 65px 35px;
+  text-align: center;
+  border: 1px solid rgba(169,139,255,.25);
+  border-radius: 30px;
+  background: radial-gradient(circle at top,rgba(169,139,255,.2),transparent 65%),rgba(255,255,255,.035);
+}
+
+.cta-box h2 {
+  font-family: 'Outfit',sans-serif;
+  font-size: clamp(32px,4vw,48px);
+  margin-bottom: 15px;
+}
+
+.cta-box p {
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 0 auto 27px;
+  max-width: 580px;
+}
+
+/* CONTACT */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.contact-info, .contact-card {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 22px;
+  padding: 32px;
+}
+
+.contact-info h3, .contact-card h3 {
+  font-family: 'Outfit',sans-serif;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.contact-info p, .contact-card p {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.contact-method {
+  margin-top: 22px;
+  padding: 15px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  color: #e3d9ff;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 35px 0;
+  border-top: 1px solid var(--border);
+  background: rgba(0,0,0,.15);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.footer-inner p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+  color: #d2cce0;
+}
+
+/* WHATSAPP */
+
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 90;
+  padding: 14px 20px;
+  border-radius: 40px;
+  background: #25d366;
+  color: #082c16;
+  font-weight: 800;
+  box-shadow: 0 10px 35px rgba(37,211,102,.25);
+  transition: .3s;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px);
+}
+
+/* MOBILE */
+
+@media(max-width:850px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    width: 100%;
+    padding: 25px 5%;
+    background: #151125;
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .hero-grid, .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 70px 0;
+  }
+
+  .hero-visual {
+    min-height: 360px;
+  }
+
+  .services-grid, .process-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(max-width:580px) {
+  .services-grid, .process-grid, .showcase, .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section.content-section {
+    padding: 75px 0;
+  }
+
+  .hero h1 {
+    letter-spacing: -1.5px;
+  }
+
+  .visual-card {
+    transform: none;
+  }
+
+  .floating-label {
+    right: 0;
+  }
+
+  .about-text h2 {
+    font-size: 34px;
+  }
+
+  .about-points {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .marquee-group span {
+    font-size: 12px;
+    padding: 0 14px;
+  }
+
+  .whatsapp-float {
+    right: 12px;
+    bottom: 12px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior: auto; }
+  .marquee-track { animation: none; }
+  * { transition: none !important; }
+}
 </style>
+</head>
+
+<body>
+
+<div class="bg-glow glow-one"></div>
+<div class="bg-glow glow-two"></div>
+
+<header>
+  <div class="container navbar">
+    <a class="logo" href="#home">GS <span>Digital</span></a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="#contact">Get Started ↗</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div>
+      <div class="eyebrow"><i></i> YOUR DIGITAL SERVICE PARTNER</div>
+
+      <h1>
+        Build Your<br>
+        <span class="gradient-text">Digital Future.</span>
+      </h1>
+
+      <p>
+        Welcome to GS Digital Solutions. We help individuals and businesses
+        with modern websites, online form assistance, typing and useful
+        digital services — all in one place.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn-primary" href="#contact">Let's Get Started ↗</a>
+        <a class="btn-outline" href="#services">Explore Services</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="visual-card">
+        <div class="visual-top">
+          <strong>GS DIGITAL STUDIO</strong>
+          <div class="visual-dots"><span></span><span></span><span></span></div>
+        </div>
+
+        <div class="visual-title">
+          Ideas into<br><span class="gradient-text">Digital Reality.</span>
+        </div>
+
+        <div class="visual-desc">
+          Websites · Digital Support · Online Services
+        </div>
+
+        <div class="visual-line"></div>
+        <div class="visual-line short"></div>
+
+        <div class="visual-boxes">
+          <div></div><div></div><div></div>
+        </div>
+      </div>
+
+      <div class="floating-label">✦ Creative Digital Solutions</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FIRST MOVING LINE -->
+<div class="marquee-band" aria-label="GS Digital Solutions services">
+  <div class="marquee-track">
+    <div class="marquee-group">
+      <span>WEBSITE DESIGN</span><span class="star">✦</span>
+      <span>DIGITAL SERVICES</span><span class="star">✦</span>
+      <span>ONLINE FORMS</span><span class="star">✦</span>
+      <span>HINDI TYPING</span><span class="star">✦</span>
+      <span>DOCUMENT SUPPORT</span><span class="star">✦</span>
+      <span>BUSINESS WEBSITES</span><span class="star">✦</span>
+    </div>
+    <div class="marquee-group" aria-hidden="true">
+      <span>WEBSITE DESIGN</span><span class="star">✦</span>
+      <span>DIGITAL SERVICES</span><span class="star">✦</span>
+      <span>ONLINE FORMS</span><span class="star">✦</span>
+      <span>HINDI TYPING</span><span class="star">✦</span>
+      <span>DOCUMENT SUPPORT</span><span class="star">✦</span>
+      <span>BUSINESS WEBSITES</span><span class="star">✦</span>
+    </div>
+  </div>
+</div>
+
+<section class="content-section" id="services">
+  <div class="container">
+    <div class="section-heading">
+      <div class="small-title">WHAT WE DO</div>
+      <h2>Digital Services, <span class="gradient-text">Made Simple.</span></h2>
+      <p>Practical digital support to help you move forward with confidence.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-icon">✦</div>
+        <h3>Website Design</h3>
+        <p>Modern and responsive websites for personal brands, shops and small businesses.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">⌘</div>
+        <h3>Online Form Assistance</h3>
+        <p>Help understanding and filling online forms with care and attention.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">⌨</div>
+        <h3>Typing Services</h3>
+        <p>Hindi and English typing support for documents and general typing work.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">▤</div>
+        <h3>Document Support</h3>
+        <p>Help with preparing, arranging and formatting digital documents.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">◈</div>
+        <h3>Digital Support</h3>
+        <p>Guidance with everyday digital tasks and online service processes.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">◎</div>
+        <h3>Business Websites</h3>
+        <p>A clean online presence to introduce your business and its services.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="content-section" id="work">
+  <div class="container">
+    <div class="section-heading">
+      <div class="small-title">OUR WORK</div>
+      <h2>Ideas That Become <span class="gradient-text">Experiences.</span></h2>
+      <p>Explore the kinds of digital projects we can help create.</p>
+    </div>
+
+    <div class="showcase">
+      <div class="showcase-card">
+        <div class="tag">Website Concept</div>
+        <h3>Business Website</h3>
+        <p>A modern website concept for presenting a business and its services.</p>
+      </div>
+
+      <div class="showcase-card">
+        <div class="tag">Digital Design</div>
+        <h3>Personal Brand</h3>
+        <p>A clean digital identity concept for individuals and growing brands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section" id="about">
+  <div class="container about-grid">
+
+    <div class="about-art">
+      <div class="about-monogram">GS</div>
+    </div>
+
+    <div class="about-text">
+      <div class="small-title">ABOUT GS</div>
+      <h2>Your Ideas.<br><span class="gradient-text">Our Digital Focus.</span></h2>
+
+      <p>
+        GS Digital Solutions is focused on making useful digital services
+        easier to understand and access.
+      </p>
+
+      <p>
+        From website creation to typing and online assistance, our aim is
+        to provide clear communication and practical support.
+      </p>
+
+      <div class="about-points">
+        <span>✦ Clear Communication</span>
+        <span>✦ Modern Design</span>
+        <span>✦ Helpful Support</span>
+        <span>✦ Customer Focus</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="section-heading">
+      <div class="small-title">HOW IT WORKS</div>
+      <h2>Simple Steps, <span class="gradient-text">Clear Process.</span></h2>
+      <p>Getting started with a digital service should feel simple.</p>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-card">
+        <div class="process-number">01</div>
+        <h3>Tell Us Your Need</h3>
+        <p>Share what kind of website or digital assistance you are looking for.</p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-number">02</div>
+        <h3>Discuss the Details</h3>
+        <p>We discuss the requirements, scope and expected work before starting.</p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-number">03</div>
+        <h3>Get Your Service</h3>
+        <p>We work on the agreed task and communicate about the progress.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Let's Create Something <span class="gradient-text">Great.</span></h2>
+      <p>
+        Have a website idea or need help with a digital service?
+        Get in touch and tell us what you need.
+      </p>
+      <a href="#contact" class="btn-primary">Contact GS Digital Solutions ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="content-section" id="contact">
+  <div class="container">
+    <div class="section-heading">
+      <div class="small-title">GET IN TOUCH</div>
+      <h2>Let's <span class="gradient-text">Talk.</span></h2>
+      <p>Share your requirement and let's discuss how we can help.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Start a Conversation</h3>
+        <p>
+          Contact us for website design, online form assistance,
+          typing and other digital service enquiries.
+        </p>
+
+        <div class="contact-method">✉ Digital Service Enquiry</div>
+        <div class="contact-method">⌘ Website & Business Support</div>
+        <div class="contact-method">⌨ Typing & Document Assistance</div>
+      </div>
+
+      <div class="contact-card">
+        <h3>Have a Project in Mind?</h3>
+        <p>
+          Send a message with the service you need.
+          We can discuss the details and next steps.
+        </p>
+
+        <br>
+        <a class="btn-primary"
+           href="https://wa.me/?text=Hello%20GS%20Digital%20Solutions%2C%20I%20want%20to%20know%20about%20your%20services."
+           target="_blank" rel="noopener">
+          Message on WhatsApp ↗
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECOND MOVING LINE: BEFORE FOOTER -->
+<div class="marquee-band" aria-label="GS Digital Solutions services">
+  <div class="marquee-track">
+    <div class="marquee-group">
+      <span>WEBSITE DESIGN</span><span class="star">✦</span>
+      <span>DIGITAL SERVICES</span><span class="star">✦</span>
+      <span>ONLINE FORMS</span><span class="star">✦</span>
+      <span>HINDI TYPING</span><span class="star">✦</span>
+      <span>DOCUMENT SUPPORT</span><span class="star">✦</span>
+      <span>BUSINESS WEBSITES</span><span class="star">✦</span>
+    </div>
+    <div class="marquee-group" aria-hidden="true">
+      <span>WEBSITE DESIGN</span><span class="star">✦</span>
+      <span>DIGITAL SERVICES</span><span class="star">✦</span>
+      <span>ONLINE FORMS</span><span class="star">✦</span>
+      <span>HINDI TYPING</span><span class="star">✦</span>
+      <span>DOCUMENT SUPPORT</span><span class="star">✦</span>
+      <span>BUSINESS WEBSITES</span><span class="star">✦</span>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <a class="logo" href="#home">GS <span>Digital</span></a>
+    <p>© <span id="year"></span> GS Digital Solutions. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float"
+   href="https://wa.me/?text=Hello%20GS%20Digital%20Solutions"
+   target="_blank" rel="noopener">
+  WhatsApp ↗
+</a>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function () {
+  navLinks.classList.toggle("open");
+});
+
+document.querySelectorAll(".nav-links a").forEach(function(link) {
+  link.addEventListener("click", function() {
+    navLinks.classList.remove("open");
+  });
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
