@@ -1,26 +1,37 @@
-/* GS DIGITAL SOLUTIONS - MOVING TEXT STRIP */
+<style>
 .marquee-band {
   width: 100%;
   overflow: hidden;
-  padding: 23px 0;
-  background: linear-gradien::chatgpt-content-reference{index="0"}
-
-track">
-    <div class="marquee-group">
-      <span>WEBSITE DESIGN</span><span class="star">✦</sp::chatgpt-content-reference{index="1"}
-
->
-  <row align="center">
-    <icon name="globe" size="xl" color="success"/>
-    **Live Website**
-  </row>
-  [GS Digital Solutions खोलें](https://gs9364863-stack.github.io/gs-digital-solutions/)
-  <divider color="subtle"/>
-  <row align="center">
-    <icon name="code" size="xl"/>
-    **Code Editor**
-  </row>
-  [GitHub में index.html एडिट करें](https://github.com/gs9364863-stack/gs-digital-solutions/edit/main/index.html)
-</box>
-
-**ध्यान दें:** अभी वेबसाइट में कोड अपने-आप नहीं जुड़ा है। आपको ऊपर बताए स्थानों पर इसे पेस्ट करके **Commit changes** करना होगा। पूरा पुराना कोड डिलीट मत करना।
+  padding: 22px 0;
+  background: linear-gradient(100deg, #17112d, #30205a, #17112d);
+  border-top: 1px solid rgba(255,255,255,.12);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: gsMarquee 28s linear infinite;
+}
+.marquee-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.marquee-group span {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 0 24px;
+}
+.marquee-group .star {
+  color: #b99aff;
+  font-size: 20px;
+  padding: 0 5px;
+}
+@keyframes gsMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+</style>
