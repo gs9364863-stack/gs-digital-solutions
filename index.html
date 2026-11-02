@@ -51,6 +51,63 @@ transition:.3s;
 .btn:hover{transform:translateY(-3px)}
 .btn.light{background:#ffffffb5;color:#4f5b9e;border:1px solid white;box-shadow:none}
 
+/* TWO-WAY MOVING TEXT STRIP */
+.ticker-wrap{
+width:100%;
+overflow:hidden;
+padding:15px 0;
+margin:5px 0 12px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+.ticker{
+width:100%;
+overflow:hidden;
+white-space:nowrap;
+border-top:1px solid #ffffff;
+border-bottom:1px solid #ffffff;
+background:#ffffff75;
+backdrop-filter:blur(15px);
+padding:13px 0;
+}
+.ticker-track{
+display:flex;
+width:max-content;
+align-items:center;
+animation:ticker-left 28s linear infinite;
+}
+.ticker.reverse .ticker-track{
+animation-name:ticker-right;
+animation-duration:32s;
+}
+.ticker:hover .ticker-track{
+animation-play-state:paused;
+}
+.ticker-item{
+display:inline-flex;
+align-items:center;
+gap:17px;
+padding:0 22px;
+font-size:12px;
+font-weight:800;
+letter-spacing:2px;
+color:#5967c9;
+text-transform:uppercase;
+}
+.ticker-item .star{
+font-size:17px;
+color:#9b64e8;
+}
+@keyframes ticker-left{
+from{transform:translateX(0)}
+to{transform:translateX(-50%)}
+}
+@keyframes ticker-right{
+from{transform:translateX(-50%)}
+to{transform:translateX(0)}
+}
+
 .hero{
 display:grid;grid-template-columns:1fr 1fr;
 gap:50px;align-items:center;padding:85px 0;
@@ -175,6 +232,7 @@ h1{font-size:45px}
 .features{grid-template-columns:1fr}
 .contact{padding:27px}
 .footer{flex-direction:column}
+.ticker-item{font-size:10px;padding:0 15px;letter-spacing:1.5px}
 }
 </style>
 </head>
@@ -196,6 +254,46 @@ h1{font-size:45px}
 <a href="#contact" class="btn">Get Started ↗</a>
 </nav>
 </header>
+
+<!-- MOVING STRIP: FIRST ROW -->
+<div class="ticker-wrap">
+<div class="ticker">
+<div class="ticker-track">
+<div class="ticker-item">WEBSITE DESIGN <span class="star">✦</span></div>
+<div class="ticker-item">DIGITAL SERVICES <span class="star">✦</span></div>
+<div class="ticker-item">ONLINE FORMS <span class="star">✦</span></div>
+<div class="ticker-item">HINDI TYPING <span class="star">✦</span></div>
+<div class="ticker-item">DOCUMENT SUPPORT <span class="star">✦</span></div>
+<div class="ticker-item">BUSINESS WEBSITES <span class="star">✦</span></div>
+
+<div class="ticker-item">WEBSITE DESIGN <span class="star">✦</span></div>
+<div class="ticker-item">DIGITAL SERVICES <span class="star">✦</span></div>
+<div class="ticker-item">ONLINE FORMS <span class="star">✦</span></div>
+<div class="ticker-item">HINDI TYPING <span class="star">✦</span></div>
+<div class="ticker-item">DOCUMENT SUPPORT <span class="star">✦</span></div>
+<div class="ticker-item">BUSINESS WEBSITES <span class="star">✦</span></div>
+</div>
+</div>
+
+<!-- MOVING STRIP: SECOND ROW, OPPOSITE DIRECTION -->
+<div class="ticker reverse">
+<div class="ticker-track">
+<div class="ticker-item">CREATIVE IDEAS <span class="star">✧</span></div>
+<div class="ticker-item">SMART SOLUTIONS <span class="star">✧</span></div>
+<div class="ticker-item">ONLINE SUPPORT <span class="star">✧</span></div>
+<div class="ticker-item">YOUR DIGITAL PARTNER <span class="star">✧</span></div>
+<div class="ticker-item">SIMPLE AND DIGITAL <span class="star">✧</span></div>
+<div class="ticker-item">GS DIGITAL SOLUTIONS <span class="star">✧</span></div>
+
+<div class="ticker-item">CREATIVE IDEAS <span class="star">✧</span></div>
+<div class="ticker-item">SMART SOLUTIONS <span class="star">✧</span></div>
+<div class="ticker-item">ONLINE SUPPORT <span class="star">✧</span></div>
+<div class="ticker-item">YOUR DIGITAL PARTNER <span class="star">✧</span></div>
+<div class="ticker-item">SIMPLE AND DIGITAL <span class="star">✧</span></div>
+<div class="ticker-item">GS DIGITAL SOLUTIONS <span class="star">✧</span></div>
+</div>
+</div>
+</div>
 
 <main>
 <div class="container hero" id="home">
@@ -294,7 +392,7 @@ GS / DIGITAL
 <h2>Have A Project In Mind?</h2>
 <p>अपने काम के बारे में बताइए। WhatsApp पर संपर्क करें।</p>
 </div>
-<a class="btn" href="https://wa.me/?text=Hello%20GS%20Digital%20Solutions%2C%20I%20need%20your%20services." target="_blank" rel="noopener">Chat On WhatsApp ↗</a>
+<a class="btn" href="https://wa.me/?text=Hello%20GS%20Digital%20Solutions%2C%20I%20need%20your%20services" target="_blank" rel="noopener">Chat On WhatsApp ↗</a>
 </div>
 </div>
 </section>
