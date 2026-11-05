@@ -63,22 +63,20 @@ nav{
   display:grid;place-items:center;color:white;font-size:19px;
   background:linear-gradient(135deg,var(--purple),var(--blue),var(--cyan));
   box-shadow:0 8px 20px #8a5aff45;
-} .logo-mark{
-  animation: gsLogoSpin 1.2s ease-out 1 both;
+}.logo > .logo-mark{
+  animation: gsLogoSpin 3s linear infinite;
+  transform-style: preserve-3d;
   transform-origin: center;
 }
 
 @keyframes gsLogoSpin{
   0%{
-    transform: rotate(-180deg) scale(.7);
-  }
-  70%{
-    transform: rotate(12deg) scale(1.08);
+    transform: perspective(400px) rotateY(0deg);
   }
   100%{
-    transform: rotate(0deg) scale(1);
+    transform: perspective(400px) rotateY(360deg);
   }
-  }
+}
 .logo small{display:block;font-size:9px;letter-spacing:3px;color:var(--muted);font-weight:700}
 .nav-links{display:flex;gap:27px;align-items:center;font-size:13px;font-weight:700;color:#51516c}
 .nav-links a:hover{color:var(--purple)}
