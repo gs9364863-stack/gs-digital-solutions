@@ -61,6 +61,15 @@ nav{
 .logo-mark{
   width:43px;height:43px;border-radius:14px;
   display:grid;place-items:center;color:white;font-size:19px;
+  .logo > .logo-mark{
+  animation: gsLogoSpin 3s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes gsLogoSpin{
+  0%{transform:rotateY(0deg)}
+  100%{transform:rotateY(360deg)}
+    }
   background:linear-gradient(135deg,var(--purple),var(--blue),var(--cyan));
   box-shadow:0 8px 20px #8a5aff45;
 } .logo-mark{
