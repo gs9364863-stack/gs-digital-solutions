@@ -63,14 +63,21 @@ nav{
   display:grid;place-items:center;color:white;font-size:19px;
   background:linear-gradient(135deg,var(--purple),var(--blue),var(--cyan));
   box-shadow:0 8px 20px #8a5aff45;
-}  animation: gsLogoSpin 1.2s ease-out 1 both;
+} .logo-mark{
+  animation: gsLogoSpin 1.2s ease-out 1 both;
   transform-origin: center;
 }
 
 @keyframes gsLogoSpin{
-  0%{transform:rotate(-180deg) scale(.7)}
-  70%{transform:rotate(12deg) scale(1.08)}
-  100%{transform:rotate(0deg) scale(1)}
+  0%{
+    transform: rotate(-180deg) scale(.7);
+  }
+  70%{
+    transform: rotate(12deg) scale(1.08);
+  }
+  100%{
+    transform: rotate(0deg) scale(1);
+  }
   }
 .logo small{display:block;font-size:9px;letter-spacing:3px;color:var(--muted);font-weight:700}
 .nav-links{display:flex;gap:27px;align-items:center;font-size:13px;font-weight:700;color:#51516c}
