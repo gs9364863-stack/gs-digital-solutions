@@ -1,759 +1,295 @@
-vv
 <!DOCTYPE html>
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#f8f6ff">
-<meta name="description" content="GS Digital Solutions - Website Design, Online Form Assistance, Typing and Digital Services.">
-<title>GS Digital Solutions</title>
+<meta name="description" content="GS Digital - GS Digital Solutions. Website Designing, Online Form Filling, Hindi and English Typing and Digital Services.">
+  <meta name="google-site-verification" content="6sCotJz9kejwWRKZ50zwC7IzQcnog2QIOMaT5euyLpY" />
+<title>GS Digital | GS Digital Solutions</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
 
 <style>
 :root{
- --ink:#11132f;
- --muted:#686984;
- --purple:#803cff;
- --blue:#3479ed;
- --cyan:#31c5c6;
- --glass:rgba(255,255,255,.72);
- --line:rgba(119,105,180,.15);
- --shadow:0 18px 55px rgba(62,45,120,.10);
+  --ink:#11132f;
+  --muted:#686984;
+  --purple:#803cff;
+  --blue:#3479ed;
+  --cyan:#31c5c6;
+  --glass:rgba(255,255,255,.72);
+  --line:rgba(119,105,180,.15);
+  --shadow:0 18px 55px rgba(62,45,120,.10);
 }
-
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
-
 body{
- font-family:'DM Sans',sans-serif;
- color:var(--ink);
- background:
- radial-gradient(ellipse at 10% 5%,#e9dcff 0,transparent 34%),
- radial-gradient(ellipse at 90% 25%,#dff5ff 0,transparent 32%),
- radial-gradient(ellipse at 50% 70%,#f2e8ff 0,transparent 40%),
- #faf9ff;
- overflow-x:hidden;
+  font-family:'DM Sans',sans-serif;
+  color:var(--ink);
+  background:
+    radial-gradient(ellipse at 10% 5%,#e9dcff 0,transparent 34%),
+    radial-gradient(ellipse at 90% 25%,#dff5ff 0,transparent 32%),
+    radial-gradient(ellipse at 50% 70%,#f2e8ff 0,transparent 40%),
+    #faf9ff;
+  overflow-x:hidden;
 }
-
 body:before{
- content:"";
- position:fixed;
- inset:0;
- pointer-events:none;
- z-index:-1;
- background-image:
- linear-gradient(rgba(112,90,170,.035) 1px,transparent 1px),
- linear-gradient(90deg,rgba(112,90,170,.035) 1px,transparent 1px);
- background-size:58px 58px;
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background-image:linear-gradient(rgba(112,90,170,.035) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(112,90,170,.035) 1px,transparent 1px);
+  background-size:58px 58px;
 }
-
 a{text-decoration:none;color:inherit}
 button{font:inherit}
 .container{width:min(1160px,calc(100% - 40px));margin:auto}
-
 .glass{
- background:var(--glass);
- border:1px solid rgba(255,255,255,.9);
- box-shadow:var(--shadow);
- backdrop-filter:blur(22px);
- -webkit-backdrop-filter:blur(22px);
+  background:var(--glass);
+  border:1px solid rgba(255,255,255,.9);
+  box-shadow:var(--shadow);
+  backdrop-filter:blur(22px);
+  -webkit-backdrop-filter:blur(22px);
 }
-
-/* NAVIGATION */
-
 .nav-wrap{position:sticky;top:12px;z-index:100;padding-top:12px}
-
 nav{
- min-height:78px;
- border-radius:50px;
- padding:12px 24px;
- display:flex;
- align-items:center;
- justify-content:space-between;
+  min-height:78px;border-radius:50px;padding:12px 24px;
+  .logo-mark{
+  position:relative;
+  isolation:isolate;
+  animation:gsLogoSpin 3.6s ease-in-out infinite;
+  transform-origin:center;
 }
 
-.logo{
- display:flex;
- align-items:center;
- gap:12px;
- font-weight:800;
- font-size:22px;
- letter-spacing:-1px;
+.logo-mark::before,
+.logo-mark::after{
+  content:"";
+  position:absolute;
+  width:13px;
+  height:13px;
+  border-radius:4px;
+  background:linear-gradient(135deg,#31c5c6,#803cff);
+  pointer-events:none;
 }
 
-/* GS SEGMENTED LOGO */
-
-.logo-mark{
- position:relative;
- width:43px;
- height:43px;
- flex-shrink:0;
- border-radius:14px;
- overflow:hidden;
- display:grid;
- place-items:center;
- background:transparent;
- box-shadow:0 8px 20px #8a5aff45;
- isolation:isolate;
+.logo-mark::before{
+  top:-5px;
+  right:-5px;
+  animation:gsShardOne 3.6s ease-in-out infinite;
 }
 
-.logo-mark .piece{
- position:absolute;
- inset:0;
- display:grid;
- place-items:center;
- color:white;
- font-size:19px;
- font-weight:800;
- letter-spacing:-1px;
- background:linear-gradient(135deg,var(--purple),var(--blue),var(--cyan));
- transform-style:preserve-3d;
- backface-visibility:hidden;
- animation:pieceAssemble 1.65s cubic-bezier(.2,.8,.2,1) both;
+.logo-mark::after{
+  bottom:-5px;
+  left:-5px;
+  background:linear-gradient(135deg,#3479ed,#31c5c6);
+  animation:gsShardTwo 3.6s ease-in-out infinite;
 }
 
-.logo-mark .piece:nth-child(1){
- clip-path:polygon(0 0,52% 0,52% 52%,0 52%);
- transform:translate(-35px,-30px) rotate(-100deg) scale(.5);
- animation-delay:.05s;
+@keyframes gsLogoSpin{
+  0%{transform:rotate(-180deg) scale(.65)}
+  35%{transform:rotate(180deg) scale(1.12)}
+  70%,100%{transform:rotate(360deg) scale(1)}
 }
 
-.logo-mark .piece:nth-child(2){
- clip-path:polygon(48% 0,100% 0,100% 52%,48% 52%);
- transform:translate(35px,-30px) rotate(100deg) scale(.5);
- animation-delay:.13s;
+@keyframes gsShardOne{
+  0%,100%{
+    opacity:0;
+    transform:translate(0,0) rotate(0);
+  }
+  35%{
+    opacity:1;
+    transform:translate(12px,-12px) rotate(150deg);
+  }
+  65%{
+    opacity:1;
+    transform:translate(5px,-5px) rotate(280deg);
+  }
 }
 
-.logo-mark .piece:nth-child(3){
- clip-path:polygon(0 48%,52% 48%,52% 100%,0 100%);
- transform:translate(-35px,30px) rotate(100deg) scale(.5);
- animation-delay:.21s;
+@keyframes gsShardTwo{
+  0%,100%{
+    opacity:0;
+    transform:translate(0,0) rotate(0);
+  }
+  35%{
+    opacity:1;
+    transform:translate(-12px,12px) rotate(-150deg);
+  }
+  65%{
+    opacity:1;
+    transform:translate(-5px,5px) rotate(-280deg);
+  }
 }
-
-.logo-mark .piece:nth-child(4){
- clip-path:polygon(48% 48%,100% 48%,100% 100%,48% 100%);
- transform:translate(35px,30px) rotate(-100deg) scale(.5);
- animation-delay:.29s;
+    transform: perspective(400px) rotateY(360deg);
+  }
 }
-
-@keyframes pieceAssemble{
- 0%{
-  opacity:0;
-  filter:blur(5px);
- }
- 65%{
-  opacity:1;
-  filter:blur(0);
- }
- 100%{
-  transform:translate(0,0) rotate(0deg) scale(1);
-  opacity:1;
-  filter:blur(0);
- }
-}
-
-.logo small{
- display:block;
- font-size:9px;
- letter-spacing:3px;
- color:var(--muted);
- font-weight:700;
-}
-
-.nav-links{
- display:flex;
- gap:27px;
- align-items:center;
- font-size:13px;
- font-weight:700;
- color:#51516c;
-}
-
+.logo small{display:block;font-size:9px;letter-spacing:3px;color:var(--muted);font-weight:700}
+.nav-links{display:flex;gap:27px;align-items:center;font-size:13px;font-weight:700;color:#51516c}
 .nav-links a:hover{color:var(--purple)}
-
 .nav-cta,.btn{
- display:inline-flex;
- align-items:center;
- justify-content:center;
- gap:10px;
- border:0;
- border-radius:50px;
- padding:15px 23px;
- font-weight:800;
- transition:.25s;
- cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  border:0;border-radius:50px;padding:15px 23px;font-weight:800;
+  transition:.25s;cursor:pointer;
 }
-
 .nav-cta,.btn-primary{
- color:white;
- background:linear-gradient(110deg,#803cff,#a04cf4);
- box-shadow:0 12px 28px #8545ed35;
+  color:white;background:linear-gradient(110deg,#803cff,#a04cf4);
+  box-shadow:0 12px 28px #8545ed35;
 }
-
-.nav-cta:hover,.btn:hover{
- transform:translateY(-3px);
- box-shadow:0 16px 32px #8545ed35;
-}
-
-.menu-btn{
- display:none;
- border:0;
- background:transparent;
- font-size:27px;
- color:var(--ink);
- cursor:pointer;
-}
-
-/* HERO */
-
+.nav-cta:hover,.btn:hover{transform:translateY(-3px);box-shadow:0 16px 32px #8545ed35}
+.menu-btn{display:none;border:0;background:transparent;font-size:27px;color:var(--ink);cursor:pointer}
 .hero{padding:75px 0 80px;position:relative}
-
 .hero-topline{
- display:inline-flex;
- align-items:center;
- gap:9px;
- padding:12px 19px;
- border-radius:50px;
- font-size:12px;
- font-weight:800;
- color:#555574;
+  display:inline-flex;align-items:center;gap:9px;padding:12px 19px;
+  border-radius:50px;font-size:12px;font-weight:800;color:#555574;
 }
-
-.dot{
- width:8px;
- height:8px;
- background:#20c9a0;
- border-radius:50%;
- box-shadow:0 0 0 5px #20c9a022;
-}
-
-.hero-grid{
- display:grid;
- grid-template-columns:1.05fr .95fr;
- gap:45px;
- align-items:center;
- margin-top:40px;
-}
-
-.eyebrow{
- color:var(--purple);
- font-size:12px;
- letter-spacing:3px;
- font-weight:800;
- text-transform:uppercase;
-}
-
+.dot{width:8px;height:8px;background:#20c9a0;border-radius:50%;box-shadow:0 0 0 5px #20c9a022}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center;margin-top:40px}
+.eyebrow{color:var(--purple);font-size:12px;letter-spacing:3px;font-weight:800;text-transform:uppercase}
 h1{
- font-family:'Playfair Display',serif;
- font-size:clamp(47px,6vw,76px);
- line-height:1.06;
- letter-spacing:-2.7px;
- margin:20px 0;
+  font-family:'Playfair Display',serif;font-size:clamp(47px,6vw,76px);
+  line-height:1.06;letter-spacing:-2.7px;margin:20px 0;
 }
-
 .gradient-text{
- background:linear-gradient(100deg,#7136ed,#367fe9,#28bdbb);
- color:transparent;
- background-clip:text;
- -webkit-background-clip:text;
- font-style:italic;
+  background:linear-gradient(100deg,#7136ed,#367fe9,#28bdbb);
+  color:transparent;background-clip:text;-webkit-background-clip:text;
+  font-style:italic;
 }
-
-.hero-copy{
- font-size:17px;
- line-height:1.85;
- color:var(--muted);
- max-width:570px;
-}
-
+.hero-copy{font-size:17px;line-height:1.85;color:var(--muted);max-width:570px}
 .hero-actions{
- display:flex;
- flex-direction:column;
- align-items:flex-start;
- gap:13px;
- margin-top:30px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:13px;
+  margin-top:30px;
 }
-
 .btn{padding:17px 25px;font-size:14px}
 .btn-light{background:white;color:var(--ink);border:1px solid var(--line)}
 .hero-note{font-size:12px;color:var(--muted);margin-top:20px}
-
-.hero-visual{
- position:relative;
- min-height:430px;
- display:grid;
- place-items:center;
-}
-
+.hero-visual{position:relative;min-height:430px;display:grid;place-items:center}
 .orb{
- position:absolute;
- width:340px;
- height:340px;
- border-radius:50%;
- background:linear-gradient(135deg,#c8a9ff88,#87dff088);
- filter:blur(2px);
- animation:float 7s ease-in-out infinite;
+  position:absolute;width:340px;height:340px;border-radius:50%;
+  background:linear-gradient(135deg,#c8a9ff88,#87dff088);
+  filter:blur(2px);animation:float 7s ease-in-out infinite;
 }
-
 .browser{
- position:relative;
- width:100%;
- max-width:490px;
- border-radius:25px;
- overflow:hidden;
- transform:rotate(-2deg);
+  position:relative;width:100%;max-width:490px;border-radius:25px;
+  overflow:hidden;transform:rotate(-2deg);
 }
-
-.browser-bar{
- height:44px;
- background:#fff;
- display:flex;
- align-items:center;
- gap:7px;
- padding:0 16px;
- border-bottom:1px solid var(--line);
-}
-
-.browser-bar i{
- width:8px;
- height:8px;
- border-radius:50%;
- background:#d6d1e5;
-}
-
+.browser-bar{height:44px;background:#fff;display:flex;align-items:center;gap:7px;padding:0 16px;border-bottom:1px solid var(--line)}
+.browser-bar i{width:8px;height:8px;border-radius:50%;background:#d6d1e5}
 .browser-title{margin-left:10px;font-size:10px;color:#85839d}
-
-.browser-content{
- padding:28px;
- background:linear-gradient(145deg,#211b49,#5741a2 55%,#258fbd);
- color:white;
- min-height:310px;
-}
-
-.browser-content small{
- color:#d9caff;
- letter-spacing:2px;
- font-size:9px;
-}
-
-.browser-content h2{
- font-family:'Playfair Display',serif;
- font-size:36px;
- line-height:1.15;
- margin:18px 0;
-}
-
+.browser-content{padding:28px;background:linear-gradient(145deg,#211b49,#5741a2 55%,#258fbd);color:white;min-height:310px}
+.browser-content small{color:#d9caff;letter-spacing:2px;font-size:9px}
+.browser-content h2{font-family:'Playfair Display',serif;font-size:36px;line-height:1.15;margin:18px 0}
 .browser-content p{font-size:12px;line-height:1.7;color:#e5e0ff}
-
-.mini-btn{
- display:inline-block;
- margin-top:20px;
- padding:10px 17px;
- border-radius:30px;
- background:white;
- color:#34236c;
- font-size:10px;
- font-weight:800;
-}
-
+.mini-btn{display:inline-block;margin-top:20px;padding:10px 17px;border-radius:30px;background:white;color:#34236c;font-size:10px;font-weight:800}
 .mini-stats{display:flex;gap:10px;margin-top:28px}
-
-.mini-stats div{
- flex:1;
- background:#ffffff18;
- border:1px solid #ffffff2c;
- padding:12px;
- border-radius:13px;
-}
-
-.mini-stats b{display:block;font-size:17px}
-.mini-stats span{font-size:9px;color:#e5e0ff}
-
+.mini-stats div{flex:1;background:#ffffff18;border:1px solid #ffffff2c;padding:12px;border-radius:13px}
+.mini-stats b{display:block;font-size:17px}.mini-stats span{font-size:9px;color:#e5e0ff}
 .floating-card{
- position:absolute;
- right:-4px;
- bottom:22px;
- padding:16px 19px;
- border-radius:18px;
- font-size:12px;
- font-weight:800;
- animation:float 5s ease-in-out infinite;
+  position:absolute;right:-4px;bottom:22px;padding:16px 19px;border-radius:18px;
+  font-size:12px;font-weight:800;animation:float 5s ease-in-out infinite;
 }
-
-.floating-card span{
- display:block;
- color:var(--muted);
- font-weight:500;
- margin-top:5px;
-}
-
+.floating-card span{display:block;color:var(--muted);font-weight:500;margin-top:5px}
 @keyframes float{50%{transform:translateY(-13px)}}
-
-/* SECTIONS */
-
 .section{padding:85px 0}
-
-.section-head{
- text-align:center;
- max-width:680px;
- margin:0 auto 43px;
-}
-
-.section-head h2{
- font-family:'Playfair Display',serif;
- font-size:clamp(34px,4vw,48px);
- line-height:1.15;
- margin:13px 0;
-}
-
-.section-head p{
- color:var(--muted);
- line-height:1.8;
- font-size:14px;
-}
-
-.trust-row{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:15px;
- margin-top:35px;
-}
-
-.trust-card{
- padding:22px;
- border-radius:20px;
- text-align:center;
-}
-
+.section-head{text-align:center;max-width:680px;margin:0 auto 43px}
+.section-head h2{font-family:'Playfair Display',serif;font-size:clamp(34px,4vw,48px);line-height:1.15;margin:13px 0}
+.section-head p{color:var(--muted);line-height:1.8;font-size:14px}
+.trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:35px}
+.trust-card{padding:22px;border-radius:20px;text-align:center}
 .trust-card b{font-size:15px;display:block}
 .trust-card span{font-size:11px;color:var(--muted)}
-
-.services-grid{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:18px;
-}
-
-.service-card{
- padding:27px;
- border-radius:24px;
- transition:.3s;
-}
-
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service-card{padding:27px;border-radius:24px;transition:.3s}
 .service-card:hover,.project-card:hover{transform:translateY(-7px)}
-
 .icon-box{
- width:52px;
- height:52px;
- border-radius:17px;
- display:grid;
- place-items:center;
- background:linear-gradient(135deg,#eee5ff,#e2f6ff);
- font-size:23px;
- margin-bottom:20px;
+  width:52px;height:52px;border-radius:17px;display:grid;place-items:center;
+  background:linear-gradient(135deg,#eee5ff,#e2f6ff);font-size:23px;margin-bottom:20px;
 }
-
 .service-card h3{font-size:18px;margin-bottom:10px}
 .service-card p{font-size:13px;line-height:1.8;color:var(--muted)}
 .service-card ul{list-style:none;margin-top:17px}
 .service-card li{font-size:12px;color:#565671;margin:9px 0}
 .service-card li:before{content:"✦";color:var(--purple);margin-right:9px}
-
-.project-grid{
- display:grid;
- grid-template-columns:repeat(2,1fr);
- gap:20px;
-}
-
-.project-card{
- border-radius:25px;
- overflow:hidden;
- transition:.3s;
-}
-
-.project-image{
- height:220px;
- padding:24px;
- display:flex;
- align-items:flex-end;
- color:white;
- position:relative;
- overflow:hidden;
-}
-
-.project-image:before{
- content:"";
- position:absolute;
- inset:0;
- background:linear-gradient(135deg,#30235f,#6b43ad,#208caa);
-}
-
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.project-card{border-radius:25px;overflow:hidden;transition:.3s}
+.project-image{height:220px;padding:24px;display:flex;align-items:flex-end;color:white;position:relative;overflow:hidden}
+.project-image:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#30235f,#6b43ad,#208caa)}
 .project-image.school:before{background:linear-gradient(135deg,#4d3553,#bd8a5b,#202d47)}
 .project-image.store:before{background:linear-gradient(135deg,#1d4563,#278f9b,#8ac8c4)}
 .project-image.personal:before{background:linear-gradient(135deg,#24243e,#7046a4,#d17cb3)}
-
 .project-image div{position:relative;z-index:1}
 .project-image small{letter-spacing:2px;font-size:9px;opacity:.8}
 .project-image h3{font-size:28px;margin-top:8px}
 .project-info{padding:22px}
 .project-info span{font-size:10px;letter-spacing:2px;color:var(--purple);font-weight:800}
 .project-info p{font-size:13px;color:var(--muted);line-height:1.7;margin-top:9px}
-
-.demo-label{
- font-size:10px!important;
- color:#8b6b00!important;
- background:#fff3c8;
- padding:7px 10px;
- border-radius:30px;
- display:inline-block;
- margin-top:12px;
- letter-spacing:0!important;
-}
-
-.process-grid{
- display:grid;
- grid-template-columns:repeat(4,1fr);
- gap:15px;
-}
-
+.demo-label{font-size:10px!important;color:#8b6b00!important;background:#fff3c8;padding:7px 10px;border-radius:30px;display:inline-block;margin-top:12px;letter-spacing:0!important}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
 .process-card{padding:25px;border-radius:22px}
 .step{font-size:34px;font-weight:800;color:#c9b2ff}
 .process-card h3{font-size:16px;margin:13px 0 9px}
 .process-card p{font-size:12px;color:var(--muted);line-height:1.8}
-
-.about-grid{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:45px;
- align-items:center;
-}
-
-.about-visual{
- padding:30px;
- border-radius:28px;
- min-height:330px;
- display:grid;
- place-items:center;
- background:linear-gradient(135deg,#e8dcff99,#d8f3ff99);
-}
-
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about-visual{padding:30px;border-radius:28px;min-height:330px;display:grid;place-items:center;background:linear-gradient(135deg,#e8dcff99,#d8f3ff99)}
 .about-art{text-align:center}
-
-.about-art .logo-mark{
- width:90px;
- height:90px;
- font-size:34px;
- border-radius:28px;
- margin:0 auto 20px;
-}
-
-.about-art .logo-mark .piece{font-size:34px}
-
-.about-art h3{
- font-family:'Playfair Display',serif;
- font-size:29px;
-}
-
+.about-art .logo-mark{width:90px;height:90px;font-size:34px;border-radius:28px;margin:0 auto 20px}
+.about-art h3{font-family:'Playfair Display',serif;font-size:29px}
 .about-art p{font-size:12px;color:var(--muted);margin-top:9px}
-
-.about-copy h2{
- font-family:'Playfair Display',serif;
- font-size:43px;
- line-height:1.15;
- margin:15px 0;
-}
-
-.about-copy p{
- font-size:14px;
- color:var(--muted);
- line-height:1.9;
- margin:12px 0;
-}
-
+.about-copy h2{font-family:'Playfair Display',serif;font-size:43px;line-height:1.15;margin:15px 0}
+.about-copy p{font-size:14px;color:var(--muted);line-height:1.9;margin:12px 0}
 .check-list{list-style:none;margin-top:20px}
 .check-list li{margin:13px 0;font-size:13px;font-weight:700}
 .check-list li:before{content:"✓";color:#14b88b;margin-right:12px;font-size:17px}
-
-.why-grid{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:17px;
-}
-
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
 .why-card{padding:25px;border-radius:22px}
 .why-card h3{font-size:16px;margin:13px 0 8px}
 .why-card p{font-size:12px;color:var(--muted);line-height:1.8}
-
-.price-card{
- max-width:720px;
- margin:auto;
- padding:38px;
- border-radius:28px;
- text-align:center;
-}
-
+.price-card{max-width:720px;margin:auto;padding:38px;border-radius:28px;text-align:center}
 .price-card h3{font-size:24px;margin:12px 0}
 .price-card p{font-size:14px;color:var(--muted);line-height:1.8}
 .price-card .btn{margin-top:20px}
-
 .faq-list{max-width:800px;margin:auto}
-
-details{
- padding:20px 23px;
- border-radius:17px;
- margin:12px 0;
-}
-
-summary{
- font-weight:800;
- font-size:14px;
- cursor:pointer;
- list-style:none;
- display:flex;
- justify-content:space-between;
- gap:15px;
-}
-
+details{padding:20px 23px;border-radius:17px;margin:12px 0}
+summary{font-weight:800;font-size:14px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:15px}
 summary:after{content:"+";color:var(--purple);font-size:20px}
 details[open] summary:after{content:"−"}
 details p{font-size:13px;line-height:1.8;color:var(--muted);padding-top:14px}
-
-/* CONTACT */
-
 .contact-box{
- padding:48px;
- border-radius:30px;
- text-align:center;
- background:linear-gradient(125deg,#251c55,#6241a6 58%,#268eaa);
- color:white;
- box-shadow:0 25px 60px #42307825;
+  padding:48px;border-radius:30px;text-align:center;
+  background:linear-gradient(125deg,#251c55,#6241a6 58%,#268eaa);color:white;
+  box-shadow:0 25px 60px #42307825;
 }
-
-.contact-box h2{
- font-family:'Playfair Display',serif;
- font-size:clamp(34px,5vw,52px);
- margin:14px 0;
-}
-
-.contact-box p{
- color:#e8e2ff;
- font-size:14px;
- line-height:1.8;
- max-width:600px;
- margin:0 auto;
-}
-
-.contact-box .btn{
- margin-top:25px;
- background:white;
- color:#34236c;
-}
-
-/* FOOTER */
-
+.contact-box h2{font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,52px);margin:14px 0}
+.contact-box p{color:#e8e2ff;font-size:14px;line-height:1.8;max-width:600px;margin:0 auto}
+.contact-box .btn{margin-top:25px;background:white;color:#34236c}
 footer{padding:45px 0 25px}
-
-.footer-grid{
- display:grid;
- grid-template-columns:1.5fr 1fr 1fr;
- gap:30px;
-}
-
-footer p{
- font-size:12px;
- color:var(--muted);
- line-height:1.8;
- margin-top:13px;
- max-width:340px;
-}
-
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px}
+footer p{font-size:12px;color:var(--muted);line-height:1.8;margin-top:13px;max-width:340px}
 footer h4{margin-bottom:15px}
 footer a{display:block;font-size:12px;color:var(--muted);margin:10px 0}
 footer a:hover{color:var(--purple)}
-
-.copyright{
- border-top:1px solid var(--line);
- margin-top:35px;
- padding-top:20px;
- text-align:center;
- font-size:11px;
- color:var(--muted);
-}
-
-.float-contact{
- position:fixed;
- right:20px;
- bottom:20px;
- z-index:90;
- display:flex;
- flex-direction:column;
- gap:10px;
-}
-
-.float-contact a{
- width:54px;
- height:54px;
- border-radius:50%;
- display:grid;
- place-items:center;
- color:white;
- font-size:22px;
- box-shadow:0 10px 25px #5330a344;
- background:linear-gradient(135deg,#803cff,#b34ff0);
-}
-
+.copyright{border-top:1px solid var(--line);margin-top:35px;padding-top:20px;text-align:center;font-size:11px;color:var(--muted)}
+.float-contact{position:fixed;right:20px;bottom:20px;z-index:90;display:flex;flex-direction:column;gap:10px}
+.float-contact a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:white;font-size:22px;box-shadow:0 10px 25px #5330a344;background:linear-gradient(135deg,#803cff,#b34ff0)}
 .float-contact a:last-child{background:#18b77a}
-
-.reveal{
- opacity:0;
- transform:translateY(22px);
- transition:.7s;
-}
-
-.reveal.visible{
- opacity:1;
- transform:none;
-}
-
-/* TABLET */
-
+.reveal{opacity:0;transform:translateY(22px);transition:.7s}
+.reveal.visible{opacity:1;transform:none}
 @media(max-width:850px){
- .nav-links{
-  display:none;
-  position:absolute;
-  top:88px;
-  left:0;
-  right:0;
-  padding:22px;
-  border-radius:22px;
-  background:#fff;
-  box-shadow:var(--shadow);
-  flex-direction:column;
-  align-items:stretch;
-  gap:18px;
- }
- .nav-links.open{display:flex}
- .nav-cta{display:none}
- .menu-btn{display:block}
+ .nav-links{display:none;position:absolute;top:88px;left:0;right:0;padding:22px;border-radius:22px;background:#fff;box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:18px}
+ .nav-links.open{display:flex}.nav-cta{display:none}.menu-btn{display:block}
  .hero-grid,.about-grid{grid-template-columns:1fr}
- .hero{padding-top:55px}
- .hero-visual{min-height:390px}
+ .hero{padding-top:55px}.hero-visual{min-height:390px}
  .services-grid{grid-template-columns:repeat(2,1fr)}
  .process-grid{grid-template-columns:repeat(2,1fr)}
 }
-
-/* MOBILE */
-
 @media(max-width:560px){
  .container{width:min(100% - 28px,1160px)}
  nav{min-height:66px;padding:10px 16px}
- .logo{font-size:18px}
- .logo-mark{width:38px;height:38px}
+ .logo{font-size:18px}.logo-mark{width:38px;height:38px}
  h1{font-size:48px;letter-spacing:-1.8px}
- .hero{padding:48px 0 55px}
- .hero-grid{gap:15px}
+ .hero{padding:48px 0 55px}.hero-grid{gap:15px}
  .hero-copy{font-size:15px}
  .hero-visual{min-height:330px}
  .orb{width:260px;height:260px}
@@ -770,187 +306,120 @@ footer a:hover{color:var(--purple)}
  .footer-grid{grid-template-columns:1fr 1fr}
  .footer-grid>div:first-child{grid-column:1/-1}
 }
-
 @media(prefers-reduced-motion:reduce){
- *,*:before,*:after{
-  scroll-behavior:auto!important;
-  animation:none!important;
-  transition:none!important;
- }
+ *,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
 }
 </style>
 </head>
 
 <body>
-
 <div class="nav-wrap container">
 <nav class="glass">
-
-<a href="#home" class="logo">
- <span class="logo-mark" aria-label="GS Logo">
-  <span class="piece">GS</span>
-  <span class="piece">GS</span>
-  <span class="piece">GS</span>
-  <span class="piece">GS</span>
- </span>
- <span>GS DIGITAL<small>SOLUTIONS</small></span>
-</a>
-
-<div class="nav-links" id="navLinks">
- <a href="#home">Home</a>
- <a href="#services">Services</a>
- <a href="#work">Our Work</a>
- <a href="#about">About</a>
- <a href="#process">Process</a>
- <a href="#faq">FAQ</a>
- <a href="#contact">Contact</a>
-</div>
-
-<a class="nav-cta" href="#contact">Start a Project ↗</a>
-<button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
-
+  <a href="#home" class="logo">
+    <span class="logo-mark">GS</span>
+    <span>GS DIGITAL<small>SOLUTIONS</small></span>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#work">Our Work</a>
+    <a href="#about">About</a>
+    <a href="#process">Process</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a class="nav-cta" href="#contact">Start a Project ↗</a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
 </nav>
 </div>
 
 <main>
-
-<!-- HERO -->
-
 <section class="hero container" id="home">
-
-<div class="hero-topline glass">
- <span class="dot"></span>
- DIGITAL SERVICES · BUILT WITH CARE
-</div>
-
-<div class="hero-grid">
-
-<div>
- <div class="eyebrow">WELCOME TO GS DIGITAL SOLUTIONS</div>
-
- <h1>Ideas Into <span class="gradient-text">Digital</span> Experiences.</h1>
-
- <p class="hero-copy">
- आपके बिजनेस और डिजिटल जरूरतों के लिए आधुनिक वेबसाइट,
- ऑनलाइन फॉर्म सहायता, टाइपिंग और भरोसेमंद डिजिटल सर्विस सपोर्ट।
- </p>
-
- <div class="hero-actions">
-  <a class="btn btn-primary" href="#work">Explore Our Work <span>→</span></a>
-  <a class="btn btn-light" href="#contact">Start a Project ↗</a>
- </div>
-
- <p class="hero-note">
- ✦ Simple process &nbsp; ✦ Clear communication &nbsp; ✦ Customer-focused support
- </p>
-</div>
-
-<div class="hero-visual">
-
-<div class="orb"></div>
-
-<div class="browser glass">
-
-<div class="browser-bar">
- <i></i><i></i><i></i>
- <span class="browser-title">gsdigitalsolutions.in</span>
-</div>
-
-<div class="browser-content">
- <small>DESIGN · DIGITAL · SUPPORT</small>
- <h2>Make Your<br>Digital Presence<br>Remarkable.</h2>
- <p>Thoughtful digital solutions for people, creators and growing businesses.</p>
- <a class="mini-btn" href="#services">DISCOVER SERVICES ↗</a>
-
- <div class="mini-stats">
-  <div><b>01</b><span>Understand</span></div>
-  <div><b>02</b><span>Create</span></div>
-  <div><b>03</b><span>Deliver</span></div>
- </div>
-</div>
-
-</div>
-
-<div class="floating-card glass">
- ✦ Your Digital Partner
- <span>Ideas deserve a great online presence.</span>
-</div>
-
-</div>
-</div>
-
-<div class="trust-row">
- <div class="trust-card glass"><b>✧ Modern Design</b><span>Clean and premium visual experience</span></div>
- <div class="trust-card glass"><b>▣ Mobile Friendly</b><span>Designed for phone, tablet and desktop</span></div>
- <div class="trust-card glass"><b>♡ Helpful Support</b><span>Clear guidance at every step</span></div>
-</div>
-
+  <div class="hero-topline glass"><span class="dot"></span> DIGITAL SERVICES · BUILT WITH CARE</div>
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">WELCOME TO GS DIGITAL SOLUTIONS</div>
+      <h1>Ideas Into <span class="gradient-text">Digital</span> Experiences.</h1>
+      <p class="hero-copy">आपके बिजनेस और डिजिटल जरूरतों के लिए आधुनिक वेबसाइट, ऑनलाइन फॉर्म सहायता, टाइपिंग और भरोसेमंद डिजिटल सर्विस सपोर्ट।</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#work">Explore Our Work <span>→</span></a>
+        <a class="btn btn-light" href="#contact">Start a Project ↗</a>
+      </div>
+      <p class="hero-note">✦ Simple process &nbsp; ✦ Clear communication &nbsp; ✦ Customer-focused support</p>
+    </div>
+    <div class="hero-visual">
+      <div class="orb"></div>
+      <div class="browser glass">
+        <div class="browser-bar"><i></i><i></i><i></i><span class="browser-title">gsdigitalsolutions.in</span></div>
+        <div class="browser-content">
+          <small>DESIGN · DIGITAL · SUPPORT</small>
+          <h2>Make Your<br>Digital Presence<br>Remarkable.</h2>
+          <p>Thoughtful digital solutions for people, creators and growing businesses.</p>
+          <a class="mini-btn" href="#services">DISCOVER SERVICES ↗</a>
+          <div class="mini-stats">
+            <div><b>01</b><span>Understand</span></div>
+            <div><b>02</b><span>Create</span></div>
+            <div><b>03</b><span>Deliver</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-card glass">✦ Your Digital Partner<span>Ideas deserve a great online presence.</span></div>
+    </div>
+  </div>
+  <div class="trust-row">
+    <div class="trust-card glass"><b>✧ Modern Design</b><span>Clean and premium visual experience</span></div>
+    <div class="trust-card glass"><b>▣ Mobile Friendly</b><span>Designed for phone, tablet and desktop</span></div>
+    <div class="trust-card glass"><b>♡ Helpful Support</b><span>Clear guidance at every step</span></div>
+  </div>
 </section>
 
-<!-- SERVICES -->
-
 <section class="section container" id="services">
+  <div class="section-head reveal">
+    <div class="eyebrow">WHAT WE DO</div>
+    <h2>Digital Services for <span class="gradient-text">Every Need.</span></h2>
+    <p>एक ही जगह पर आपकी वेबसाइट, ऑनलाइन काम और डिजिटल जरूरतों के लिए उपयोगी सेवाएँ।</p>
+  </div>
+  <div class="services-grid">
+    <article class="service-card glass reveal">
+      <div class="icon-box">✧</div><h3>Website Design</h3>
+      <p>आपके बिजनेस, दुकान या व्यक्तिगत ब्रांड के लिए आकर्षक और मोबाइल-फ्रेंडली वेबसाइट।</p>
+      <ul><li>Business websites</li><li>Personal portfolio</li><li>Landing pages</li><li>Responsive layout</li></ul>
+    </article>
+    <article class="service-card glass reveal">
+      <div class="icon-box">▤</div><h3>Online Form Assistance</h3>
+      <p>ऑनलाइन आवेदन और फॉर्म भरने की प्रक्रिया में सावधानीपूर्वक सहायता।</p>
+      <ul><li>Form filling guidance</li><li>Application assistance</li><li>Document checklist</li><li>Submission guidance</li></ul>
+    </article>
+    <article class="service-card glass reveal">
+      <div class="icon-box">⌨</div><h3>Typing Services</h3>
+      <p>हिंदी और अंग्रेजी में साफ-सुथरा टाइपिंग और डॉक्यूमेंट तैयार करने का काम।</p>
+      <ul><li>Hindi typing</li><li>English typing</li><li>Document formatting</li><li>Basic data entry</li></ul>
+    </article>
+    <article class="service-card glass reveal">
+      <div class="icon-box">▧</div><h3>Document Support</h3>
+      <p>डिजिटल दस्तावेजों को व्यवस्थित करने और सामान्य डॉक्यूमेंट सहायता।</p>
+      <ul><li>PDF assistance</li><li>Document formatting</li><li>File organization</li><li>Print-ready documents</li></ul>
+    </article>
+    <article class="service-card glass reveal">
+      <div class="icon-box">◈</div><h3>Digital Business Support</h3>
+      <p>छोटे बिजनेस और दुकानों के लिए ऑनलाइन मौजूदगी बनाने में सहायता।</p>
+      <ul><li>Business profile guidance</li><li>Digital contact setup</li><li>Online presence</li><li>Basic tech support</li></ul>
+    </article>
+    <article class="service-card glass reveal">
+      <div class="icon-box">✦</div><h3>Creative Digital Work</h3>
+      <p>आपकी जरूरत के अनुसार डिजिटल डिजाइन और ऑनलाइन सामग्री तैयार करने में सहायता।</p>
+      <ul><li>Social media creatives</li><li>Basic banners</li><li>Digital presentations</li><li>Custom requests</li></ul>
+    </article>
+  </div>
+</section>
 
-<div class="section-head reveal">
- <div class="eyebrow">WHAT WE DO</div>
- <h2>Digital Services for <span class="gradient-text">Every Need.</span></h2>
- <p>एक ही जगह पर आपकी वेबसाइट, ऑनलाइन काम और डिजिटल जरूरतों के लिए उपयोगी सेवाएँ।</p>
-</div>
-
-<div class="services-grid">
-
-<article class="service-card glass reveal">
- <div class="icon-box">✧</div>
- <h3>Website Design</h3>
- <p>आपके बिजनेस, दुकान या व्यक्तिगत ब्रांड के लिए आकर्षक और मोबाइल-फ्रेंडली वेबसाइट।</p>
- <ul>
-  <li>Business websites</li>
-  <li>Personal portfolio</li>
-  <li>Landing pages</li>
-  <li>Responsive layout</li>
- </ul>
-</article>
-
-<article class="service-card glass reveal">
- <div class="icon-box">▤</div>
- <h3>Online Form Assistance</h3>
- <p>ऑनलाइन आवेदन और फॉर्म भरने की प्रक्रिया में सावधानीपूर्वक सहायता।</p>
- <ul>
-  <li>Form filling guidance</li>
-  <li>Application assistance</li>
-  <li>Document checklist</li>
-  <li>Submission guidance</li>
- </ul>
-</article>
-
-<article class="service-card glass reveal">
- <div class="icon-box">⌨</div>
- <h3>Typing Services</h3>
- <p>हिंदी और अंग्रेजी में साफ-सुथरा टाइपिंग और डॉक्यूमेंट तैयार करने का काम।</p>
- <ul>
-  <li>Hindi typing</li>
-  <li>English typing</li>
-  <li>Document formatting</li>
-  <li>Basic data entry</li>
- </ul>
-</article>
-
-<article class="service-card glass reveal">
- <div class="icon-box">▧</div>
- <h3>Document Support</h3>
- <p>डिजिटल दस्तावेजों को व्यवस्थित करने और सामान्य डॉक्यूमेंट सहायता।</p>
- <ul>
-  <li>PDF assistance</li>
-  <li>Document formatting</li>
-  <li>File organization</li>
-  <li>Print-ready documents</li>
- </ul>
-</article>
-
-<article class="service-card glass reveal">
- <div class="icon-box">◈</div>
- <h3>Digital Business Support</h3>
- <p>छोटे बिजनेस और दुकानों के लिए ऑनलाइन मौजूदगी बनाने में सहायता।</p>
- <ul>
-  <li>Business profile guidance</li>
-  <li>Digital contact setup</
+<section class="section container" id="work">
+  <div class="section-head reveal">
+    <div class="eyebrow">SELECTED CONCEPTS</div>
+    <h2>Ideas Made <span class="gradient-text">Visible.</span></h2>
+    <p>यहाँ कुछ डेमो डिजाइन कॉन्सेप्ट हैं। वास्तविक ग्राहक प्रोजेक्ट मिलने पर उन्हें यहाँ जोड़ा जा सकता है।</p>
+  </div>
+  <div class="project-grid">
+    <article class="project-card glass reveal">
+      <div class="project-image school"><div><small>EDUCATION WEBSITE CONCEPT</small><h3>Learning Space</h3></div></div>
+      <div class="project-info"><span>DEMO CONCEPT · 01</span><p>स्कूल या कोचिंग संस्था
