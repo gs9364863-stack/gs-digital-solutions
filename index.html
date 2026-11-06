@@ -1,593 +1,841 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>GS Digital Solutions | Your Trusted Digital Partner</title>
-
-<meta name="description" content="GS Digital Solutions provides website design, online form assistance, typing and digital services.">
-
-<meta name="theme-color" content="#080d20">
-
-<link rel="icon" type="image/svg+xml" href="./favicon.svg">
-<link rel="shortcut icon" href="./favicon.svg">
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #080d20;
-  color: white;
-  overflow-x: hidden;
-}
-
-:root {
-  --cyan: #67e8f9;
-  --blue: #3479ed;
-  --purple: #803cff;
-  --dark: #080d20;
-  --card: #131d38;
-}
-
-/* HEADER */
-
-header {
-  min-height: 85px;
-  padding: 15px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #101832;
-  border-bottom: 1px solid #263657;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--cyan);
-  font-size: 23px;
-  font-weight: 900;
-  text-decoration: none;
-}
-
-/* CONTINUOUS GS LOGO */
-
-.logo-mark {
-  width: 48px;
-  height: 48px;
-  position: relative;
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  overflow: visible;
-  perspective: 500px;
-  animation: gsRotate 4s linear infinite;
-}
-
-.logo-piece {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  font-size: 21px;
-  font-weight: 900;
-  letter-spacing: -2px;
-  color: white;
-  background: linear-gradient(
-    135deg,
-    #803cff,
-    #3479ed,
-    #31c5c6
-  );
-  border-radius: 11px;
-  backface-visibility: hidden;
-  animation: gsSplit 3.2s ease-in-out infinite;
-}
-
-.piece-one {
-  clip-path: inset(0 50% 50% 0);
-  --x: -9px;
-  --y: -9px;
-  animation-delay: 0s;
-}
-
-.piece-two {
-  clip-path: inset(0 0 50% 50%);
-  --x: 9px;
-  --y: -9px;
-  animation-delay: .04s;
-}
-
-.piece-three {
-  clip-path: inset(50% 50% 0 0);
-  --x: -9px;
-  --y: 9px;
-  animation-delay: .08s;
-}
-
-.piece-four {
-  clip-path: inset(50% 0 0 50%);
-  --x: 9px;
-  --y: 9px;
-  animation-delay: .12s;
-}
-
-@keyframes gsRotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes gsSplit {
-  0%, 15%, 100% {
-    transform: translate(0,0) rotate(0deg) scale(1);
-    opacity: 1;
-  }
-
-  35% {
-    transform: translate(var(--x),var(--y))
-      rotate(90deg) scale(.92);
-    opacity: 1;
-  }
-
-  55% {
-    transform: translate(var(--x),var(--y))
-      rotate(180deg) scale(.85);
-    opacity: .95;
-  }
-
-  75% {
-    transform: translate(0,0) rotate(270deg) scale(1);
-    opacity: 1;
-  }
-}
-
-nav {
-  display: flex;
-  gap: 25px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
-  transition: .3s;
-}
-
-nav a:hover {
-  color: var(--cyan);
-}
-
-/* HERO */
-
-.hero {
-  min-height: 580px;
-  padding: 110px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background:
-    radial-gradient(circle at 20% 20%, #342078 0%, transparent 40%),
-    radial-gradient(circle at 80% 80%, #075985 0%, transparent 40%),
-    linear-gradient(135deg, #101832, #080d20);
-}
-
-.hero-content {
-  max-width: 850px;
-}
-
-.hero-logo {
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 30px;
-}
-
-.hero-logo .logo-piece {
-  font-size: 38px;
-  border-radius: 20px;
-}
-
-.hero h1 {
-  font-size: clamp(38px, 7vw, 68px);
-  line-height: 1.15;
-  margin-bottom: 22px;
-}
-
-.hero h1 span {
-  color: var(--cyan);
-}
-
-.hero p {
-  max-width: 650px;
-  margin: auto;
-  color: #d0dafa;
-  font-size: 17px;
-  line-height: 1.9;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 15px 30px;
-  background: var(--cyan);
-  color: #081226;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: .3s;
-}
-
-.btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px #67e8f955;
-}
-
-/* SECTIONS */
-
-section {
-  padding: 85px 8%;
-  text-align: center;
-}
-
-h2 {
-  font-size: clamp(28px, 4vw, 38px);
-  margin-bottom: 16px;
-}
-
-.sub {
-  color: #b9c4e4;
-  margin-bottom: 45px;
-  line-height: 1.7;
-}
-
-/* SERVICES */
-
-.services {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(220px, 1fr)
-  );
-  gap: 24px;
-}
-
-.card {
-  background: var(--card);
-  border: 1px solid #28385c;
-  padding: 32px 25px;
-  border-radius: 20px;
-  text-align: left;
-  transition: .35s;
-}
-
-.card:hover {
-  transform: translateY(-9px);
-  border-color: var(--cyan);
-  box-shadow: 0 15px 35px #0005;
-}
-
-.icon {
-  font-size: 38px;
-}
-
-.card h3 {
-  color: var(--cyan);
-  margin: 18px 0 12px;
-}
-
-.card p {
-  color: #c4cce0;
-  line-height: 1.8;
-}
-
-/* ABOUT */
-
-.about {
-  background: #101832;
-}
-
-.about-content {
-  max-width: 800px;
-  margin: auto;
-}
-
-.about p {
-  color: #c4cce0;
-  line-height: 1.9;
-  font-size: 17px;
-}
-
-/* CONTACT */
-
-.contact {
-  background:
-    linear-gradient(135deg, #101832, #25205c, #075985);
-}
-
-.contact p {
-  color: #e0e7ff;
-  line-height: 1.8;
-}
-
-/* FOOTER */
-
-footer {
-  padding: 35px 8%;
-  text-align: center;
-  color: #aab5d0;
-  background: #080d20;
-  border-top: 1px solid #28385c;
-}
-
-.footer-logo {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 15px;
-}
-
-footer p {
-  line-height: 1.8;
-}
-
-/* WHATSAPP */
-
-.whatsapp {
-  position: fixed;
-  right: 22px;
-  bottom: 22px;
-  z-index: 200;
-  background: #25d366;
-  color: white;
-  padding: 14px 20px;
-  border-radius: 40px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 5px 25px #0006;
-}
-
-/* MOBILE */
-
-@media(max-width: 650px) {
-  header {
-    flex-direction: column;
-    gap: 18px;
-    padding: 18px 12px;
-  }
-
-  nav {
-    gap: 17px;
-  }
-
-  nav a {
-    font-size: 13px;
-  }
-
-  .hero {
-    min-height: 520px;
-    padding: 80px 18px;
-  }
-
-  section {
-    padding: 65px 6%;
-  }
-
-  .whatsapp {
-    right: 12px;
-    bottom: 12px;
-    padding: 12px 16px;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google SEO -->
+  <title>GS Digital</title>
+  <meta name="description" content="GS Digital Solutions - Website Design, Online Form Filling, Hindi and English Typing and Digital Services.">
+  <meta name="keywords" content="GS Digital, GS Digital Solutions, Website Design, Online Form, Typing Services">
+  <meta name="author" content="GS Digital Solutions">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#080d1b">
+
+  <!-- GS Favicon -->
+  <link rel="icon" type="image/svg+xml"
+  href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230d1830'/%3E%3Ctext x='50' y='66' font-size='47' font-family='Arial' font-weight='bold' text-anchor='middle' fill='%23d6b56d'%3EGS%3C/text%3E%3C/svg%3E">
+
+  <!-- Google Search Preview -->
+  <meta property="og:title" content="GS Digital">
+  <meta property="og:description" content="Your Trusted Online Service Center">
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --bg: #080d1b;
+      --card: rgba(255,255,255,0.055);
+      --gold: #d6b56d;
+      --white: #ffffff;
+      --muted: #aab3c5;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* INTRO LOGO ANIMATION */
+
+    #intro {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #080d1b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      animation: introHide 0.7s ease 2.8s forwards;
+    }
+
+    .intro-logo {
+      position: relative;
+      width: 145px;
+      height: 145px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 5px;
+    }
+
+    .piece {
+      background: linear-gradient(135deg, #f2d99d, #a77c35);
+      color: #101626;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 43px;
+      font-weight: 900;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(214,181,109,0.25);
+      animation-duration: 1.3s;
+      animation-timing-function: cubic-bezier(.2,.8,.2,1);
+      animation-fill-mode: both;
+    }
+
+    .piece:nth-child(1) {
+      animation-name: pieceOne;
+    }
+
+    .piece:nth-child(2) {
+      animation-name: pieceTwo;
+    }
+
+    .piece:nth-child(3) {
+      animation-name: pieceThree;
+    }
+
+    .piece:nth-child(4) {
+      animation-name: pieceFour;
+    }
+
+    @keyframes pieceOne {
+      0% { transform: translate(-180px,-150px) rotate(-90deg); opacity: 0; }
+      65% { transform: translate(12px,10px) rotate(12deg); opacity: 1; }
+      100% { transform: translate(0,0) rotate(0); opacity: 1; }
+    }
+
+    @keyframes pieceTwo {
+      0% { transform: translate(180px,-150px) rotate(90deg); opacity: 0; }
+      65% { transform: translate(-12px,10px) rotate(-12deg); opacity: 1; }
+      100% { transform: translate(0,0) rotate(0); opacity: 1; }
+    }
+
+    @keyframes pieceThree {
+      0% { transform: translate(-180px,150px) rotate(90deg); opacity: 0; }
+      65% { transform: translate(12px,-10px) rotate(-12deg); opacity: 1; }
+      100% { transform: translate(0,0) rotate(0); opacity: 1; }
+    }
+
+    @keyframes pieceFour {
+      0% { transform: translate(180px,150px) rotate(-90deg); opacity: 0; }
+      65% { transform: translate(-12px,-10px) rotate(12deg); opacity: 1; }
+      100% { transform: translate(0,0) rotate(0); opacity: 1; }
+    }
+
+    .intro-name {
+      margin-top: 28px;
+      color: var(--gold);
+      font-size: 25px;
+      letter-spacing: 5px;
+      font-weight: bold;
+      animation: nameShow 1s ease 1s both;
+    }
+
+    .intro-tagline {
+      margin-top: 12px;
+      color: #aab3c5;
+      font-size: 12px;
+      letter-spacing: 3px;
+    }
+
+    @keyframes nameShow {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes introHide {
+      to { opacity: 0; visibility: hidden; pointer-events: none; }
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8,13,27,0.92);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,0.09);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 17px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    .brand-icon {
+      width: 43px;
+      height: 43px;
+      border-radius: 12px;
+      background: linear-gradient(135deg,#f2d99d,#a77c35);
+      color: #101626;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 18px;
+      box-shadow: 0 0 20px rgba(214,181,109,.2);
+    }
+
+    .brand span {
+      color: var(--gold);
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: #dce2ed;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    /* HERO SECTION */
+
+    .hero {
+      min-height: 650px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 90px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .small-tag {
+      display: inline-block;
+      padding: 10px 17px;
+      border: 1px solid rgba(214,181,109,.4);
+      border-radius: 30px;
+      color: var(--gold);
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px,6vw,68px);
+      line-height: 1.15;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.9;
+      max-width: 550px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      padding: 15px 25px;
+      border-radius: 10px;
+      font-weight: bold;
+      display: inline-block;
+      transition: .3s;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg,#f2d99d,#b58a43);
+      color: #101626;
+    }
+
+    .btn-outline {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+    }
+
+    /* HERO LOGO */
+
+    .hero-visual {
+      min-width: 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-logo {
+      width: 260px;
+      height: 260px;
+      border-radius: 45px;
+      border: 1px solid rgba(214,181,109,.4);
+      background: linear-gradient(145deg,#172542,#0d1425);
+      box-shadow: 0 0 70px rgba(214,181,109,.12);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      animation: floatLogo 4s ease-in-out infinite;
+    }
+
+    .main-logo::before {
+      content: "";
+      position: absolute;
+      inset: 15px;
+      border: 1px solid rgba(214,181,109,.3);
+      border-radius: 35px;
+    }
+
+    .main-logo strong {
+      font-size: 78px;
+      color: var(--gold);
+      letter-spacing: -8px;
+      text-shadow: 0 0 30px rgba(214,181,109,.3);
+    }
+
+    @keyframes floatLogo {
+      0%,100% { transform: translateY(0) rotate(-3deg); }
+      50% { transform: translateY(-15px) rotate(3deg); }
+    }
+
+    /* COMMON SECTION */
+
+    section {
+      padding: 85px 22px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title span {
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: 3px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      margin-top: 14px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      margin-top: 14px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    /* SERVICES */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      padding: 32px 25px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 20px;
+      transition: .3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+      box-shadow: 0 15px 35px rgba(0,0,0,.2);
+    }
+
+    .service-icon {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 21px;
+      margin-bottom: 13px;
+      color: var(--gold);
+    }
+
+    .service-card p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: rgba(255,255,255,.025);
+    }
+
+    .about-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-content h2 {
+      font-size: 35px;
+      margin-bottom: 22px;
+    }
+
+    .about-content h2 span {
+      color: var(--gold);
+    }
+
+    .about-content p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 2;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 22px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .contact-card {
+      padding: 30px;
+      border-radius: 18px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.1);
+      text-align: center;
+    }
+
+    .contact-card .service-icon {
+      font-size: 38px;
+    }
+
+    .contact-card h3 {
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      margin-bottom: 20px;
+      word-break: break-word;
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    footer strong {
+      color: var(--gold);
+    }
+
+    /* WHATSAPP FLOATING BUTTON */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 500;
+      background: #20c968;
+      color: white;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 27px;
+      font-weight: bold;
+      box-shadow: 0 5px 25px rgba(32,201,104,.35);
+      transition: .3s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.12);
+    }
+
+    /* MOBILE RESPONSIVE */
+
+    @media(max-width:800px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 65px;
+      }
+
+      .hero-content {
+        margin: auto;
+      }
+
+      .hero p {
+        margin: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      nav {
+        gap: 13px;
+      }
+    }
+
+    @media(max-width:550px) {
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .brand {
+        font-size: 19px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 65px 20px;
+      }
+
+      .main-logo {
+        width: 205px;
+        height: 205px;
+      }
+
+      .main-logo strong {
+        font-size: 65px;
+      }
+
+      .services-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 29px;
+      }
+
+      section {
+        padding: 65px 18px;
+      }
+    }
+
+    /* REDUCE MOTION ACCESSIBILITY */
+
+    @media(prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-
-<header>
-
-<a href="#home" class="logo">
-
-  <span class="logo-mark">
-    <span class="logo-piece piece-one">GS</span>
-    <span class="logo-piece piece-two">GS</span>
-    <span class="logo-piece piece-three">GS</span>
-    <span class="logo-piece piece-four">GS</span>
-  </span>
-
-  GS Digital Solutions
-
-</a>
-
-<nav>
-  <a href="#home">Home</a>
-  <a href="#services">Services</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-</header>
-
-<!-- HERO -->
-
-<main>
-
-<section class="hero" id="home">
-
-<div class="hero-content">
-
-  <div class="logo-mark hero-logo">
-    <span class="logo-piece piece-one">GS</span>
-    <span class="logo-piece piece-two">GS</span>
-    <span class="logo-piece piece-three">GS</span>
-    <span class="logo-piece piece-four">GS</span>
+  <!-- LOGO INTRO -->
+  <div id="intro">
+    <div class="intro-logo">
+      <div class="piece">G</div>
+      <div class="piece">S</div>
+      <div class="piece">D</div>
+      <div class="piece">S</div>
+    </div>
+    <div class="intro-name">GS DIGITAL</div>
+    <div class="intro-tagline">YOUR TRUSTED DIGITAL PARTNER</div>
   </div>
 
-  <h1>
-    Your Digital Journey
-    <span>Starts Here.</span>
-  </h1>
+  <!-- HEADER -->
+  <header>
+    <div class="navbar">
 
-  <p>
-    Welcome to GS Digital Solutions — your trusted
-    partner for online forms, document assistance,
-    typing work and digital services.
-  </p>
+      <a href="#home" class="brand">
+        <div class="brand-icon">GS</div>
+        GS <span>Digital</span>
+      </a>
 
-  <a href="#services" class="btn">
-    Explore Services →
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- HOME -->
+  <main>
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+
+        <div class="small-tag">
+          ✦ YOUR TRUSTED ONLINE SERVICE CENTER
+        </div>
+
+        <h1>
+          Welcome To<br>
+          <span>GS Digital</span>
+        </h1>
+
+        <p>
+          आपका स्वागत है GS Digital Solutions में।
+          यहाँ आपको Website Design, Online Form Filling,
+          Hindi & English Typing और Digital Services
+          एक ही जगह पर मिलेंगी।
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn btn-gold"
+             href="https://wa.me/917247648515?text=Hello%20GS%20Digital%2C%20mujhe%20service%20ki%20jankari%20chahiye">
+            WhatsApp Now
+          </a>
+
+          <a class="btn btn-outline" href="#services">
+            Our Services
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-visual">
+        <div class="main-logo">
+          <strong>GS</strong>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+
+      <div class="container">
+
+        <div class="section-title">
+          <span>WHAT WE DO</span>
+          <h2>Our Services</h2>
+          <p>आपकी जरूरत की डिजिटल सेवाएँ</p>
+        </div>
+
+        <div class="services-grid">
+
+          <div class="service-card">
+            <div class="service-icon">🌐</div>
+            <h3>Website Design</h3>
+            <p>
+              Business Website, Personal Website
+              और Professional Website Design.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">📋</div>
+            <h3>Online Form</h3>
+            <p>
+              Online Application और Form Filling
+              में सहायता।
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">⌨️</div>
+            <h3>Typing Services</h3>
+            <p>
+              Hindi और English Typing,
+              Document और अन्य टाइपिंग सेवाएँ।
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">💻</div>
+            <h3>Digital Solutions</h3>
+            <p>
+              आपकी जरूरत के अनुसार डिजिटल
+              सेवाओं में सहायता।
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">📱</div>
+            <h3>Online Assistance</h3>
+            <p>
+              ऑनलाइन काम और डिजिटल प्रक्रिया
+              में मार्गदर्शन।
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">✨</div>
+            <h3>Professional Support</h3>
+            <p>
+              आपकी जरूरत के अनुसार
+              बेहतर डिजिटल सहायता।
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+      <div class="about-content">
+
+        <div class="section-title">
+          <span>ABOUT US</span>
+          <h2>About <span style="color:#d6b56d">GS Digital</span></h2>
+        </div>
+
+        <p>
+          GS Digital Solutions एक डिजिटल सर्विस प्लेटफॉर्म है।
+          हमारा उद्देश्य लोगों को वेबसाइट डिजाइन, ऑनलाइन फॉर्म,
+          टाइपिंग और अन्य डिजिटल सेवाओं में सरल सहायता प्रदान करना है।
+          हमारा लक्ष्य है कि आपको डिजिटल काम के लिए
+          एक भरोसेमंद जगह मिले।
+        </p>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="section-title">
+          <span>GET IN TOUCH</span>
+          <h2>Contact Us</h2>
+          <p>किसी भी सेवा के लिए हमसे संपर्क करें।</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-card">
+            <div class="service-icon">📱</div>
+            <h3>WhatsApp</h3>
+            <p>+91 7247648515</p>
+
+            <a class="btn btn-gold"
+               href="https://wa.me/917247648515?text=Hello%20GS%20Digital">
+              Message Now
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <div class="service-icon">✉️</div>
+            <h3>Gmail</h3>
+            <p>gs936463@gmail.com</p>
+
+            <a class="btn btn-outline"
+               href="mailto:gs936463@gmail.com">
+              Send Email
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <strong>GS Digital Solutions</strong>
+    <br>
+    Your Trusted Online Service Center
+    <br>
+    © <span id="year"></span> GS Digital. All Rights Reserved.
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a class="whatsapp-float"
+     href="https://wa.me/917247648515?text=Hello%20GS%20Digital"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contact GS Digital on WhatsApp">
+    W
   </a>
 
-</div>
+  <script>
+    // Current year
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
 
-</section>
+    // Remove intro after animation
+    window.addEventListener("load", function() {
+      setTimeout(function() {
+        const intro = document.getElementById("intro");
+        if (intro) {
+          intro.style.pointerEvents = "none";
+        }
+      }, 3500);
+    });
+  </script>
 
-<!-- SERVICES -->
-
-<section id="services">
-
-<h2>Our Services</h2>
-
-<p class="sub">
-Simple, helpful and reliable digital support.
-</p>
-
-<div class="services">
-
-  <div class="card">
-    <div class="icon">🌐</div>
-    <h3>Website Design</h3>
-    <p>
-      Modern and professional websites for your
-      business and personal needs.
-    </p>
-  </div>
-
-  <div class="card">
-    <div class="icon">📝</div>
-    <h3>Online Forms</h3>
-    <p>
-      Assistance with online applications
-      and form filling.
-    </p>
-  </div>
-
-  <div class="card">
-    <div class="icon">📄</div>
-    <h3>Typing & Documents</h3>
-    <p>
-      Typing work and help preparing
-      digital documents.
-    </p>
-  </div>
-
-  <div class="card">
-    <div class="icon">💻</div>
-    <h3>Digital Services</h3>
-    <p>
-      Friendly support for everyday
-      online tasks and digital work.
-    </p>
-  </div>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-<div class="about-content">
-
-<h2>About GS Digital Solutions</h2>
-
-<p>
-Our goal is to make online services easier and
-more accessible for everyone. We provide helpful
-digital solutions with a focus on simplicity,
-quality and customer satisfaction.
-</p>
-
-<a href="#contact" class="btn">
-Contact Us →
-</a>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<h2>Let's Connect!</h2>
-
-<p>
-Need help with an online service?
-<br>
-Contact GS Digital Solutions on WhatsApp.
-</p>
-
-<a
-  href="https://wa.me/91XXXXXXXXXX"
-  class="btn"
-  target="_blank"
-  rel="noopener"
->
-Chat on WhatsApp →91-7247648515
-</a>
-
-</section>
-
-</main>
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="footer-logo">
-
-  <span class="logo-mark">
-    <span class="logo-piece piece-one">GS</span>
-    <span class="logo-piece piece-two">GS</span>
-    <span class="logo-piece piece-three">GS</span>
-    <span class="logo-piece piece-four">GS</span>
-  </span>
-
-</div>
-
-<p>
-<strong>GS Digital Solutions</strong>
-</p>
-
-<p>
-Your Trusted Online Service Center
-</p>
-
-<p>
-© 2026 GS Digital Solutions | All Rights Reserved
-</p>
-
-</footer>
-
-<a
-  href="https
+</body>
+</html>
