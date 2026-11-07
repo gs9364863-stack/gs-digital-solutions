@@ -1,10 +1,9 @@
- 
 <!DOCTYPE html>
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="description" content="GS Digital - Website Design, Online Forms, Hindi and English Typing and Digital Services.">
-<title>GS Digital | GS Digital Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8f7ff">
 <meta name="description" content="GS Digital Solutions - Website Design, Online Forms and Digital Services">
 <title>GS Digital Solutions | Ideas Into Digital Experiences</title>
 
@@ -84,7 +83,14 @@ header {
 
 .brand {
   display:flex;
-  .logo {
+  align-items:center;
+  gap:12px;
+  font-weight:800;
+  font-size:18px;
+  letter-spacing:-.7px;
+}
+
+.logo {
   width:43px;
   height:43px;
   border-radius:14px;
@@ -96,45 +102,24 @@ header {
   background:linear-gradient(135deg,#8244f3,#2cb9ca);
   box-shadow:0 8px 20px #8547e74a;
   isolation:isolate;
-  animation:logoSpin 10s linear infinite;
 }
 
-.logo::before,
-.logo::after {
-  content:"GS";
+.logo:before,.logo:after {
+  content:"";
   position:absolute;
-  inset:0;
-  display:grid;
-  place-items:center;
-  color:white;
-  font-weight:800;
-  border-radius:inherit;
-  pointer-events:none;
+  inset:-5px;
+  border:2px solid transparent;
+  border-top-color:#8a4df1;
+  border-right-color:#39b9cc;
+  border-radius:16px;
+  animation:spin 5s linear infinite;
+  z-index:-1;
 }
 
-.logo::before {
-  clip-path:polygon(0 0,100% 0,48% 48%,0 100%);
-  animation:shardOne 3s ease-in-out infinite;
-}
-
-.logo::after {
-  clip-path:polygon(100% 0,100% 100%,0 100%,48% 48%);
-  animation:shardTwo 3s ease-in-out infinite;
-}
-
-@keyframes logoSpin {
-  to {transform:rotate(360deg);}
-}
-
-@keyframes shardOne {
-  0%,100% {transform:translate(0,0) rotate(0);}
-  45% {transform:translate(-7px,-5px) rotate(-12deg);}
-}
-
-@keyframes shardTwo {
-  0%,100% {transform:translate(0,0) rotate(0);}
-  45% {transform:translate(7px,5px) rotate(12deg);}
-}
+.logo:after {
+  inset:-9px;
+  border-width:1px;
+  border-bottom-color:#b18aff;
   border-left-color:#72d5dd;
   animation-direction:reverse;
   animation-duration:8s;
@@ -864,4 +849,4 @@ document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
 </body>
-</html>
+ </html>
