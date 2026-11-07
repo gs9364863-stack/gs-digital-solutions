@@ -104,19 +104,63 @@ header {
   isolation:isolate;
 }
 
-.logo:before,.logo:after {
+.logo {
+  width:43px;
+  height:43px;
+  border-radius:14px;
+  position:relative;
+  display:grid;
+  place-items:center;
+  color:white;
+  font-weight:800;
+  background:linear-gradient(135deg,#8244f3,#2cb9ca);
+  box-shadow:0 8px 20px #8547e74a;
+  isolation:isolate;
+  z-index:1;
+}
+
+.logo:before,
+.logo:after {
   content:"";
   position:absolute;
-  inset:-5px;
-  border:2px solid transparent;
-  border-top-color:#8a4df1;
-  border-right-color:#39b9cc;
-  border-radius:16px;
-  animation:spin 5s linear infinite;
+  inset:-7px;
+  border-radius:18px;
+  background:conic-gradient(
+    from 0deg,
+    transparent 0 15%,
+    #8a4df1 20% 35%,
+    transparent 40% 55%,
+    #39b9cc 60% 75%,
+    transparent 80%
+  );
+  -webkit-mask:radial-gradient(
+    farthest-side,
+    transparent calc(100% - 2px),
+    #fff calc(100% - 1px)
+  );
+  mask:radial-gradient(
+    farthest-side,
+    transparent calc(100% - 2px),
+    #fff calc(100% - 1px)
+  );
+  animation:spin 3s linear infinite;
   z-index:-1;
 }
 
 .logo:after {
+  inset:-12px;
+  border-radius:21px;
+  background:conic-gradient(
+    from 180deg,
+    transparent 0 20%,
+    #b18aff 25% 40%,
+    transparent 45% 65%,
+    #72d5dd 70% 85%,
+    transparent 90%
+  );
+  animation:spin 5s linear infinite reverse;
+  }
+  
   inset:-9px;
   border-width:1px;
   border-bottom-color:#b18aff;
