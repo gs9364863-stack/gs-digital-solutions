@@ -1,1 +1,212 @@
-( ram ) 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GS Digital | Digital Solutions</title>
+<meta name="description" content="GS Digital - Websites, online services, typing and digital solutions.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%237c4dff'/%3E%3Ctext x='50' y='65' font-size='42' text-anchor='middle' fill='white'%3EGS%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#080b14;color:white;font-family:'DM Sans',sans-serif}
+a{text-decoration:none;color:inherit}
+.container{width:90%;max-width:1200px;margin:auto}
+header{height:85px;display:flex;align-items:center;border-bottom:1px solid #ffffff18;background:#080b14;position:sticky;top:0;z-index:10}
+nav{display:flex;justify-content:space-between;align-items:center;width:100%}
+.logo{font:700 24px 'Space Grotesk';color:white}
+.logo span{color:#9b70ff}
+nav ul{display:flex;gap:30px;list-style:none}
+nav ul a{color:#bbb;font-size:14px}
+nav ul a:hover{color:#9b70ff}
+.btn{background:linear-gradient(100deg,#7545ef,#3479ed);padding:14px 23px;border-radius:8px;font-weight:700;display:inline-block}
+.hero{min-height:650px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px}
+.tag{color:#9b70ff;letter-spacing:3px;font-size:12px;font-weight:bold}
+h1{font:700 clamp(45px,6vw,75px)/1.08 'Space Grotesk';margin:25px 0}
+.gradient{background:linear-gradient(90deg,#a47bff,#4adbd2);color:transparent;background-clip:text}
+.hero p{color:#aab2c2;line-height:1.9;max-width:520px}
+.actions{display:flex;gap:15px;margin-top:30px;flex-wrap:wrap}
+.outline{border:1px solid #ffffff44;padding:14px 23px;border-radius:8px}
+.animation{height:430px;display:grid;place-items:center;position:relative}
+.glow{position:absolute;width:330px;height:330px;border-radius:50%;background:#7948ff55;filter:blur(90px)}
+.logo-box{width:210px;height:210px;display:grid;grid-template-columns:repeat(3,1fr);gap:7px;position:relative;animation:float 4s ease-in-out infinite}
+.logo-box span{display:grid;place-items:center;border-radius:13px;background:linear-gradient(140deg,#9466ff,#315caa);font:700 30px 'Space Grotesk';box-shadow:0 5px 25px #855bff55;animation:pieces 5s infinite}
+.logo-box span:nth-child(even){background:linear-gradient(140deg,#40d4ce,#286b91)}
+.logo-box span:nth-child(5){background:white;color:#17152b}
+@keyframes float{50%{transform:translateY(-15px) rotateY(12deg)}}
+@keyframes pieces{0%,15%,85%,100%{transform:translate(0,0) rotate(0);opacity:1}40%{transform:translate(calc((var(--i) - 4)*15px),calc((var(--i) - 4)*-13px)) rotate(25deg);opacity:.7}60%{transform:translate(calc((var(--i) - 4)*-8px),calc((var(--i) - 4)*9px)) rotate(-15deg);opacity:.9}}
+.orbit{position:absolute;width:390px;height:230px;border:1px solid #8d6aff77;border-radius:50%;transform:rotate(-30deg)}
+.orbit.two{transform:rotate(55deg);border-color:#3dd7ce66}
+section{padding:100px 0}
+.heading{text-align:center;max-width:700px;margin:0 auto 50px}
+.heading h2{font:700 43px 'Space Grotesk';margin:15px 0}
+.heading p{color:#aab2c2;line-height:1.8}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{padding:30px;border:1px solid #ffffff18;border-radius:15px;background:linear-gradient(140deg,#151e30,#0c1220);transition:.3s}
+.card:hover{transform:translateY(-8px);border-color:#916bff}
+.icon{font-size:30px;margin-bottom:20px;color:#a27bff}
+.card h3{font:600 20px 'Space Grotesk';margin-bottom:12px}
+.card p{color:#9da9bd;font-size:14px;line-height:1.8}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about-art{height:350px;border-radius:20px;border:1px solid #ffffff22;background:radial-gradient(circle,#6339b966,transparent 65%),#111a2b;display:grid;place-items:center;font:700 45px 'Space Grotesk'}
+.about p{color:#aab2c2;line-height:1.9;margin:20px 0}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.project{height:230px;border-radius:15px;border:1px solid #ffffff22;background:linear-gradient(135deg,#242d4b,#101725);display:grid;place-items:center;font:700 27px 'Space Grotesk';color:#c7b5ff}
+.project:nth-child(2){background:linear-gradient(135deg,#194044,#101725)}
+.project:nth-child(3){background:linear-gradient(135deg,#443047,#101725)}
+.project:nth-child(4){background:linear-gradient(135deg,#233c5d,#101725)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step{border-top:2px solid #875aff;padding:22px 10px}
+.step b{color:#48d9d1}
+.step h3{margin:15px 0;font-family:'Space Grotesk'}
+.step p{color:#9da9bd;font-size:13px;line-height:1.8}
+.faq{max-width:800px;margin:auto}
+details{padding:22px 5px;border-bottom:1px solid #ffffff22}
+summary{cursor:pointer;font-weight:bold}
+details p{color:#9da9bd;margin-top:15px;line-height:1.8}
+.contact-box{padding:60px;border-radius:20px;border:1px solid #8d67ff66;background:radial-gradient(circle at 90% 0,#7346c955,transparent 55%),#11192a;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.contact-box h2{font:700 40px 'Space Grotesk';margin:15px 0}
+.contact-box p{color:#aab2c2}
+footer{padding:60px 0 25px;border-top:1px solid #ffffff22}
+.footer{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+footer p,footer a{color:#9da9bd;font-size:13px;line-height:2}
+footer h3{margin-bottom:15px}
+.copyright{border-top:1px solid #ffffff22;margin-top:40px;padding-top:20px;color:#748095;font-size:12px}
+@media(max-width:800px){
+nav ul{display:none}
+.hero{grid-template-columns:1fr;padding:70px 0}
+.animation{height:350px}
+.cards{grid-template-columns:1fr 1fr}
+.about{grid-template-columns:1fr}
+.steps{grid-template-columns:1fr 1fr}
+}
+@media(max-width:550px){
+h1{font-size:48px}
+.cards,.project-grid{grid-template-columns:1fr}
+.heading h2{font-size:34px}
+.contact-box{padding:30px;display:block}
+.contact-box h2{font-size:32px}
+.footer{grid-template-columns:1fr 1fr}
+.footer>div:first-child{grid-column:1/-1}
+.logo-box{width:165px;height:165px}
+.orbit{width:310px;height:190px}
+}
+</style>
+</head>
+
+<body>
+<header>
+<div class="container">
+<nav>
+<a class="logo" href="#home">GS<span> DIGITAL.</span></a>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#work">Work</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<a class="btn" href="https://wa.me/917247648515">Let's Talk ↗</a>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="container hero" id="home">
+<div>
+<div class="tag">✦ YOUR DIGITAL GROWTH PARTNER</div>
+<h1>We Create<br><span class="gradient">Digital Experiences.</span></h1>
+<p>We build modern websites and provide smart digital solutions that help individuals and businesses grow in the digital world.</p>
+<div class="actions">
+<a class="btn" href="https://wa.me/917247648515">Start a Project ↗</a>
+<a class="outline" href="#work">Explore Our Work →</a>
+</div>
+</div>
+<div class="animation">
+<div class="glow"></div><div class="orbit"></div><div class="orbit two"></div>
+<div class="logo-box">
+<span style="--i:0">G</span><span style="--i:1">S</span><span style="--i:2">✦</span>
+<span style="--i:3">D</span><span style="--i:4">G</span><span style="--i:5">T</span>
+<span style="--i:6">✧</span><span style="--i:7">S</span><span style="--i:8">✦</span>
+</div>
+</div>
+</div>
+
+<section id="services">
+<div class="container">
+<div class="heading"><div class="tag">WHAT WE DO</div><h2>Our <span class="gradient">Services.</span></h2><p>Everything you need to build your digital presence and simplify your online work.</p></div>
+<div class="cards">
+<div class="card"><div class="icon">⌘</div><h3>Website Design</h3><p>Modern, responsive websites for businesses, creators and personal brands.</p></div>
+<div class="card"><div class="icon">▤</div><h3>Online Forms</h3><p>Online application and form-filling assistance with clear guidance.</p></div>
+<div class="card"><div class="icon">✎</div><h3>Typing & Documents</h3><p>Hindi and English typing, document formatting and digital support.</p></div>
+<div class="card"><div class="icon">◈</div><h3>Creative Design</h3><p>Professional digital graphics and promotional design solutions.</p></div>
+<div class="card"><div class="icon">▣</div><h3>Business Setup</h3><p>Digital presence and online contact setup for your business.</p></div>
+<div class="card"><div class="icon">↗</div><h3>Digital Support</h3><p>Practical help with common online and website-related tasks.</p></div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container about">
+<div class="about-art">GS DIGITAL</div>
+<div><div class="tag">ABOUT GS DIGITAL</div><h2 style="font:700 40px 'Space Grotesk';margin-top:18px">Turning Ideas Into <span class="gradient">Reality.</span></h2><p>At GS Digital, our goal is to make digital services simple, useful and accessible. We focus on clean design, practical solutions and helpful communication.</p><p>Whether you need a website or online assistance, we are ready to understand your requirements.</p><a class="btn" href="#contact">Know More ↗</a></div>
+</div>
+</section>
+
+<section id="work">
+<div class="container">
+<div class="heading"><div class="tag">OUR WORK</div><h2>Ideas Made <span class="gradient">Visible.</span></h2><p>Explore the types of digital experiences we can create.</p></div>
+<div class="project-grid">
+<div class="project">BUSINESS WEBSITE</div>
+<div class="project">DIGITAL SERVICES</div>
+<div class="project">CREATIVE DESIGN</div>
+<div class="project">ONLINE EXPERIENCE</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="heading"><div class="tag">OUR PROCESS</div><h2>How We <span class="gradient">Work.</span></h2></div>
+<div class="steps">
+<div class="step"><b>01 / DISCOVER</b><h3>Understand</h3><p>We understand your ideas and requirements.</p></div>
+<div class="step"><b>02 / PLAN</b><h3>Plan</h3><p>We prepare a clear plan for your project.</p></div>
+<div class="step"><b>03 / CREATE</b><h3>Create</h3><p>We design and build your digital solution.</p></div>
+<div class="step"><b>04 / DELIVER</b><h3>Launch</h3><p>We help you publish and move forward.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container faq">
+<div class="heading"><div class="tag">FAQ</div><h2>Common <span class="gradient">Questions.</span></h2></div>
+<details><summary>What services do you provide?</summary><p>Website design, online form assistance, typing, document support and digital services.</p></details>
+<details><summary>How can I contact GS Digital?</summary><p>You can contact us directly through WhatsApp or email.</p></details>
+<details><summary>Can you create a website for my business?</summary><p>Yes. Share your requirements with us to discuss your website project.</p></details>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="contact-box">
+<div><div class="tag">LET'S CONNECT</div><h2>Have a Project in <span class="gradient">Mind?</span></h2><p>Let's discuss your idea and make it happen.</p></div>
+<a class="btn" href="https://wa.me/917247648515?text=Hello%20GS%20Digital%2C%20I%20need%20your%20services.">Contact Us ↗</a>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container">
+<div class="footer">
+<div><a class="logo" href="#home">GS<span> DIGITAL.</span></a><p style="margin-top:15px">Your trusted digital solutions partner. Building useful digital experiences for everyone.</p></div>
+<div><h3>Quick Links</h3><a href="#home">Home</a><br><a href="#services">Services</a><br><a href="#about">About</a><br><a href="#work">Work</a></div>
+<div><h3>Contact</h3><a href="https://wa.me/917247648515">+91 72476 48515</a><br><a href="mailto:gs936463@gmail.com">gs936463@gmail.com</a></div>
+</div>
+<div class="copyright">© 2026 GS Digital. All Rights Reserved.</div>
+</div>
+</footer>
+</body>
+  </html>
